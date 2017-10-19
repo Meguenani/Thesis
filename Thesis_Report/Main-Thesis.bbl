@@ -1,0 +1,651 @@
+\begin{thebibliography}{xxxx}
+
+\bibitem[ABB~2017]{YuMi-url}
+ABB.
+\newblock {\em YuMi}.
+\newblock \url{http://new.abb.com/products/robotics/industrial-robots/yumi},
+  Accessed: 2017.
+
+\bibitem[Alami~2006]{alami2006safe}
+R.~Alami, A.~Albu-Schaeffer, A.~Bicchi, R.~Bischoff, R.~Chatila, A.~De~Luca,
+  A.~De~Santis, G.~Giralt, J.~Guiochet, G.~Hirzinger, F.~Ingrand, V.~Lippiello,
+  R.~Mattone, D.~Powell, S.~Sen, B.~Siciliano, G.~Tonietti and L.~Villani.
+\newblock {\em Safe and dependable physical human-robot interaction in
+  anthropic domains: State of the art and challenges}.
+\newblock In Proceedings of the IEEE/RSJ International Conference on
+  Intelligent Robots and Systems, pages 1--16. IEEE, 2006.
+
+\bibitem[Albu-Schaffer~2005]{albu2005physical}
+A.~Albu-Schaffer, A.~Bicchi, G.~Boccadamo, R.~Chatila, A.~De~Luca,
+  A.~De~Santis, G.~Giralt, G.~Hirzinger, V.~Lippiello, R.~Mattone, R.~Schiavi,
+  B.~Siciliano, G.~Tonietti and L.~Villani.
+\newblock {\em Physical human-robot interaction in anthropic domains: Safety
+  and dependability}.
+\newblock In Proceedings of the 4th IARP/IEEE-RAS/EURON Workshop on Technical
+  Challenges for Dependable Robots in Human Environments, 2005.
+
+\bibitem[Albu-Sch{\"a}ffer~2007]{albu2007unified}
+Alin Albu-Sch{\"a}ffer, Christian Ott and Gerd Hirzinger.
+\newblock {\em A unified passivity-based control framework for position, torque
+  and impedance control of flexible joint robots}.
+\newblock The International Journal of Robotics Research, vol.~26, no.~1, pages
+  23--39, 2007.
+
+\bibitem[Aubin~1991]{aubin1991viability}
+Jean-Pierre Aubin.
+\newblock {\em Viability theory. Systems \& control: Foundations \&
+  applications}.
+\newblock Birkh{\"a}user, Boston. doi, vol.~10, no.~1007, pages 978--0, 1991.
+
+\bibitem[Aubin~2011]{aubin2011viability}
+Jean-Pierre Aubin, Alexandre~M. Bayen and Patrick Saint-Pierre.
+\newblock Viability theory: new directions.
+\newblock Springer Science \& Business Media, 2011.
+
+\bibitem[Baerlocher~2004]{baerlocher2004inverse}
+Paolo Baerlocher and Ronan Boulic.
+\newblock {\em An inverse kinematics architecture enforcing an arbitrary number
+  of strict priority levels}.
+\newblock The visual computer, vol.~20, no.~6, pages 402--417, 2004.
+
+\bibitem[Bischoff~2010]{bischoff2010kuka}
+Rainer Bischoff, Johannes Kurth, G{\"u}nter Schreiber, Ralf Koeppe, Alin
+  Albu-Sch{\"a}ffer, Alexander Beyer, Oliver Eiberger, Sami Haddadin, Andreas
+  Stemmer, Gerhard Grunwald and G.~Hirzinger.
+\newblock {\em The KUKA-DLR Lightweight Robot arm-a new reference platform for
+  robotics research and manufacturing}.
+\newblock In Proceedings of the 41st International Symposium on Robotics and
+  6th German Conference on Robotics, pages 1--8, 2010.
+
+\bibitem[Boaventura~2012]{boaventura2012dynamic}
+Thiago Boaventura, Claudio Semini, Jonas Buchli, Marco Frigerio, Michele Focchi
+  and Darwin~G Caldwell.
+\newblock {\em Dynamic torque control of a hydraulic quadruped robot}.
+\newblock In Proceedings of the IEEE International Conference on Robotics and
+  Automation, pages 1889--1894. IEEE, 2012.
+
+\bibitem[Boyd~2004]{boyd2004}
+Stephen Boyd and Lieven Vandenberghe.
+\newblock Convex optimization.
+\newblock Cambridge university press, 2004.
+
+\bibitem[Burdet~2001]{burdet2001central}
+Etienne Burdet, Rieko Osu, David~W Franklin, Theodore~E Milner and Mitsuo
+  Kawato.
+\newblock {\em The central nervous system stabilizes unstable dynamics by
+  learning optimal impedance}.
+\newblock Nature, vol.~414, no.~6862, pages 446--449, 2001.
+
+\bibitem[Caldwell~1995]{caldwell1995control}
+Darwin~G Caldwell, Gustavo~A Medrano-Cerda and Mike Goodwin.
+\newblock {\em Control of pneumatic muscle actuators}.
+\newblock IEEE Control Systems, vol.~15, no.~1, pages 40--48, 1995.
+
+\bibitem[Chanteperdrix~2017]{xenomai-url}
+Gerum Chanteperdrix.
+\newblock {\em Xenomai}.
+\newblock \url{https://xenomai.org}, Accessed: 2017.
+
+\bibitem[Chen~1994]{chen1994torque}
+Tsing-Hua Chen, Fan-Tien Cheng, York-Yih Sun and Min-Hsiung Hung.
+\newblock {\em Torque optimization schemes for kinematically redundant
+  manipulators}.
+\newblock Journal of Robotic Systems, vol.~11, no.~4, pages 257--269, 1994.
+
+\bibitem[Chen~2013]{chen2013optimal}
+Lisha Chen, Manolo Garabini, Matteo Laffranchi, Navvab Kashiri, Nikos~G
+  Tsagarakis, Antonio Bicchi and Darwin~G Caldwell.
+\newblock {\em Optimal control for maximizing velocity of the CompAct™
+  compliant actuator}.
+\newblock In Proceedings of the IEEE International Conference on Robotics and
+  Automation, pages 516--522. IEEE, 2013.
+
+\bibitem[De~Luca~2006]{de2006collision}
+Alessandro De~Luca, Alin Albu-Sch{\"a}ffer, Sami Haddadin and Gerd Hirzinger.
+\newblock {\em Collision detection and safe reaction with the DLR-III
+  lightweight manipulator arm}.
+\newblock In Proceedings of the IEEE/RSJ International Conference on
+  Intelligent Robots and Systems, pages 1623--1630, 2006.
+
+\bibitem[De~Luca~2008]{de2008exploiting}
+Alessandro De~Luca and Lorenzo Ferrajoli.
+\newblock {\em Exploiting robot redundancy in collision detection and
+  reaction}.
+\newblock In Proceedings of the IEEE/RSJ International Conference on
+  Intelligent Robots and Systems, pages 3299--3305, 2008.
+
+\bibitem[De~Luca~2012]{de2012integrated}
+Alessandro De~Luca and Fabrizio Flacco.
+\newblock {\em Integrated control for pHRI: Collision avoidance, detection,
+  reaction and collaboration}.
+\newblock In Proceedings of the 4th IEEE RAS/EMBS International Conference on
+  Biomedical Robotics and Biomechatronics, pages 288--295. IEEE, 2012.
+
+\bibitem[Decr{\'e}~2009]{decre2009extending}
+Wilm Decr{\'e}, Ruben Smits, Herman Bruyninckx and Joris De~Schutter.
+\newblock {\em Extending iTaSC to support inequality constraints and
+  non-instantaneous task specification}.
+\newblock In Proceedings of the IEEE International Conference on Robotics and
+  Automation, pages 964--971. IEEE, 2009.
+
+\bibitem[Del~Prete~2016]{del2016robustness}
+Andrea Del~Prete and Nicolas Mansard.
+\newblock {\em Robustness to joint-torque-tracking errors in task-space inverse
+  dynamics}.
+\newblock IEEE Transactions on Robotics, vol.~32, no.~5, pages 1091--1105,
+  2016.
+
+\bibitem[Ebert~2002]{ebert2002safe}
+Dirk~M Ebert and Dominik~D Henrich.
+\newblock {\em Safe human-robot-cooperation: Image-based collision detection
+  for industrial robots}.
+\newblock In Proceedings of the IEEE/RSJ International Conference On
+  Intelligent Robots and Systems, pages 1826--1831, 2002.
+
+\bibitem[EMIKA~2017]{Franka-url}
+Franka EMIKA.
+\newblock {\em Franka}.
+\newblock \url{https://www.franka.de/}, Accessed: 2017.
+
+\bibitem[Ferraguti~2013]{ferraguti2013tank}
+Federica Ferraguti, Cristian Secchi and Cesare Fantuzzi.
+\newblock {\em A tank-based approach to impedance control with variable
+  stiffness}.
+\newblock In Proceedings of the IEEE International Conference on Robotics and
+  Automation, pages 4948--4953. IEEE, 2013.
+
+\bibitem[Ficuciello~2015]{ficuciello2015variable}
+Fanny Ficuciello, Luigi Villani and Bruno Siciliano.
+\newblock {\em Variable impedance control of redundant manipulators for
+  intuitive human--robot physical interaction}.
+\newblock IEEE Transactions on Robotics, vol.~31, no.~4, pages 850--863, 2015.
+
+\bibitem[Flacco~2012]{flacco2012depth}
+Fabrizio Flacco, Torsten Kr{\"o}ger, Alessandro De~Luca and Oussama Khatib.
+\newblock {\em A depth space approach to human-robot collision avoidance}.
+\newblock In Proceedings of the IEEE International Conference on Robotics and
+  Automation, pages 338--345. IEEE, 2012.
+
+\bibitem[Flacco~2015]{flacco2015control}
+Fabrizio Flacco, Alessandro De~Luca and Oussama Khatib.
+\newblock {\em Control of redundant robots under hard joint constraints:
+  Saturation in the null space}.
+\newblock IEEE Transactions on Robotics, vol.~31, no.~3, pages 637--654, 2015.
+
+\bibitem[Fraichard~2007]{fraichard2007short}
+Thierry Fraichard.
+\newblock {\em A short paper about motion safety}.
+\newblock In Proceedings of the IEEE International Conference on Robotics and
+  Automation, pages 1140--1145. IEEE, 2007.
+
+\bibitem[Fryman~2014]{fryman2014updating}
+Jeff Fryman.
+\newblock {\em Updating the Industrial Robot Safety Standard}.
+\newblock In Proceedings of the 41st International Symposium on Robotics, pages
+  1--4, 2014.
+
+\bibitem[Garabini~2011]{garabini2011optimality}
+Manolo Garabini, Andrea Passaglia, Felipe Belo, Paolo Salaris and Antonio
+  Bicchi.
+\newblock {\em Optimality principles in variable stiffness control: The vsa
+  hammer}.
+\newblock In Proceedings of the IEEE/RSJ International Conference on
+  Intelligent Robots and Systems, pages 3770--3775. IEEE, 2011.
+
+\bibitem[Grebenstein~2011]{grebenstein2011dlr}
+M.~Grebenstein, A.~Albu-Sch{\"a}ffer, T.~Bahls, M.~Chalon, O.~Eiberger,
+  W.~Friedl, R.~Gruber, S.~Haddadin, U.~Hagn, R.~Haslinger, H.~Höppner,
+  S.~Jörg, M.~Nickl, A.~Nothhelfer, F.~Petit, J.~Reill, N.~Seitz, T.~Wimböck,
+  S.~Wolf, T.~Wüsthoff and G.~Hirzinger.
+\newblock {\em The DLR hand arm system}.
+\newblock In Proceedings of the IEEE International Conference on Robotics and
+  Automation, pages 3175--3182. IEEE, 2011.
+
+\bibitem[{Gurobi Optimization Inc.}~2015]{gurobi}
+{Gurobi Optimization Inc.}
+\newblock {\em Gurobi Optimizer Reference Manual}, 2015.
+
+\bibitem[Haddadin~2008]{haddadin2008collision}
+Sami Haddadin, Alin Albu-Sch{\"a}ffer, Alessandro De~Luca and Gerd Hirzinger.
+\newblock {\em Collision detection and reaction: A contribution to safe
+  physical human-robot interaction}.
+\newblock In Proceedings of the IEEE/RSJ International Conference on
+  Intelligent Robots and Systems, pages 3356--3363, 2008.
+
+\bibitem[Haddadin~2012a]{haddadin2012truly}
+S.~Haddadin, A.~Khoury, T.~Rokahr, S.~Parusel, R.~Burgkart, A.~Bicchi and
+  A.~Albu-Sch{\"a}ffer.
+\newblock {\em A truly safely moving robot has to know what injury it may
+  cause}.
+\newblock In Proceedings of the IEEE/RSJ International Conference on
+  Intelligent Robots and Systems, pages 5406--5413, 2012.
+
+\bibitem[Haddadin~2012b]{haddadin2012}
+Sami Haddadin, Nico Mansfeld and A~Albu-Sch{\"a}ffer.
+\newblock {\em Rigid vs. elastic actuation: Requirements \& performance}.
+\newblock In Proceedings of the IEEE/RSJ International Conference on
+  Intelligent Robots and Systems, pages 5097--5104. IEEE, 2012.
+
+\bibitem[Heinzmann~2003]{heinzmann2003quantitative}
+Jochen Heinzmann and Alexander Zelinsky.
+\newblock {\em Quantitative safety guarantees for physical human-robot
+  interaction}.
+\newblock The International Journal of Robotics Research, vol.~22, no.~7-8,
+  pages 479--504, 2003.
+
+\bibitem[Hirzinger~2001]{hirzinger2001}
+Gerd Hirzinger, A~Albu-Sch{\"a}ffer, M~Hahnle, Ingo Schaefer and Norbert
+  Sporer.
+\newblock {\em On a new generation of torque controlled light-weight robots}.
+\newblock In Proceedings of the IEEE International Conference on Robotics and
+  Automation, volume~4, pages 3356--3363, 2001.
+
+\bibitem[Hoarau~2017]{rtt-lwr-url}
+A.~Hoarau, J.~DaSilva, A.~Ibanez and V.~Padois.
+\newblock {\em {rtt-kuka-lwr}: Control software architecture for lightweight
+  robots}.
+\newblock \url{https://www.github.com/kuka-isir/rtt_lwr}, Accessed: 2017.
+
+\bibitem[Hogan~1984]{hogan1984impedance}
+Neville Hogan.
+\newblock {\em Impedance control: An approach to manipulation}.
+\newblock In Proceedings fo the American Control Conference, pages 304--313.
+  IEEE, 1984.
+
+\bibitem[Hyon~2007]{hyon2007full}
+Sang-Ho Hyon, Joshua~G Hale and Gordon Cheng.
+\newblock {\em Full-body compliant human--humanoid interaction: balancing in
+  the presence of unknown external forces}.
+\newblock IEEE Transactions on Robotics, vol.~23, no.~5, pages 884--898, 2007.
+
+\bibitem[Ibanez~2015]{ibanez2015Emergence}
+Aur{\'e}lien Ibanez.
+\newblock {\em {Emergence of complex behaviors from coordinated predictive
+  control in humanoid robotics}}.
+\newblock PhD thesis, {Universit{\'e} Pierre et Marie Curie Paris VI},
+  September 2015.
+
+\bibitem[Ikuta~2001]{ikuta2001safety}
+K~Ikuta, M~Nokata and H~Ishii.
+\newblock {\em Safety evaluation method of human-care robot control and special
+  robot simulator. Integration of Assistive Technology in the Information Age},
+  2001.
+
+\bibitem[Ikuta~2003]{ikuta2003safety}
+Koji Ikuta, Hideki Ishii and Makoto Nokata.
+\newblock {\em Safety evaluation method of design and control for human-care
+  robots}.
+\newblock The International Journal of Robotics Research, vol.~22, no.~5, pages
+  281--297, 2003.
+
+\bibitem[ISO~2011a]{ISO10218PDF1}
+ISO.
+\newblock {\em Robots and Robotic Devices-Safety Requirements for Industrial
+  Robots-Part1: Robots}.
+\newblock Iso, International Organization for Standardization, Geneva, CH,
+  2011.
+
+\bibitem[ISO~2011b]{ISO10218PDF2}
+ISO.
+\newblock {\em Robots and Robotic Devices-Safety Requirements for Industrial
+  Robots-Part2: Robot systems and integration}.
+\newblock Iso, International Organization for Standardization, Geneva, CH,
+  2011.
+
+\bibitem[ISO~2016]{ISO15066PDF}
+ISO.
+\newblock {\em robots and robotic devices - collaborative robots}.
+\newblock Iso, International Organization for Standardization, Geneva, CH,
+  2016.
+
+\bibitem[Ivar~2011]{ivar2011nonlinear}
+Thorson Ivar and D~Caldwell.
+\newblock {\em A Nonlinear Series Elastic Actuator for Highly Dynamic Motions}.
+\newblock In Proceedings of the IEEE/RSJ International Conference on
+  Intelligent Robots and Systems, pages 390--394, 2011.
+
+\bibitem[KaewTraKulPong~2002]{background_substraction}
+Pakorn KaewTraKulPong and Richard Bowden.
+\newblock {\em An improved adaptive background mixture model for real-time
+  tracking with shadow detection}.
+\newblock In Video-based surveillance systems, pages 135--144. Springer, 2002.
+
+\bibitem[Kashiri~2013]{kashiri2013stiffness}
+Navvab Kashiri, Nikos~G Tsagarakis, Matteo Laffranchi and Darwin~G Caldwell.
+\newblock {\em On the stiffness design of intrinsic compliant manipulators}.
+\newblock In Proceedings of the IEEE/ASME International Conference on Advanced
+  Intelligent Mechatronics, pages 1306--1311. IEEE, 2013.
+
+\bibitem[Katzschmann~2013]{katzschmann2013towards}
+Robert Katzschmann, Torsten Kr{\"o}ger, Tamim Asfour and Oussama Khatib.
+\newblock {\em Towards online trajectory generation considering robot dynamics
+  and torque limits}.
+\newblock In Proceedings of the IEEE/RSJ International Conference on
+  Intelligent Robots and Systems, pages 5644--5651. IEEE, 2013.
+
+\bibitem[Khatib~1987]{khatib1987unified}
+Oussama Khatib.
+\newblock {\em A unified approach for motion and force control of robot
+  manipulators: The operational space formulation}.
+\newblock IEEE Journal on Robotics and Automation, vol.~3, no.~1, pages 43--53,
+  1987.
+
+\bibitem[Khatib~1995]{khatib1995inertial}
+Oussama Khatib.
+\newblock {\em Inertial properties in robotic manipulation: An object-level
+  framework}.
+\newblock The International Journal of Robotics Research, vol.~14, no.~1, pages
+  19--36, 1995.
+
+\bibitem[KUKA~2017]{iiwa-url}
+KUKA.
+\newblock {\em LBR iiwa}.
+\newblock
+  \url{https://www.kuka.com/en-de/products/robot-systems/industrial-robots/lbr%
+-iiwa}, Accessed: 2017.
+
+\bibitem[Kulic~2007]{kulic2007affective}
+Dana Kulic and Elizabeth~A Croft.
+\newblock {\em Affective state estimation for human--robot interaction}.
+\newblock IEEE Transactions on Robotics, vol.~23, no.~5, pages 991--1000, 2007.
+
+\bibitem[Laffranchi~2011]{laffranchi2011compact}
+Matteo Laffranchi, Nikos Tsagarakis and Darwin~G Caldwell.
+\newblock {\em A compact compliant actuator (CompAct™) with variable physical
+  damping}.
+\newblock In Proceedings of the IEEE International Conference on Robotics and
+  Automation, pages 4644--4650. IEEE, 2011.
+
+\bibitem[Lange~2014]{lange2014predictive}
+Friedrich Lange and Michael Suppa.
+\newblock {\em Predictive path-accurate scaling of a sensor-based defined
+  trajectory}.
+\newblock In Proceedings of the IEEE International Conference on Robotics and
+  Automation, pages 754--759. IEEE, 2014.
+
+\bibitem[Lange~2015]{lange2015trajectory}
+Friedrich Lange and Michael Suppa.
+\newblock {\em Trajectory generation for immediate path-accurate jerk-limited
+  stopping of industrial robots}.
+\newblock In Proceedings of the IEEE International Conference on Robotics and
+  Automation, pages 2021--2026. IEEE, 2015.
+
+\bibitem[Loughlin~2007]{loughlin2007dlr}
+Clive Loughlin, A~Albu-Sch{\"a}ffer, S~Haddadin, Ch~Ott, A~Stemmer,
+  T~Wimb{\"o}ck and G~Hirzinger.
+\newblock {\em The DLR lightweight robot: design and control concepts for
+  robots in human environments}.
+\newblock Industrial Robot, vol.~34, no.~5, pages 376--385, 2007.
+
+\bibitem[Lumelsky~1993]{lumelsky1993real}
+Vladimir~J Lumelsky and Edward Cheung.
+\newblock {\em Real-time collision avoidance in teleoperated whole-sensitive
+  robot arm manipulators}.
+\newblock Transactions on Systems, Man and Cybernetics, vol.~23, no.~1, pages
+  194--203, 1993.
+
+\bibitem[Ma~2002]{ma2002time}
+Shugen Ma and Mitsuru Watanabe.
+\newblock {\em Time-optimal control of kinematically redundant manipulators
+  with limit heat characteristics of actuators}.
+\newblock Advanced Robotics, vol.~16, no.~8, pages 735--749, 2002.
+
+\bibitem[{Maplesoft Inc.}~2016]{maple}
+{Maplesoft Inc.}
+\newblock {\em Maple 18}, 2016.
+
+\bibitem[Marx~2017]{rtnet-url}
+et~al. Marx.
+\newblock {\em RTnet: Hard Real-Time Networking for Real-Time Linux}.
+\newblock \url{http://rtnet.org}, Accessed: 2017.
+
+\bibitem[Mason~1981]{mason1981compliance}
+Matthew~T Mason.
+\newblock {\em Compliance and force control for computer controlled
+  manipulators}.
+\newblock IEEE Transactions on Systems, Man, and Cybernetics, vol.~11, no.~6,
+  pages 418--432, 1981.
+
+\bibitem[Mavridis~2015]{mavridis2015review}
+Nikolaos Mavridis.
+\newblock {\em A review of verbal and non-verbal human--robot interactive
+  communication}.
+\newblock Robotics and Autonomous Systems, vol.~63, pages 22--35, 2015.
+
+\bibitem[Meguenani~2016a]{kuka-url-fullconstraints}
+A.~Meguenani, V.~Padois, J.~Da~Silva, A.~Hoarau and P.~Bidaud.
+\newblock {\em {KUKA}: {H}{R} interaction with constraints on {E}c and {E}p}.
+\newblock
+  \url{http://pages.isir.upmc.fr/~padois/website/fichiers/videos/Kuka_Human_in%
+teraction_constraints_on_Ec_and_Ep.mp4}, 2016.
+
+\bibitem[Meguenani~2016b]{kuka-url-noconstraints}
+A.~Meguenani, V.~Padois, J.~Da~Silva, A.~Hoarau and P.~Bidaud.
+\newblock {\em {KUKA}: {H}{R} interaction with no constraints}.
+\newblock
+  \url{http://pages.isir.upmc.fr/~padois/website/fichiers/videos/Kuka_Human_in%
+teraction_no_constraints.mp4}, 2016.
+
+\bibitem[Merlhiot~2012]{merlhiot2012}
+X.~Merlhiot, J.L. Garrec, G.~Saupin and C.~Andriot.
+\newblock {\em The XDE mechanical kernel: efficient and robust simulation of
+  multibody dynamics with intermittent nonsmooth contacts}.
+\newblock In Proceedings of the International Conference on Multibody System
+  Dynamics, Stuttgart, Germany, 2012.
+
+\bibitem[Ngo~2005]{ngo2005passivity}
+Khoi~B Ngo and Robert Mahony.
+\newblock {\em Passivity-based control of robot manipulators subject to
+  constraints}.
+\newblock In Proceedings of the Australian Conference on Robotics and
+  Automation, 2005.
+
+\bibitem[Ngo~2006]{ngo2006bounded}
+Khoi~B Ngo and Robert Mahony.
+\newblock {\em Bounded torque control for robot manipulators subject to joint
+  velocity constraints}.
+\newblock In Proceedings of the IEEE International Conference on Robotics and
+  Automation, pages 7--12. IEEE, 2006.
+
+\bibitem[Ott~2008a]{ott2008cartesian}
+Christian Ott.
+\newblock Cartesian impedance control of redundant and flexible-joint robots.
+\newblock Springer, 2008.
+
+\bibitem[Ott~2008b]{ott2008passivity}
+Christian Ott, Alin Albu-Schaffer, Andreas Kugi and Gerd Hirzinger.
+\newblock {\em On the passivity-based impedance control of flexible joint
+  robots}.
+\newblock IEEE Transactions on Robotics, vol.~24, no.~2, pages 416--429, 2008.
+
+\bibitem[Ott~2010]{ott2010unified}
+Christian Ott, Ranjan Mukherjee and Yoshihiko Nakamura.
+\newblock {\em Unified impedance and admittance control}.
+\newblock In Proceedings of the IEEE International Conference on Robotics and
+  Automation, pages 554--561. IEEE, 2010.
+
+\bibitem[Padois~2016]{2016THDR3834}
+V.~Padois.
+\newblock {\em Control and design of robots with tasks and constraints in
+  mind}.
+\newblock PhD thesis, Université Pierre et Marie Curie (Paris 6), Paris,
+  France, oct 2016.
+
+\bibitem[Park~1998]{park1998enhanced}
+Ki~Cheol Park, Pyung~Hun Chang and Seung~Ho Kim.
+\newblock {\em The enhanced compact QP method for redundant manipulators using
+  practical inequality constraints}.
+\newblock In Proceedings of the IEEE International Conference on Robotics and
+  Automation, volume~1, pages 107--114. IEEE, 1998.
+
+\bibitem[Pfeifer~2006]{pfeifer2006body}
+Rolf Pfeifer and Josh Bongard.
+\newblock How the body shapes the way we think: a new view of intelligence.
+\newblock MIT press, 2006.
+
+\bibitem[Pratt~1995]{pratt1995series}
+Gill~A Pratt and Matthew~M Williamson.
+\newblock {\em Series elastic actuators}.
+\newblock In Proceedings of the IEEE/RSJ International Conference on
+  Intelligent Robots and Systems, volume~1, pages 399--406. IEEE, 1995.
+
+\bibitem[Raibert~1981]{raibert1981hybrid}
+Marc~H Raibert and John~J Craig.
+\newblock {\em Hybrid position/force control of manipulators}.
+\newblock Journal of Dynamic Systems, Measurement, and Control, vol.~102,
+  no.~127, pages 126--133, 1981.
+
+\bibitem[Robotics~2017a]{Fogale-url}
+Fogale Robotics.
+\newblock \url{http://www.fogale-robotics.com}, Accessed: 2017.
+
+\bibitem[Robotics~2017b]{Sawyer-url}
+Rethink Robotics.
+\newblock {\em Sawyer}.
+\newblock \url{http://www.rethinkrobotics.com/sawyer/ }, Accessed: 2017.
+
+\bibitem[ROBOTS~2017]{UR10-url}
+UNIVERSAL ROBOTS.
+\newblock {\em UR10}.
+\newblock \url{https://www.universal-robots.com/products/ur10-robot/},
+  Accessed: 2017.
+
+\bibitem[Rubrecht~2010]{rubrecht2010constraints}
+S{\'e}bastien Rubrecht, Vincent Padois, Philippe Bidaud and Michel De~Broissia.
+\newblock {\em Constraints Compliant Control: constraints compatibility and the
+  displaced configuration approach}.
+\newblock In Proceedings of the IEEE/RSJ International Conference on
+  Intelligent Robots and Systems, pages 677--684. IEEE, 2010.
+
+\bibitem[Rubrecht~2011]{rubrecht:tel-00654514}
+S.~Rubrecht.
+\newblock {\em {Contributions to the control of constrained robots}}.
+\newblock Theses, {Universit{\'e} Pierre et Marie Curie - Paris VI}, September
+  2011.
+
+\bibitem[Rusu~2011]{PCL}
+RB. Rusu and S.~Cousins.
+\newblock {\em {3D is here: Point Cloud Library (PCL)}}.
+\newblock In Proceedings of the IEEE International Conference on Robotics and
+  Automation, Shanghai, China, May 9-13 2011.
+
+\bibitem[Salisbury~1991]{salisbury1991design}
+Kenneth Salisbury, Brian Eberman, Michael Levin and William Townsend.
+\newblock {\em The design and control of an experimental whole-arm
+  manipulator}.
+\newblock In Proceedings of the 5th International Symposium on Robotics
+  Sesearch, pages 233--241. MIT Press, 1991.
+
+\bibitem[Schindlbeck~2015]{schindlbeck2015unified}
+Christopher Schindlbeck and Sami Haddadin.
+\newblock {\em Unified passivity-based cartesian force/impedance control for
+  rigid and flexible joint robots via task-energy tanks}.
+\newblock In Proceedings of the IEEE International Conference on Robotics and
+  Automation, pages 440--447. IEEE, 2015.
+
+\bibitem[Schreiber~2010]{schreiber2010fast}
+G{\"u}nter Schreiber, Andreas Stemmer and Rainer Bischoff.
+\newblock {\em The fast research interface for the kuka lightweight robot}.
+\newblock In Proceedings of the IEEE International Conference on Robotics and
+  Automation, 2010.
+
+\bibitem[Siciliano~2008]{Siciliano2008}
+B.~Siciliano and O.~Khatib.
+\newblock \href{http://www.springer.com/fr/book/9783540239574}{Springer
+  handbook of robotics}.
+\newblock Springer Science \& Business Media, 2008.
+
+\bibitem[Siciliano~2016]{siciliano2016springer}
+Bruno Siciliano and Oussama Khatib.
+\newblock Springer handbook of robotics.
+\newblock Springer, 2016.
+
+\bibitem[Soetens~2017]{rtt-url}
+P.~Soetens.
+\newblock {\em {RTT}: {R}eal-{T}ime {T}oolkit}.
+\newblock \url{http://www.orocos.org/rtt}, Accessed: 2017.
+
+\bibitem[Tassa~2012]{tassa2012synthesis}
+Yuval Tassa, Tom Erez and Emanuel Todorov.
+\newblock {\em Synthesis and stabilization of complex behaviors through online
+  trajectory optimization}.
+\newblock In Intelligent Robots and Systems (IROS), 2012 IEEE/RSJ International
+  Conference on, pages 4906--4913. IEEE, 2012.
+
+\bibitem[Townsend~1993]{townsend1993mechanical}
+William~T Townsend and J~Kenneth Salisbury.
+\newblock {\em Mechanical design for whole-arm manipulation}.
+\newblock Robots and Biological Systems: Towards a New Bionics?, pages
+  153--164, 1993.
+
+\bibitem[Tsagarakis~2009]{tsagarakis2009compact}
+Nikolaos~G Tsagarakis, Matteo Laffranchi, Bram Vanderborght and Darwin~G
+  Caldwell.
+\newblock {\em A compact soft actuator unit for small scale human friendly
+  robots}.
+\newblock In Proceedings of the IEEE International Conference on Robotics and
+  Automation, pages 4356--4362. IEEE, 2009.
+
+\bibitem[Vanderborght~2012]{vanderborght2012variable}
+Bram Vanderborght, Alin Albu-Sch{\"a}ffer, Antonio Bicchi, Etienne Burdet,
+  D~Caldwell, Raffaella Carloni, M~Catalano, G~Ganesh, Manolo Garabini, Markus
+  Grebenstein, G.~Grioli, S.~Haddadin, A.~Jafari, M.~Laffranchi, D.~Lefeber,
+  F.~Petit, S.~Stramigioli, N.~Tsagarakis, M.~Van~Damme, R.~Van~Ham, L.~C.
+  Visser and S.~Wolf.
+\newblock {\em Variable impedance actuators: Moving the robots of tomorrow}.
+\newblock In Proceedings of the IEEE/RSJ International Conference on
+  Intelligent Robots and Systems, pages 5454--5455. IEEE, 2012.
+
+\bibitem[Vanderborght~2013]{vanderborght2013variable}
+B.~Vanderborght, A.~Albu-Sch{\"a}ffer, A.~Bicchi, E.~Burdet, D.~G. Caldwell,
+  R.~Carloni, M.~Catalano, O.~Eiberger, W.~Friedl, G~Ganesh, M.~Garabini,
+  M.~Grebenstein, G.~Grioli, S.~Haddadin, H.~Hoppner, A.~Jafari, M.~Laffranchi,
+  D.~Lefeber, F.~Petit, S.~Stramigioli, N.~Tsagarakis, M.~Van~Damme,
+  R.~Van~Ham, L.C. Visser and S.~Wolf.
+\newblock {\em Variable impedance actuators: A review}.
+\newblock Robotics and autonomous systems, vol.~61, no.~12, pages 1601--1614,
+  2013.
+
+\bibitem[VIA~2017]{VIACTORS-url}
+\url{http://www.viactors.org}, Accessed: 2017.
+
+\bibitem[Whitney~1977]{whitney1977force}
+Daniel~E Whitney.
+\newblock {\em Force feedback control of manipulator fine motions}.
+\newblock Journal of Dynamic Systems, Measurement, and Control, vol.~99, no.~2,
+  pages 91--97, 1977.
+
+\bibitem[Wieber~2006]{wieber2006trajectory}
+Pierre-Brice Wieber.
+\newblock {\em Trajectory free linear model predictive control for stable
+  walking in the presence of strong perturbations}.
+\newblock In Proceedings of the IEEE-RAS International Conference on Humanoid
+  Robots, pages 137--142. IEEE, 2006.
+
+\bibitem[Wolf~2011]{wolf2011dlr}
+Sebastian Wolf, Oliver Eiberger and Gerd Hirzinger.
+\newblock {\em The DLR FSJ: Energy based design of a variable stiffness joint}.
+\newblock In Proceedings of the IEEE International Conference on Robotics and
+  Automation, pages 5082--5089. IEEE, 2011.
+
+\bibitem[Yoshikawa~1985]{yoshikawa1985manipulability}
+Tsuneo Yoshikawa.
+\newblock {\em Manipulability of robotic mechanisms}.
+\newblock The international journal of Robotics Research, vol.~4, no.~2, pages
+  3--9, 1985.
+
+\bibitem[Zinn~2004]{zinn2004}
+Michael Zinn, Oussama Khatib, Bernard Roth and J~Kenneth Salisbury.
+\newblock {\em Playing it safe [human-friendly robots]}.
+\newblock Robotics \& Automation Magazine, IEEE, vol.~11, no.~2, pages 12--21,
+  2004.
+
+\bibitem[Zollo~2005]{zollo2005compliance}
+Loredana Zollo, Bruno Siciliano, Alessandro De~Luca, Eugenio Guglielmelli and
+  Paolo Dario.
+\newblock {\em Compliance control for an anthropomorphic robot with elastic
+  joints: Theory and experiments}.
+\newblock Journal of dynamic systems, measurement, and control, vol.~127,
+  no.~3, pages 321--328, 2005.
+
+\end{thebibliography}

@@ -1,0 +1,407 @@
+\chapter{Generalized energy based safety indicator}
+\label{chap:motion}
+
+\setfigurepath{figures/Safety2}
+
+%=========================================================================
+
+
+%=========================================================================
+
+\section{Introduction}
+\label{sec:safety2intro}
+In this chapter, an updated version of the energy based safety indicator introduced in chapter 2 is presented. This indicator quantifies the amount of hazard represented by a robot towards a nearby human operator. For a given shape, the degree of danger during human robot interaction is mainly caused by two parameters : the impact force created at the collision instant and the contact forces existing after the establishment of physical contact. Therefore, to ensure safety, an indicator whose value is related to both parameters and that can be expressed using the control input is proposed. A safety criterion, namely a bound on the maximum value of the safety indicator, is then derived. 
+
+
+\section{Interaction forces and the safety indicator}
+The generated impact force at a collision instant can be written as a function of the dissipated energy and the shock absorption distance:
+\begin{equation}
+\begin{split}
+\int_u F_{impact} du  & = E_{dissipated} \\
+                      & = E_{c}^{hum} + E_{c}^{rob},
+\end{split}
+\label{eq:Energydissipationmodel}
+\end{equation}
+
+$ F_{impact} $ is the generated impact force during the collision, $u$ the shock absorption distance and $E_{dissipated}$ the dissipated energy which is equal to the sum of the kinetic energy $E_{c}$ of both the human operator and the robot. At a given time, very few assumptions can be made on the state of energy of the human operator and on its future evolution. As a consequence, the retained safety indicator $S_c$ is robot-centred. $E_{c}^{rob}$ is directly related to the impact force and can be expressed using the actuation torque. It is therefore to be considered for the formulation of the safety indicator. Before physical contact : 
+\begin{equation}
+\begin{split}
+ S_c = E_{C|k+1}^{i,j} = \frac{1}{2}  m(\vect{q})_{i,j}^{eq} v_{i,j|k+1}^2
+\end{split} 
+\end{equation}
+where $1/m(\vect{q})_{i,j}^{eq}  = J(\vect{q})_{C}^{i,j} M(\vect{q})^{-1} J(\vect{q})_{C}^{{i,j}^T}$. $m(\vect{q})_{i,j}^{eq}$ is the equivalent mass of the robot segment $i$ in the direction of obstacle $j$ expressed in the cartesian space \cite{khatib1995inertial}. $M(\vect{q})$ is the joint space inertia matrix of the robot and $\vect{q}$ its joint space configuration. $v_{i,j|k+1} = J(\vect{q})_{C}^{i,j} \dot{\vect{q}}$ is the relative velocity of the closest point $C$ belonging to the robot segment $i$ in the direction of obstacle $j$, with respect to obstacle $j$ . $J(\vect{q})_{C}^{i,j}$ is the Jacobian of the robot segment $i$ expressed at $C$ and projected along the distance vector towards obstacle $j$. 
+
+During the movement of the robot, the force $\vect{F}_{C|k} = m(\vect{q})_{i,j}^{eq} \left\| \vect{\ddot{X}}_{C|k} \right\|_{i,j}$ driving the potential contact point $C$ along a considered trajectory tracking task and projected in the direction $i,j$ of the obstacle, makes it move from position $\vect{X}_{C|k}$ to the next desired position $\vect{X}_{C|k}^*$. Newton's third law of motion is satisfied :
+ 
+\begin{equation}
+\begin{split}
+2 \hspace{0.5mm} \textnormal{sign(}  \vect{\ddot{X}}_{|k} \textnormal{)}_{i,j} \hspace{0.5mm} \left\| \vect{\ddot{X}}_{C|k} \right\|_{i,j} & \left\| \vect{X}_{C|k} - \vect{X}_{C|k}^* \right\|_{i,j} \\
+& = v_{C|k+1}^2 - v_{C|k}^2
+\end{split}
+\label{eq:2pts_mvt_dyn}
+\end{equation}
+
+Multiplying both sides of (\ref{eq:2pts_mvt_dyn}) by $\dfrac{1}{2}
+m(\vect{q})_{i,j}^{eq}$ results in:
+ 
+\begin{equation}
+\begin{split} 
+m(\vect{q})_{i,j}^{eq} \left\| \vect{\ddot{X}}_{C|k} \right\|_{i,j} & \left\| \vect{X}_{C|k} - \vect{X}_{C|k}^* \right\|_{i,j} \\ 
+& = \frac{1}{2} m(\vect{q})_{i,j}^{eq} (v_{C|k+1}^2 - v_{C|k}^2) \\
+E_{p_{|k}} & = E_{c_{C|k+1}} - E_{c_{C|k}}
+\end{split}
+\label{eq:Ec_var_eq_Ep}
+\end{equation}
+
+$\vect{X}_{C|k}$ and $\vect{X}_{C|k+1}^{*}$ are respectively the current and next desired cartesian positions of the potential contact point $C$. $\vect{\ddot{X}}_{C|k} = \dot{J}(\vect{q})_{C}^{i,j} \vect{\dot{q}} + J(\vect{q})_{C}^{i,j} \vect{\ddot{q}} $ is the cartesian acceleration at the potential contact point $C$. $\vect{\dot{q}}$ and $\vect{\ddot{q}}$ are the articular velocity and acceleration.  
+$\left\|\vect{A}\right\|_{i,j}$ is the norm of vector $\vect{A}$ projected in the $i,j$ direction.
+ 
+The \textit{injected} potential energy $E_{p|k}$ when released modifies the kinetic energy of the robot in the right direction to accomplish the trajectory tracking task. Therefore, the kinetic energy of the system $E_{c|n}$ at a given time step $k = n$ can be expressed as the sum of all the previously injected potential energies $E_{p|k}$ : 
+\begin{equation}
+E_{c|n} = \sum\limits_{k=0}^{n-1} E_{p|k}
+\label{eq:Ec_eq_sum_Ep}
+\end{equation}
+
+Because the tracked trajectory is being discretized, every time step, only a small amount of potential energy $E_{p|k}$ is being transformed into kinetic energy. From (\ref{eq:Ec_eq_sum_Ep}), the modulation of the potential energy $E_{p|k}$ injected every time step in the system can directly influence the resulting kinetic energy and therefore the impact force $\vect{F}_{impact}$.
+
+After the establishment of physical contact, contact forces are created as a consequence of the potential energy generated within the human operator-robot system. The force $\vect{F}_{C|k}$ driving the contact point at each time step $k$ in the direction of the considered trajectory tracking task is derived from this potential energy $E_{p|k}$ :
+\begin{equation}
+\vect{F}_{C|k} = -\vect{\nabla} E_{p|k} 
+\label{eq:F_drved_Ep}
+\end{equation}
+Thus :
+\begin{equation}
+\begin{split}
+E_{p|k} & = -\int_{\vect{x}_{C|k}}^{\vect{x}_{C|k+1}^{*}} \vect{F}_{C|k} d\vect{x} \\
+           & = -\vect{F}_{C|k} \left\| \vect{X}_{C|k} - \vect{X}_{C|k+1}^{*} \right\|_{i,*}
+\end{split}
+\label{eq:Ep_is_force_int}
+\end{equation}
+
+With :
+\begin{equation}
+\begin{split}
+\vect{F}_{C|k} = m(\vect{q})_{i,*}^{eq} \vect{\ddot{X}}_{C|k}^{i,*} 
+\end{split}
+\label{eq:expl_F_meq}
+\end{equation}
+
+$i,*$ represents the directing vector between the point $C$ on a considered segment $i$ and its desired position $*$. $E_{p|k}$ is directly related to the contact forces and can be expressed using the actuation parameters. It is therefore used for the formulation of the safety indicator during the physical contact phase. The retained safety indicator $S_p$ is robot centred and expressed as following :
+
+\begin{equation}
+S_p = E_{p|k} = -\vect{F}_{C|k} \left\| \vect{X}_{C|k} - \vect{X}_{C|k+1}^{*}\right\|_{i,*}
+\end{equation}
+
+
+To ensure safety for both the robot and any nearby obstacle, the introduced indicators have to be considered for each (robot segment $i$, obstacle $j$) pair. \textit{i.e.} for $n_o$ obstacles and a robot composed of $n_b$ mobile bodies, $n_o \times n_b$ safety indicators are to be used. Which may over constrain the control problem. A solution is to consider in real time only one closest (point $C$ , obstacle $j$) pair. However, discontinuities caused by the shape and dynamic of both the robot and the considered obstacle and also the distance acquisition system are to be dealt with. Within the framework of this chapter, and without loss of generality, a single obstacle $O$ is considered and the only mobile body of the robot considered for safety is the end-effector (EE). Indeed, it is the last segment of the fixed base serial robot (Kuka LWR4) that holds the practical load and consequently deploys the maximum energy (kinetic and potential).    
+
+\begin{equation}
+\begin{split}
+S_c = E_{c|k+1}^{EE,O} =  E_{c|k}^{EE,O} + E_{p|k}^{EE,O}
+\end{split}
+\label{eq:Ec_constr_2}
+\end{equation}
+
+\begin{equation}
+\begin{split}
+S_p = E_{p|k}^{i,*} = - m(\vect{q})_{i,*}^{eq} \vect{\ddot{X}}_{C|k}^{i,*} \left\| \vect{X}_{C|k} - \vect{X}_{C|k+1}^{*} \right\|_{i,*}
+\end{split}
+\label{eq:Ep_constr_2}
+\end{equation}
+
+$S_c$ represents the amount of kinetic energy that would be dissipated by the end-effector and the human operator in case of a collision. On the other hand, $S_p$ represents the amount of potential energy stored in the obstacle-robot system during a physical contact phase. This same potential energy when released is transformed into kinetic energy when physical contact is released.
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                  %SAFETY LIMIT VALUE%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Safety limit value}
+For $S_c$, the safety criterion represents the maximum amount $E_{c limit}$ of kinetic energy  allowed to be dissipated during a human-robot impact. To prevent over limiting the dynamic of the system, the idea is as following: When the human operator is far from the robot, the system can be as dynamic as possible to accomplish its main task (maximum kinetic energy $E_{c max}$ allowed). A constraint $E_{c limit}$ depending on the distance between the two is placed on the kinetic energy of the robot end-effector so the system is forced into a safe dynamic behaviour. At this time, if any physical contact is engaged, the resulting impact force will be harmless (see Fig.~\ref{fig:niveauEnergie2}).    
+
+\begin{equation}
+ S_c \leq E_{c limit} = E_{c safe} + f(d)
+\label{eq:Ec_constr}
+\end{equation}
+
+
+The value of $E_{c safe}$ depends on the contact zone, the shape of the tool carried by the end-effector, its apparent mass and the maximum allowed velocity [56 haddadin]. Putting $E_{c safe} = 0$ forces the end-effector to stop at a distance $d = d_{safe}$ from the human operator. When contact is allowed: $E_{c safe} > 0$ is the maximum value of kinetic energy allowed for the robot just before collision. $f(d)$ is a weighting function depending on the distance $d$ between the end-effector and the considered obstacle (see Fig.~\ref{fig:niveauEnergie21}). 
+
+When the relative distance between the robot and the human operator is decreasing, the system must be able to develop sufficient breaking capabilities (torque and jerk) to satisfy the imposed constraint on kinetic energy; And this during two phases: First at the meeting of the constraint, the braking movement induced by the actuators must be inside the max/min feasible torque/jerk domains and still be able to make the kinetic energy cope with its constraint; The second is when the kinetic energy is sticking to the maximum allowed value. The variation of the weighting function $f(d)$ must therefore account for the (torque and jerk capacities) robot dynamics at every time-step. 
+
+From the Work-Energy theorem, the amount of work exerted on the robot during the breaking phase is equal to the variation of its kinetic energy. Moreover, this work can be expressed as a product between the \textit{equivalent breaking force $F_{eq}$} applied on the end-effector and the breaking distance:
+\begin{equation}
+\begin{split}
+W &= \Delta E_c 
+\\
+&= F_{break eq} (d-d_{safe}) 
+\\
+&= E_{c limit}(d) - E_{c limit}(d_{safe}) 
+\\
+&= f(d) - f(d_{safe}).
+\end{split}
+\end{equation}
+
+\begin{figure}
+    \centering
+	\includegraphics[width=0.7\columnwidth]{\figurepath/niveauEnergie_graph21}
+    \caption{Evolution of the constraint on kinetic and potential energy  depending on the distance $d$ between the end-effector and the obstacle.}
+    \label{fig:niveauEnergie21}
+\end{figure}
+
+By choosing $f$ to be linear inside the distance energy working zone (see Fig.~\ref{fig:niveauEnergie21}), we can write:
+\begin{equation}
+f(d) = K (d - d_{safe}).
+\end{equation}
+
+The smaller the braking distance, the higher must be the slope coefficient of the weighting function $f(d)$. $K$ represents the equivalent breaking force applied on the end-effector  in the direction of the obstacle. It depends on the available braking torque $\boldsymbol{\tau}_{braking}$, jerk capabilities and the Jacobian of the end-effector in direction of the considered obstacle $J(\vect{q})_C$: 
+
+\begin{equation}
+\boldsymbol{\tau}_{breaking}  = J(\vect{q})_C^{T} \vect{K}.
+\end{equation}
+
+For every time step, the available equivalent braking force can be computed as following :
+
+\begin{gather}
+\argmin \limits_{\boldsymbol{K}} \left\|\vect{K}\right\|^{2},
+\raisetag{-.5em}
+\label{eq:K_minimizing_opt}
+\end{gather}
+
+s.t: $\boldsymbol{\tau}_{breaking}  = J(\vect{q})_C^{T} \vect{K}$
+
+$\vect{K}$ must be guaranteed over all the braking distance $d$. However, $\boldsymbol{\tau}_{breaking}$ and $J(\vect{q})_C$ can only be considered constant locally and $\vect{K}$ is thus a function of the future configurations of the robot. Given the non linear nature of robotic manipulators, predicting the evolution of $\vect{K}$ is a complex problem. In the worst cases, this value is very close to $0$ and to ensure safety $E_{c limit}$  should always be equal to $E_{c safe}$, strongly limiting the dynamic performances of the robot when $d < d_{max}$. On an other hand, using actuators capable of deploying high braking torques will significantly decrease the worst case (smallest) braking distance. A local estimation of $\boldsymbol{\tau}_{breaking}$ and $J(\vect{q})$ is therefore a good approximation. Given the global objectives of this work, an average value of $\vect{K}$ ($>0$) is considered all over the workspace of the robot. 
+
+For $S_p$, the safety criterion represents the maximum amount $E_{p limit}$ of potential energy allowed to be stored at time step $k$ within the human-robot system during a physical contact phase. The value of $E_{p limit}$ depends on several aspects: The desired degree of passivity of the robotic system, the maximum allowed contact force, if a spring-damper like behaviour is preferred and more importantly the degree of danger if physical contact is lost. Indeed, when contact breaks, the stored potential energy $E_{p limit}$ is to be transformed into kinetic energy and if collision occurs, the resulting impact force $F_{impact}$ should not cause any damage. Therefore, the maximum value acceptable for  $E_{p limit} = E_{p safe}$ is $E_{c safe}$: 
+
+\begin{equation}
+\begin{split}
+S_p \leq E_{p limit} = E_{p safe} \\
+With :
+0 \leq E_{p limit} \leq E_{c safe}
+\end{split}
+\label{eq:Ep_constr}
+\end{equation}
+
+\begin{figure}
+    \centering
+	\includegraphics[width=0.7\columnwidth]{\figurepath/niveauEnergie_graph22}
+    \caption{Evolution of the kinetic energy constraint depending on the distance $d$ between the end-effector and the obstacle.}
+    \label{fig:niveauEnergie22}
+\end{figure}
+
+(\ref{eq:Ec_constr}) and (\ref{eq:Ep_constr}) constraints can be implemented into a control optimization problem using two different approaches: the switching method and the simultaneous implementation one. Fig.~\ref{fig:niveauEnergie21} and Fig.~\ref{fig:niveauEnergie22} give an overall description of the switching process: Before physical contact and during the approach of the human operator, only the constraint on $S_c$ is activated. At the collision, the kinetic energy of the colliding part of the robot is dissipated causing the impact force. Constraint on $S_c$ is then removed and (\ref{eq:Ep_constr}) activated (both instantaneously). Because of the enabled physical contact, potential energy within the human-robot system starts to increase to reach the maximum allowed value. Depending on $E_{p safe}$, the robotic system is more or less passive and can be moved by the human operator. When contact is released, (\ref{eq:Ep_constr}) is instantaneously deactivated and (\ref{eq:Ec_constr}) progressively activated. The safe maximum allowed kinetic energy $E_{c limit}$ variates linearly from $0$ to $E_{c safe}$ preventing a hazardous fast transformation of potential energy into kinetic energy.
+
+For a repetitive trajectory tracking task, the amount of injected potential energy (as the next desired position is given) can be measured. Because the trajectory to follow is being discretized, before physical contact and every time step, only a small amount of potential energy is injected and transformed into kinetic energy as the robot moves. This way, the potential energy profile of any trajectory tracking movement can be measured then bounded. Using (\ref{eq:Ep_constr}) and the measured energetic profile, the robot is prevented from deploying any additional energy than what is used for the main task: 
+
+\begin{equation}
+S_p \leq E_{p limit} = E_{p profile} 
+\label{eq:Ep_constr_3}
+\end{equation}
+  
+(\ref{eq:Ep_constr_3}) can therefore always be activated and used as a low level security layer. The robot will automatically comply to any external force and prevents the generation of harmful contact forces during a physical contact phase. While (\ref{eq:Ep_constr_3}) is used to limit instantaneous added potential energy, (\ref{eq:Ec_constr}) can be used at the same time to limit the accumulation of injected and transformed potential energy. Both constraints are compatible and implemented at the same time in the optimization control problem. 
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                 %SAFE DYNAMIC CONTROLLER%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Safe dynamic controller}
+In this section a dynamic control strategy that ensures safety for both the human operator and the robot is proposed. The objective is to compute the control torque $\boldsymbol{\tau}$ in order to to perform a trajectory tracking task while respecting a number of constraints at every time-step: 
+\begin{itemize}
+\item respect the introduced safety criteria ($S_c$ and $S_p$) to prevent damaging collisions and harmful contact forces. 
+\item respect the physical limitations of the robots actuators.
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                     %TASK FORMULATION%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Task Formulation}
+The same trajectory tracking task used in the previous chapters is considered. A cartesian acceleration task is defined as an error between the expected acceleration $\vect{\ddot{X}}^c$ and the real acceleration $\vect{\ddot{X}}$ of the robot-end effector. Considering $\vect{\ddot{X}} =  J(\vect{q}) \vect{\ddot{q}} + \dot{J}(\vect{q}) \vect{\dot{q}}$ (where $J(\vect{q})$ is the Jacobian of the end-effector), it can be written as function of the control input using the equation of motion of the system:
+\begin{equation}
+ \vect{\ddot{X}} = J(\vect{q}) M(\vect{q})^{-1} \left(\boldsymbol{\tau} - \vect{b}(\vect{q},\vect{\dot{q}})\right) + \dot{J}(\vect{q}) \vect{\dot{q}},
+\label{Xddot}
+\end{equation}
+where $\vect{b}(\vect{q},\vect{\dot{q}})$ are the non linear terms of the equation of motion, namely gravity, Coriolis and centrifugal induced generalized forces. $\vect{\ddot{X}}^c$ can be computed with a PD controller with feed-forward term in order to track some desired trajectory $\vect{X}(t)^\star$. The acceleration task function to minimize can then be written:
+\begin{equation}
+ \vect{g}\left(\boldsymbol{\tau},\vect{\ddot{X}}^c\right) =  \vect{\ddot{X}}^c - \left(J(\vect{q}) M(\vect{q})^{-1} \left(\boldsymbol{\tau} - \vect{b}(\vect{q},\vect{\dot{q}}) \right) + \dot{J}(\vect{q}) \vect{\dot{q}}\right) .
+\label{accelerationError}
+\end{equation}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+              %CONSTRAINTS FORMULATION%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Constraints formulation}
+First, the physical limitations of the robotic system must be accounted for when solving the control problem. The computed control input $\boldsymbol{\tau}_{|k}$ at instant $k$ must be such that the considered limits are never violated. The actuators limitations are considered at the following levels: $\vect{q}$, $\vect{\dot{q}}$, $\vect{\ddot{q}}$ and $\vect{\dddot{q}}$. Generally, these are expressed as inequality constraints and activated only one time step before hitting the limits; This can result into a compatibility problem. Indeed, for e.g. no sufficient braking torque and jerk are available to cope with an articular position limit within only one time step. Therefore, modified formulations detailed into the previous chapter are used to express the limitations as inequality constraints activated several time steps ahead to guaranty sufficient braking capabilities until to cope with the constraint.      
+
+The considered physical limitations can naturally be written as inequality constraints:
+\begin{equation} 
+\left\{\begin{array}{lcl}
+\vect{q}_{m} \leq \vect{q}_{|k+n_7+n_9} \leq \vect{q}_{M}, \\
+\vect{\dot{q}}_{m} \leq \vect{\dot{q}}_{|k+n_1} \leq \vect{\dot{q}}_{M}, \\
+\boldsymbol{\tau}_{m} \leq \boldsymbol{\tau}_{|k} \leq \boldsymbol{\tau}_{M},\\
+\vect{\dddot{q}}_{m} \leq \vect{\dddot{q}}_{|k+1} \leq \vect{\dddot{q}}_{M}
+\end{array}\right.
+\label{eq:const_15}
+\end{equation}
+
+To be easily accounted for, these constraints must be expressed as a function of the control variable $\boldsymbol{\tau}_{|k}$ (or $\vect{\ddot{q}}_{k}$). This can be done based on the state at instant $k$ and a discrete linear approximation of the behaviour of the robot in joint space:  
+
+\begin{equation} 
+\left\{\begin{array}{lcl}
+\begin{split}
+\vect{q}_{|k+n_7+n_9} & =\vect{q}_{|k} + (n_7+n_9) \vect{\dot{q}}_{|k} \delta t  \\
+             & + [\frac{(n_7^2-n_7)}{2}+n_7 n_9] \vect{\ddot{q}}_{|k} \delta t^2 \\
+             & + [\frac{n_7^3}{6}-\frac{n_7^2}{2}+\frac{n_7}{3}+\frac{n_9(n_7^2-n_7)}  {2}] \vect{\dddot{q}}_{|m,M} \delta t^3 \\
+             & + \frac{(n_9^2-n_9)}{2} \vect{\ddot{q}}_{|m,M} \delta t^2, \\
+\end{split}
+\\
+\\
+\vect{\dot{q}}_{|k+n_1} = \vect{\dot{q}}_{|k} + n_1 \vect{\ddot{q}}_{|k} \delta t + \frac{(n_1^2-n_1)}{2} \vect{\dddot{q}}_{|m,M} \delta t^2, \\
+\vect{\ddot{q}}_{|k} = M(\vect{q}_{|k})^{-1} \left(\boldsymbol{\tau}_{|k} - \vect{b}(\vect{q}_{|k},\vect{\dot{q}}_{|k})\right),
+\\
+\vect{\ddot{q}}_{|k+1} = \vect{\ddot{q}}_{|k} + \vect{\dddot{q}}_{|k} \delta t
+\end{array}\right.
+\label{eq:const_47}
+\end{equation}
+
+With $\vect{\ddot{q}}_{|m,M}$ and $\vect{\dddot{q}}_{|m,M}$ respectively the maximum or minimum feasible deceleration and jerk. $n_1$ and $n_7 + n_9$ are respectively the number of iterations to reach the constraint on the articular velocity considering the feasible jerk and the number of iterations to reach the constraint on the articular position considering the feasible jerk and torque.
+
+In an equivalent way, the safety indicators $S_{c}$ and $S_{p}$ can be expressed as a function of the control variable $\vect{\ddot{q}}_{|k}$ : 
+
+\begin{equation}
+\begin{split}
+S_c &= E_{c|k+1}^{EE,O} =  E_{c|k}^{EE,O} + E_{p|k}^{EE,O} \\
+    &= E_{c|k}^{EE,O} -m(\vect{q})_{EE,O}^{eq} \vect{\ddot{X}}_{C|k}^{EE,O} \left\| \vect{X}_{C|k} - \vect{X}_{C|k+1}^{*}\right\|_{EE,O}
+\end{split}
+\label{eq:Ec_constr_3}
+\end{equation}
+
+With $\vect{\ddot{X}}_{C|k}^{EE,O} = \dot{J}(\vect{q})_{C}^{EE,O} \vect{\dot{q}} + J(\vect{q})_{C}^{EE,O} \vect{\ddot{q}}_{|k}$
+
+\begin{equation}
+\begin{split}
+S_p = E_{p|k}^{i,*} = - m(\vect{q})_{i,*}^{eq} \vect{\ddot{X}}_{C|k}^{i,*} \left\| \vect{X}_{C|k} - \vect{X}_{C|k+1}^{*} \right\|_{i,*}
+\end{split}
+\label{eq:Ep_constr_4}
+\end{equation}
+
+From (\ref{eq:Ec_constr_3}) and (\ref{eq:Ep_constr_4}), the constraints related to $S_{c}$ and $S_{p}$ are written:
+
+\begin{equation}
+\begin{split}
+S_c =  E_{c|k}^{EE,O} + E_{p|k}^{EE,O} \leq E_{climit} - \epsilon_{d} \dot{E}_{c|k}^{EE,O} 
+\end{split}
+\label{eq:Ec_constr_5}
+\end{equation}
+
+With: $\epsilon_{d} \dot{E}_{c|k}^{EE,O}$ used for regulation.
+
+\begin{equation}
+\begin{split}
+S_p = E_{p|k}^{i,*} \leq E_{plimit}
+\end{split}
+\label{eq:Ep_constr_6}
+\end{equation}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                 %CONTROLLER FORMULATION%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Controller formulation}
+The same controller formulated in the previous chapters is  used. The control torque is computed by minimizing the norm of the  cartesian acceleration task function expressed in the following quadratic form: 
+\begin{equation}
+\argmin \limits_{\boldsymbol{\tau}}  \left\| \vect{g}\left(\boldsymbol{\tau},\vect{\ddot{X}}^c\right) \right\|_{Q_t}^2 + \epsilon  \| \boldsymbol{\tau} \|_{Q_r}^2,
+\label{eq:ctrl_pb_4}
+\end{equation}
+subject to (\ref{eq:const_15}), (\ref{eq:Ec_constr_5}) and (\ref{eq:Ep_constr_6}).
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                  %EXPERIMENTAL RESULTS%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Experimental results}
+First, the robot performs a repetitive pick and place movement where it tracks a desired position and orientation in the cartesian space (see Fig.~\ref{fig:kuka_in_xde}).
+
+The controller is implemented with no constraints on kinetic nor potential energy. Only constraints on the position, velocity and torque bounds are present. The kinetic energy $E_{c|n=k}^{\vect{x}} = \frac{1}{2} m(\vect{q})_{EE-\vect{x}}^{eq} v_{\vect{x}|k}^2$ and $E_{c|n=k}^{\vect{x}} = \sum\limits_{k=0}^{n-1} E_{p|k}^{\vect{x}}$ along the $\vect{x}$ direction are plotted for each time step $k$ (see Fig.~\ref{fig:Ec_sum_Ep1}).
+
+With: 
+
+\begin{equation}
+E_{p|k}^{\vect{x}} = m(\vect{q})_{7-\vect{x}}^{eq} \vect{\ddot{X}}_{|k}^{\vect{x}} \left\| \vect{X}_{|k} - \vect{X}_{k+1}^* \right\|_{\vect{x}}
+\label{eq:prj_plotted_data}
+\end{equation}
+
+
+\begin{figure}[h]
+\centering
+{\includegraphics[width=0.5\columnwidth]{\figurepath/Ec_sum_Ep1}}
+\caption{Kinetic energy of the robot end-effector computed using two different methods} 
+\label{fig:Ec_sum_Ep1}
+\end{figure}
+
+Independently from the sign, Fig.~\ref{fig:Ec_sum_Ep1} shows the kinetic energy of the robot end effector at every time step $n=k$ equal to all the previously injected potential energies $E_{p|k}^{\vect{x}}$ from $k=0$ to $k=n-1$. Which confirms (\ref{eq:Ec_var_eq_Ep}).
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                %Kinetic energy modulation%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Kinetic energy modulation}
+In this case, only the constraint on kinetic energy (injected potential energy) is implemented, see (\ref{eq:Ec_constr_5}).
+
+
+\begin{figure}[h]
+\centering
+{\includegraphics[width=0.5\columnwidth]{\figurepath/Contsr_Ec_sum_Ep}}
+\caption{Modulation of the kinetic energy of the robot end-effector using the injected potential energy depending on the distance to the obstacle} 
+\label{fig:Contsr_Ec_sum_Ep}
+\end{figure}
+
+As can be seen in (\ref{fig:Contsr_Ec_sum_Ep}), the kinetic energy limit is perfectly respected, exactly like in chapter I (Fig.~\ref{fig:vel_track_wO_wpC_wEc}).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   %Contact forces modulation using potential energy%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Contact forces modulation using potential energy}
+In this case, the obstacle intersects with the \circled{2}-\circled{3} segment of the pick and place movement trajectory (case $O_1$ in Fig.~\ref{fig:kuka_in_xde}). A constraint on the maximum potential energy allowed to be stored in the  system is activated just after the impact between the robot and the rigid object, $\vect{E}_{plimit} = 0$. The contact forces and the potential energy generated within the human robot system are plotted in  Fig.~\ref{fig:F_contact_x_and_Epx_with_constr_0_on_Ep}.
+   
+   
+\begin{figure}[h]
+\centering
+{\includegraphics[width=0.5\columnwidth]{\figurepath/F_contact_x_and_Epx_with_constr_0_on_Ep}}
+\caption{Constrained potential energy stored in the system and the resulting contact force} 
+\label{fig:F_contact_x_and_Epx_with_constr_0_on_Ep}
+\end{figure}
+     
+
+\begin{figure}[h]
+\centering
+{\includegraphics[width=0.5\columnwidth]{\figurepath/F_contact_x_and_Epx_without_constr_on_Ep}}
+\caption{Unconstrained potential energy stored in the system and the resulting contact force} 
+\label{fig:F_contact_x_and_Epx_without_constr_on_Ep}
+\end{figure}
+
+Compared to the case where no constraint is bounding the maximum potential energy allowed to be generated, The evolution of the contact force and potential energy can be seen in Fig.~\ref{fig:F_contact_x_and_Epx_without_constr_on_Ep}. Bigger contact forces derived from the accumulating potential energy is created between the robot and the obstacle.
+
+\section{Conclusion}
+\label{sec:safety2conclusion}
+The energy based safety indicators presented in this chapter allow a continuously safe human-robot interaction.  It allows the robotic system to adapt its dynamic behaviour from the approach of the human operator to the establishment of physical contact. Contact and impact forces are modulated all along the interaction process and the contact enabling/disabling transition is smoothed thanks to the universality of the energetic formulation. 
+
+

@@ -1,0 +1,394 @@
+\documentclass[11pt,a4paper,titlepage,twoside,openright]{book}
+% Use the UniMelb Dissertation Template
+\usepackage{amsmath}
+\usepackage{amsfonts}   % if you want the fonts
+\usepackage{graphicx}%11111111111111111111111111111
+\usepackage{tikz}%11111111111111111111111111111
+%\usepackage[french]{babel}
+\usepackage[english]{babel} 
+\usepackage{float}%11111111111111111111111111111
+\usepackage{lipsum,multicol}%11111111111111111111111111111
+%\usepackage[numbers,sort]{natbib}
+\usepackage{rotating}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\DeclareMathOperator*{\argmin}{arg~~min}
+%\usepackage{style/uomthesis}
+\usepackage{style/IEEEtrantools}
+\usepackage{mathtools}%11111111111111111111111111111
+\usepackage{xfrac}%11111111111111111111111111111
+\usepackage{lettrine}
+\usepackage{cases}
+\usepackage{pdflscape}
+\usepackage[hang,flushmargin]{footmisc}%11111111111111111111111111111
+\usepackage{hyperref}
+\usepackage[nottoc]{tocbibind}%11111111111111111111111111111
+\usepackage{empheq}%11111111111111111111111111111
+\usepackage{systeme}%11111111111111111111111111111
+\usepackage{scalerel}%11111111111111111111111111111
+\usepackage[usestackEOL]{stackengine}%11111111111111111111111111111
+\usepackage{titlesec}%11111111111111111111111111111
+\usepackage{algorithm}%11111111111111111111111111111
+\usepackage{algpseudocode}%11111111111111111111111111111*
+\usepackage{xcolor, soul}%11111111111111111111111111111
+\usepackage{caption}%11111111111111111111111111111
+%\usepackage[bottom]{footmisc}%11111111111111111111111111111
+\usepackage{algorithmicx}%11111111111111111111111111111
+\usepackage{multirow}
+\usepackage{blindtext}
+\usepackage{hyperref}
+\usepackage{nameref}
+\usepackage{subcaption}
+\usepackage{url}
+\usepackage{pdflscape}
+\usepackage{afterpage}
+\usepackage{capt-of}
+\usepackage{enumitem}
+\usepackage{soul}
+\usepackage{setspace}
+\usepackage{changepage}
+\usepackage{fancyhdr}
+%\usepackage{geometry}
+\usepackage[a4paper, total={170mm,257mm}, outer=23mm, inner=27mm, top=35mm, bottom=30mm]{geometry}
+\newcounter{mylabelcounter}
+
+
+\makeatletter
+\newcommand{\labelText}[2]{%
+#1\refstepcounter{mylabelcounter}%
+\immediate\write\@auxout{%
+  \string\newlabel{#2}{{1}{\thepage}{{\unexpanded{#1}}}{mylabelcounter.\number\value{mylabelcounter}}{}}%
+}%
+}
+\makeatother
+%\usepackage{style/uomthesis}
+
+
+
+
+\newcommand\abstractname{Abstract}  %%% here
+\makeatletter
+\if@titlepage
+  \newenvironment{abstract}{%
+      \titlepage
+      \null
+      \@beginparpenalty\@lowpenalty
+      \begin{center}%
+        {\bfseries \Huge\abstractname\vspace{-2mm}}
+         \medskip\noindent \rule{\linewidth}{.5pt}
+        \@endparpenalty\@M
+      \end{center}}%
+     {\par\vfil\null\endtitlepage}
+\else
+  \newenvironment{abstract}{%
+      \if@twocolumn
+        \section*{\abstractname}%
+      \else
+        \small
+        \begin{center}%
+          {\bfseries \Huge\abstractname\vspace{\z@}}
+           \medskip\noindent \rule{\linewidth}{.5pt}
+        \end{center}%
+        \quotation
+      \fi}
+      {\if@twocolumn\else\endquotation\fi}
+\fi
+\makeatother
+
+
+
+
+
+
+
+
+\newcommand\acknowname{Acknowledgements}  %%% here
+\makeatletter
+\if@titlepage
+  \newenvironment{acknowledgements}{%
+      \titlepage
+      \null
+      \@beginparpenalty\@lowpenalty
+      \begin{center}%
+        {\bfseries \LARGE\acknowname\vspace{-2mm}}
+         \medskip\noindent \rule{\linewidth}{.5pt}
+        \@endparpenalty\@M
+      \end{center}}%
+     {\par\vfil\null\endtitlepage}
+\else
+  \newenvironment{acknowledgements}{%
+      \if@twocolumn
+        \section*{\acknowname}%
+      \else
+        \small
+        \begin{center}%
+          {\bfseries \Huge\acknowname\vspace{\z@}}
+           \medskip\noindent \rule{\linewidth}{.5pt}
+        \end{center}%
+        \quotation
+      \fi}
+      {\if@twocolumn\else\endquotation\fi}
+\fi
+\makeatother
+
+
+
+
+
+
+ 
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[EL]{\nouppercase\leftmark}
+\fancyhead[OR]{\nouppercase\rightmark}
+\fancyhead[ER,OL]{\thepage}
+%\bibliographystyle{ieeetr} 
+
+% \geometry{
+% a4paper,
+% total={170mm,257mm},
+% outer=20mm,
+% inner=30mm,
+% top=25mm,
+% bottom=30mm,
+% }
+% 
+
+
+\newcommand\abstractname{Abstract}  %%% here
+
+\errorcontextlines\maxdimen
+
+% begin vertical rule patch for algorithmicx (http://tex.stackexchange.com/questions/144840/vertical-loop-block-lines-in-algorithmicx-with-noend-option)
+\makeatletter
+% start with some helper code
+% This is the vertical rule that is inserted
+    \newcommand*{\algrule}[1][\algorithmicindent]{\makebox[#1][l]{\hspace*{.5em}\thealgruleextra\vrule height \thealgruleheight depth \thealgruledepth}}%
+% its height and depth need to be adjustable
+\newcommand*{\thealgruleextra}{}
+\newcommand*{\thealgruleheight}{.75\baselineskip}
+\newcommand*{\thealgruledepth}{.25\baselineskip}
+
+\makeatletter
+\newcommand\footnoteref[1]{\protected@xdef\@thefnmark{\ref{#1}}\@footnotemark}
+
+
+\newcommand{\algorithmfootnote}[2][\footnotesize]{%
+  \let\old@algocf@finish\@algocf@finish% Store algorithm finish macro
+  \def\@algocf@finish{\old@algocf@finish% Update finish macro to insert "footnote"
+    \leavevmode\rlap{\begin{minipage}{\linewidth}
+    #1#2
+    \end{minipage}}%
+  }%
+}\\
+\renewcommand{\floatpagefraction}{.9}
+
+\newcount\ALG@printindent@tempcnta
+\def\ALG@printindent{%
+    \ifnum \theALG@nested>0% is there anything to print
+        \ifx\ALG@text\ALG@x@notext% is this an end group without any text?
+            % do nothing
+        \else
+            \unskip
+            \addvspace{-1pt}% FUDGE to make the rules line up
+            % draw a rule for each indent level
+            \ALG@printindent@tempcnta=1
+            \loop
+                \algrule[\csname ALG@ind@\the\ALG@printindent@tempcnta\endcsname]%
+                \advance \ALG@printindent@tempcnta 1
+            \ifnum \ALG@printindent@tempcnta<\numexpr\theALG@nested+1\relax% can't do <=, so add one to RHS and use < instead
+            \repeat
+        \fi
+    \fi
+    }%
+\usepackage{etoolbox}
+% the following line injects our new indent handling code in place of the default spacing
+\patchcmd{\ALG@doentity}{\noindent\hskip\ALG@tlm}{\ALG@printindent}{}{\errmessage{failed to patch}}
+\makeatother
+
+% the required height and depth are set by measuring the content to be shown
+% this means that the content is processed twice
+\newbox\statebox
+\newcommand{\myState}[1]{%
+    \setbox\statebox=\vbox{#1}%
+    \edef\thealgruleheight{\dimexpr \the\ht\statebox+1pt\relax}%
+    \edef\thealgruledepth{\dimexpr \the\dp\statebox+1pt\relax}%
+    \ifdim\thealgruleheight<.75\baselineskip
+        \def\thealgruleheight{\dimexpr .75\baselineskip+1pt\relax}%
+    \fi
+    \ifdim\thealgruledepth<.25\baselineskip
+        \def\thealgruledepth{\dimexpr .25\baselineskip+1pt\relax}%
+    \fi
+    %\showboxdepth=100
+    %\showboxbreadth=100
+    %\showbox\statebox
+    \State #1%
+    %\State \usebox\statebox
+    %\State \unvbox\statebox
+    %reset in case the next command is not wrapped in \myState
+    \def\thealgruleheight{\dimexpr .75\baselineskip+1pt\relax}%
+    \def\thealgruledepth{\dimexpr .25\baselineskip+1pt\relax}%
+}
+% end vertical rule patch for algorithmicx
+
+
+
+
+
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}\\
+
+
+\algnewcommand{\IfThenElse}[3]{% \IfThenElse{<if>}{<then>}{<else>}
+  \State \algorithmicif\ #1\ \algorithmicthen\ #2\  #3}
+  
+  
+\newcommand{\myfrac}[3][0pt]{\genfrac{}{}{}{}{\raisebox{#1}{$#2$}}{\raisebox{-#1}{$#3$}}}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=0.5pt] (char) {#1};}}
+\newcommand{\vect}[1]{\mbox{\boldmath${#1}$}}%$
+\DeclareMathOperator*{\argmax}{arg\,max}
+%\frenchbsetup{StandardLists=true}
+
+\newenvironment{rcases}
+  {\left.\begin{aligned}}
+  {\end{aligned}\right\rbrace}
+  
+\hypersetup{
+colorlinks = true,
+linkcolor  = black,
+bookmarks  = true,
+urlcolor   = blue,
+citecolor  = blue,
+}
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+
+
+%\titlespacing*{\section}
+%{0.5pt}{5.5ex plus 1ex minus .2ex}{5.3ex plus .2ex}
+%\titlespacing*{\subsection}
+%{0.5pt}{5.5ex plus 1ex minus .2ex}{5.3ex plus .2ex}
+%\titlespacing*{\subsubsection}
+%{0.5pt}{5.5ex plus 1ex minus .2ex}{5.3ex plus .2ex}
+%\titlespacing*{\paragraph}
+%{0.5pt}{5.5ex plus 1ex minus .2ex}{5.3ex plus .2ex}
+% For drafts uncomment the following line
+%\usepackage[light,timestamp,first]{draftcopy}
+
+% Comment out the following line TO MARK blank pages with the 
+% text "This page intentionally left blank."
+% \newcommand{\markblankpages}{}
+
+% Comment out the following line for the copy submitted to the library
+\newcommand{\archivalpapernote}{}
+
+
+\pdfminorversion=5
+\pdfobjcompresslevel=4
+% User defined commands
+\input{style/user-defined}
+
+\begin{document}
+
+	%%
+	%% Front matter
+	%%
+	\begin{frontmatter}
+		%\frontmatterheadings
+%outer=23mm, inner=27mm	
+\begin{adjustwidth}{-6mm}{-6mm}
+
+		% Collect the dissertation information for the title page
+		\input{Cover-English}
+		\cleardoublepage
+		
+		% Generate the title page
+		%\maketitle
+
+		% Author declaration
+		%\makedeclaration
+\end{adjustwidth}	
+		% Acknowledgements
+		\input{acknowledgements}
+		\input{abstract}
+		% Preface
+		%\input{preface}
+
+		% Dedications...
+		%\input{dedication}
+
+		% Table of Contents, List of Figures, List of Tables
+		%\singlespacing
+		\tableofcontents
+
+		%\listoffigures
+		% Do not include a list of tables if you have less
+		% than 10 tables, as per SGS suggestion.
+%		\listoftables
+		\clearpage
+	\end{frontmatter}
+
+	%\input{nomenclature}
+
+	%%
+	%% Main matter
+	%%
+
+ 
+	\begin{mainmatter}
+%	\mainmatterheadings
+
+
+		
+%	\setlength{\belowdisplayskip}{14pt}
+%    \setlength{\belowdisplayshortskip}{14pt}
+%    \setlength{\abovedisplayskip}{14pt}
+%    \setlength{\abovedisplayshortskip}{14pt}	
+		
+	%\input{chapter-1-introduction}
+	\input{chapter-2-litreview}
+	\input{chapter-3-constrcomp}
+	\input{chapter-4-safety}
+	\input{chapter-5-safety2}
+	\input{chapter-6-conclusion}
+	
+	\end{mainmatter}
+
+	%%
+	%% Bibliography
+	%%
+	%\begin{backmatter}
+
+		%\chapter*{\bibname}%
+		%\markboth{\MakeUppercase\bibname}{\MakeUppercase\bibname}%
+		%
+		% Uncomment the following line to produce a
+		% bibliography list of all entries in the bib database
+		%\nocite{*}
+		%\bibliography{bib/thesis}
+			%bib/wireless,%
+			%bib/dsl,%
+			%bib/selfpubs%
+		
+	%\end{backmatter}
+	
+	
+	%%
+	%%Appendix
+	%%
+	\begin{appendix}
+		\input{appendix-constrcomp}
+	\end{appendix}
+
+	\bibliography{bib/thesis}
+
+\end{document}

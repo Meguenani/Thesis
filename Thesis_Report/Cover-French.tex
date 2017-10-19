@@ -1,0 +1,106 @@
+% *-----------------------------------------------------------*
+% *         Page de Garde (basé sur le modèle UPMC)
+% * Dernière modif le : 2012/02/13
+% *-----------------------------------------------------------*
+% * README: 
+% *   - se compile avec pdflatex
+% *   - l'entête de ce fichier sert pour générer une page
+% *     unique. Ce texte latex peut s'inclure (partie comprise 
+% *     entre les lignes et  ) dans un document existant.
+% *-----------------------------------------------------------*
+
+% - - - - - - - entête pour avoir une page unique 
+
+
+% - - - - - - - début de la page 
+
+\newenvironment{wide}{
+  \begin{list}{}{
+      \setlength{\topsep}{0pt}
+      \addtolength{\leftmargin}{-2.cm}
+      \addtolength{\rightmargin}{-1cm}
+      \setlength{\listparindent}{\parindent}
+      \setlength{\itemindent}{\parindent}
+      \setlength{\parsep}{\parskip}
+      }
+      \item[]}%
+     {\end{list}}
+
+
+\thispagestyle{empty}
+
+%\includegraphics[scale=0.12]{upmc-logo.png}
+
+{
+
+\begin{wide}
+
+%\vspace*{1cm}
+
+\begin{center}
+\bf {\huge{TH\`ESE DE DOCTORAT}}
+ \\ 
+ \large{\bf DE l'UNIVERSIT\'E PIERRE ET MARIE CURIE}
+
+\vspace*{0.5cm}
+
+\small{\'Ecole doctorale Sciences M\'ecaniques, Acoustique, \'Electronique et Robotique  de Paris}
+
+
+\vspace*{0.5cm}
+
+\large{Sp\'ecialit\'e \\ 
+{\bf M\'ecanique - Robotique}\ \\ }
+
+
+
+\vspace*{0.5cm}
+
+{Pr\'esent\'ee par }\ \\
+
+\vspace*{0.5cm}
+{\huge {\bf Anis Meguenani}}
+
+%\vspace*{1cm}
+%{Pour obtenir le grade de \ \\[1ex]
+%{ DOCTEUR de l'UNIVERSIT\'E PIERRE ET MARIE CURIE}} \ \\
+
+
+\vspace*{0.5cm}
+\hrulefill \\
+{\huge {\bf  Contr\^ole de Robots collaboratifs : Une Approche \'Energétique aux probl\'ematiques de S\^uret\'e \\ }}
+\hrulefill \\
+\vspace*{0.5cm}
+\textit{Soutenance pr\'evue le 30 Juin 2016}\\
+
+\end{center}
+
+\vspace*{0.8cm} 
+
+
+\begin{center}
+\Large{\bf Devant le jury compos\'e de :}\\
+\vspace*{0.2cm}
+\begin{small}
+{\def\arraystretch{1.3}\tabcolsep=5pt
+\begin{tabular}{lll}
+M. Olivier {\sc STASSE} & Directeur de recherche au LAAS-CNRS, Toulouse    & Examinateur  \\
+M. Guillaume {\sc MOREL} & Professeur \`a l'Universit\'e Pierre et Marie Curie    & Examinateur  \\
+M. Philippe {\sc BIDAUD}    & Professeur \`a l'Universit\'e Pierre et Marie Curie      & Directeur de th\`ese  \\
+M. Vincent  {\sc PADOIS}     & Ma\^itre de Conf\'erences \`a l'Universit\'e Pierre et Marie Curie &  Encadrant \\
+
+
+\end{tabular}%
+}
+\end{small}
+\end{center}
+
+\end{wide}
+
+}
+% - - - - - - - fin de la page 
+
+
+
+
+

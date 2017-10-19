@@ -1,0 +1,82 @@
+\select@language {english}
+\contentsline {chapter}{\numberline {1}Introduction, State-of-the-art and proposed contributions}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Safe mechanical design}{2}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Flexible actuators}{3}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Lightweight Robotic Systems}{4}{subsection.1.2.2}
+\contentsline {section}{\numberline {1.3}Control}{5}{section.1.3}
+\contentsline {section}{\numberline {1.4}Safety standards}{7}{section.1.4}
+\contentsline {section}{\numberline {1.5}Discussion and proposed contributions}{8}{section.1.5}
+\contentsline {subsection}{\numberline {1.5.1}Considerations when dealing with safety during human-robot interaction}{8}{subsection.1.5.1}
+\contentsline {subsection}{\numberline {1.5.2}Considerations when dealing with constraints}{9}{subsection.1.5.2}
+\contentsline {section}{\numberline {1.6}Related Publications}{12}{section.1.6}
+\contentsline {chapter}{\numberline {2}Constraints incompatibility}{13}{chapter.2}
+\contentsline {section}{\numberline {2.1}Introduction}{13}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}The general problem}{14}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Different types of constraints}{18}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Corresponding literature}{19}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.4}Contributions}{21}{subsection.2.1.4}
+\contentsline {section}{\numberline {2.2}The QP form and the different constraints incompatibility cases}{22}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Task formulation}{22}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Controller formulation}{22}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Articular constraints: naive formulations}{23}{subsection.2.2.3}
+\contentsline {section}{\numberline {2.3}Test case scenario for simulation}{24}{section.2.3}
+\contentsline {section}{\numberline {2.4}Articular constraints: new formulations}{25}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Joint velocity constraint incompatibility with jerk limits}{26}{subsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.1.1}Illustration 1}{29}{subsubsection.2.4.1.1}
+\contentsline {subsection}{\numberline {2.4.2}Joint position constraint incompatibility with deceleration and/or jerk limits}{30}{subsection.2.4.2}
+\contentsline {subsubsection}{\numberline {2.4.2.1}Joint position constraint incompatibility with deceleration limits}{35}{subsubsection.2.4.2.1}
+\contentsline {paragraph}{\numberline {2.4.2.1.1}Illustration 2}{37}{paragraph.2.4.2.1.1}
+\contentsline {subsubsection}{\numberline {2.4.2.2}Joint position constraint incompatibility with jerk limits 1}{40}{subsubsection.2.4.2.2}
+\contentsline {paragraph}{\numberline {2.4.2.2.1}Illustration 3}{42}{paragraph.2.4.2.2.1}
+\contentsline {subsubsection}{\numberline {2.4.2.3}Joint position constraint incompatibility with jerk limits 2}{45}{subsubsection.2.4.2.3}
+\contentsline {paragraph}{\numberline {2.4.2.3.1}Illustration 4}{47}{paragraph.2.4.2.3.1}
+\contentsline {subsubsection}{\numberline {2.4.2.4}Joint position constraint incompatibility with both deceleration and jerk limits 1}{48}{subsubsection.2.4.2.4}
+\contentsline {paragraph}{\numberline {2.4.2.4.1}Illustration 5}{53}{paragraph.2.4.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.2.5}Joint position constraint incompatibility with both jerk and deceleration limits 2}{55}{subsubsection.2.4.2.5}
+\contentsline {paragraph}{\numberline {2.4.2.5.1}Illustration 6}{60}{paragraph.2.4.2.5.1}
+\contentsline {section}{\numberline {2.5}Final bounds on the acceleration control variable}{60}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Illustration 7}{61}{subsection.2.5.1}
+\contentsline {section}{\numberline {2.6}Conclusion}{65}{section.2.6}
+\contentsline {chapter}{\numberline {3}Energy based safe control}{67}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introduction}{67}{section.3.1}
+\contentsline {section}{\numberline {3.2}Interaction forces and safety indicators}{69}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Kinetic energy}{69}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Potential energy}{71}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Relation between kinetic and potential energies}{73}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Safety limit values}{75}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Safety limit value for the pre-collision safety indicator}{75}{subsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.1.1}Pre-collision safety criterion extension}{78}{subsubsection.3.3.1.1}
+\contentsline {subsection}{\numberline {3.3.2}Safety limit value for the physical-contact safety indicator}{79}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}Energy constraints implementation}{80}{section.3.4}
+\contentsline {section}{\numberline {3.5}Task energy profile}{80}{section.3.5}
+\contentsline {section}{\numberline {3.6}Safe dynamic controller}{81}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Task formulation}{81}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}Constraints formulation}{82}{subsection.3.6.2}
+\contentsline {subsubsection}{\numberline {3.6.2.1}Articular constraints}{82}{subsubsection.3.6.2.1}
+\contentsline {subsubsection}{\numberline {3.6.2.2}Energy related constraints}{83}{subsubsection.3.6.2.2}
+\contentsline {subsection}{\numberline {3.6.3}Controller formulation}{86}{subsection.3.6.3}
+\contentsline {section}{\numberline {3.7}Simulation}{86}{section.3.7}
+\contentsline {subsection}{\numberline {3.7.1}Test case scenario}{86}{subsection.3.7.1}
+\contentsline {subsection}{\numberline {3.7.2}Scenario 1: obstacle intersecting with the trajectory of the robot and no constraints on its energy}{89}{subsection.3.7.2}
+\contentsline {subsection}{\numberline {3.7.3}Scenario 2: nearby obstacle not intersecting with the trajectory of the robot and constraint on its kinetic energy}{91}{subsection.3.7.3}
+\contentsline {subsection}{\numberline {3.7.4}Scenario 3: obstacle intersecting with the trajectory of the robot and constraint on its kinetic energy}{93}{subsection.3.7.4}
+\contentsline {subsection}{\numberline {3.7.5}Scenario 4: obstacle intersecting the trajectory of the robot and constraints on its kinetic and \textit {potential} energies}{96}{subsection.3.7.5}
+\contentsline {subsection}{\numberline {3.7.6}Scenario 5: obstacle intersecting with the trajectory of the robot and constraint on its task energy profile}{99}{subsection.3.7.6}
+\contentsline {section}{\numberline {3.8}Conclusion}{102}{section.3.8}
+\contentsline {chapter}{\numberline {4}Safe human-robot interaction: experimental results}{105}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{105}{section.4.1}
+\contentsline {section}{\numberline {4.2}Experimental setup}{105}{section.4.2}
+\contentsline {section}{\numberline {4.3}Test case scenario}{106}{section.4.3}
+\contentsline {section}{\numberline {4.4}Human-robot interaction, scenario 1}{108}{section.4.4}
+\contentsline {section}{\numberline {4.5}Human-robot interaction, scenario 2}{109}{section.4.5}
+\contentsline {section}{\numberline {4.6}Human-robot interaction, scenario 3}{109}{section.4.6}
+\contentsline {section}{\numberline {4.7}Human-robot interaction, scenario 4}{112}{section.4.7}
+\contentsline {section}{\numberline {4.8}Conclusion}{113}{section.4.8}
+\contentsline {chapter}{\numberline {5}Conclusions and outlook}{119}{chapter.5}
+\contentsline {section}{\numberline {5.1}Contributions}{119}{section.5.1}
+\contentsline {section}{\numberline {5.2}Perspectives}{121}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Extension of the work on the constraints incompatibility problem}{121}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Control of collaborative robots for safe human-robot interaction}{121}{subsection.5.2.2}
+\contentsline {chapter}{\numberline {A}Appendix}{123}{appendix.A}
+\contentsline {chapter}{Bibliography}{125}{section*.83}

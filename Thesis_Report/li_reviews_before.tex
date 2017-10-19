@@ -1,0 +1,442 @@
+\chapter{Literature review}
+\label{chap:Litreview}
+% preferred location for \figurepath in this chapter
+\setfigurepath{figures/Litreview}
+The objective for human-robot collaboration is to combine the high performances in terms of precision, speed, payload and repeatability of robots  with the excellent skills of people for solving problems and taking decisions in complex situations; So tasks can be correctly executed. In pursuit of this goal, researchers worldwide are intensively studying the subject of human-robot interaction; Which is divided into two main topics\cite{albu2005physical}:
+\begin{itemize}
+\item Social and cognitive Human-Robot interaction (cHRI)
+\item Physical Human-Robot interaction (pHRI)
+\end{itemize}
+The first branch intends to understand the social, psychological and cognitive aspects related to how robots are perceived as they are introduced within human environments. Providing robots with the capability of predicting humans behaviour by estimating their affective state can considerably improve the quality of human-robot interaction. Acquired data like verbal and non verbal signals for example facial expressions and the "body language" can be used to adapt the robot actions and make its interaction with humans more effective and intuitive \cite{kulic2007affective}, \cite{mavridis2015review}. \\
+Note that in this section, the topic of (cHRI) is not reviewed and the highlight is exclusively on the (pHRI) branch that on the other hand focuses on the peculiar aspects of "physical" human-robot interaction with safety as a main criteria for developing new mechanical designs and control strategies. The main contributions in these fields are hereby briefly outlined. 
+
+\section{Safety oriented mechanical design}
+Traditionally in robots, stiff actuators governed by the principle of ``the stiffer, the better'' are used for tasks requiring tracking of a desired trajectory with high accuracy \cite{salisbury1991design}. When these are perfect for such use, they pose however various fundamental problems for applications requiring interaction with unknown and dynamic environments including humans. Such robots cannot just blindly move along computed trajectories without concern of the induced forces caused by contacts with the environment, they must be able to properly and safely react to these perturbations. These challenges can partially be tackled  from a control point of view but to reach human like compliance capabilities without sacrificing much of the machines performances, the entire robotic design must be reconsidered. Indeed, researchers quickly realized that in humans not only the brain creates the intelligence of the body, but also the morphology and biomechanics of the muscles play a critical role in the way humans think and move \cite{pfeifer2006body}. Therefore, besides the proprioceptive sensors, such as Cartesian force/torque sensors, articular torque sensors and tactile sensitive skins \cite{Fogale-robotics}; Back-drivable motors can be used to passively react to external forces \cite{townsend1993mechanical} and more recently intrinsically flexible actuators inspired from the biological spring-like properties of human muscles became a subject of interest \cite{burdet2001central}.  
+\subsection{Intrinsically flexible actuators}
+Despite the tradition of making the interface between an actuator and its load as stiff as possible, reducing this stiffness have a number of advantages that can bring the actuation closer to human capabilities; This can result in: greater shock tolerance, lower reflected inertia by decoupling the motor side from the link-side inertia, more stable and accurate force control in addition to the capacity for storing and releasing energy \cite{garabini2011optimality}, \cite{chen2013optimal}. Depending on how their stiffness and damping can be achieved, intrinsically flexible actuators can be divided into two main categories \cite{vanderborght2012variable}: \\
+\begin{itemize}
+\item Actuators with emulated compliance, where the impedance (stiffness and/or damping) of the actuator can be adjusted using software control \cite{loughlin2007dlr}. The main advantage of such actuators is the possibility to tune the desired elasticity parameters online so the mechanical behaviour can be instantaneously adapted for different tasks; On the other hand, as no physical compliant element is present, energy cannot passively be stored in the system. Active compliance has been pioneered by the DLR and is today commercialized in Kuka robotic systems \cite{bischoff2010kuka}. This technology has also been shown in hydraulic actuators on systems such as Sarcos \cite{hyon2007full} and the hydraulically actuated quadruped robot HyQ \cite{boaventura2012dynamic}.
+\item Actuators with inherent compliance that contains a passive flexible element where the effective joint impedance is altered via active control. Such designs started with earlier VIA (Variable Impedance Actuators) such as Mckibben pneumatic actuators \cite{caldwell1995control} and the famous series elastic actuator (SEA) \cite{pratt1995series}, \cite{laffranchi2011compact}, \cite{vanderborght2013variable}. This category can be divided into two main design approaches: i) Mechanisms where the mechanical compliance of the element cannot be changed (fixed compliance); For example the sagarakis et al. \cite{tsagarakis2009compact} ComPact soft actuator for the iCub robot that uses 6 linear springs and the HypoSEA \cite{ivar2011nonlinear} designed to stretch a linear spring in a non-linear way. ii) Adaptable compliance systems where the stiffness is controlled by mechanical reconfiguration; In this case, usually two motors are used: one to control the equilibrium position of the joint and a second to control its compliance. A famous example of such design is the DLR
+Floating Spring Joint (FSJ) \cite{wolf2011dlr} designed for the first 4 axes of the anthropomorphic DLR Hand Arm System \cite{}. \\
+To help tuning passive elasticity for actuators, Kashiri et al in \cite{kashiri2013stiffness} introduced a method for the selection of passive stiffness of compliant actuated arms. The method is based on the effects of passive compliance on key parameters including natural frequency, damping ratio, Cartesian stiffness and energy storage capacity.
+\end{itemize}
+More details about VIAs and their various design technologies can be found in \cite{vanderborght2013variable} and among the VIACTORS project \cite{viactors} related publications.  
+\subsection{Lightweight Robotic Systems}  
+Using the aforementioned actuation technology, robots more suitable for
+physical interaction with humans, based on lightweight and highly integrated mechatronics designs have been developed. Prominent state of the art robots from this category are depicted in Figure 69.10: \\
+%The Barrett arm
+%The Mitsubishi PA10
+The KUKA LBR iiwa is a fully torque controlled robot designed as a continuation of the DLR lightweight robotic arms line-up. Based on the DLR LWR-III, it has 7 degrees of freedom, weighs $14~kg$ and is able to achieve a unitary payload-to-weight ratio. The robot is equipped with redundant joint position sensors on both actuation and link sides and demonstrates a position repeatability of $+/-0.15~mm$. Cosidering its performances, the KUKA LBR iiwa is one of the best of its category on the market. \\
+%
+Franka Emika is a highly cost competitive robotic arm also aimed for human-robot collaboration. Launched in 2017, despite its low cost, it has similar features to other more expensive systems. The robot is equipped with torque sensors in all its 7 joints and can handle payloads up to $3~kg$ with a repeatability precision of $0.1~mm$. \\
+%
+UR10 from UNIVERSAL ROBOTS is a commercially available lightweight redundant arm with a weight of $28.9~kg$ and a payload of $10~kg$. With only 6 degrees of freedom, it has however a great working range with joints that can perform  complete $+/-360~°$ rotations. Like the Franka Emika arm, UR10 comes with various out of the box safety settings and control modes adapted for interaction with humans. \\
+%
+ABB Yumi is a collaborative dual-arm robot with 14 axes of freedom (7 in each arm). It includes flexible hands, parts feeding systems and embedded cameras. With a weight of $38~kg$, a payload of $0.5~kg$ and a precision of $0.02~mm$, the robot is specifically designed for small parts assembly. \\
+%
+Sawyer is the latest robot model from Rethink Robotics. Based on the two armed baxter, with 7 degrees of freedom, it exhibits better accuracy and repeatability performances: $+/-1~mm$ repeatability for positioning in Cartesian space. With its embedded vision, Sawyer can track human presence and locate parts in its environment. It weighs $19~kg$ and is able to handle loads up to $4~kg$. With its torque sensors, its can also be torque controlled. This system has a LED tablet as a face that can be used to render its interaction with humans more effective and intuitive.
+
+This is the case of robot manipulators actuated
+through pulleys and steel cables, where the elasticity is deter-
+mined by the elastic coefficient of the cables. Cable actuation can
+ensure human-like dimensions of the artifact, lightness and also
+anthropomorphic mass distributio
+
+\section{Control}
+%1)Parler des difrrentes techniques utuliser pour les controleurs d'interaction : ex force/position. 
+%2)Parler du plus importaht qui est le impedance controller.
+%3)Dire que sa formulation standart est por les robots stiff. 
+%4)ensuite dire les problems que ça pose pour les robots élastiques. 
+%5)Dires les nouvelles formulations.
+%6) Parler des autres stratégie comme celle de sami. 
+%
+%
+%The idea of extending human-like impedance control to robots aimed for physical interaction stared with the pioneering work of Hogan \cite{part1985impedance} The basic objective of such controllers is the achievement of a desired dynamical relation between external forces applied to the robot and its resulting movement. In many robotic  applications this dynamical behaviour is usually specified in terms  of stiffness and damping matrices with respect to some Cartesian  coordinates
+%
+%Which has since been extended to intrinsically flexible joint robots in [79, 16, 309, 15, 2015]
+%
+%
+%A Passivity  Based Cartesian  Impedance  Controller for Flexible Joint Robots 
+%- Part I: 
+%/However in many robotic  applications this dynamical behaviour is specified in terms  of stiffness and damping matrices with respect to some Cartesian  coordinates 
+%/A straight forward application of these techniques to a flexible joint robot  therefore usually will not  lead to a satisfactory performance'. In this paper an  impedance  control law is proposed  which 
+%is designed for flexible joint robots. The desired  impedance is assumed to be  a  second  order  mass- spring-damper  system.  Furthermore only  the achievement of stiffness and  damping is  considered herein,  while  the inertial behaviour is left unchanged. 
+%/However it has been shown that in practice only quite unsatisfactory results can be achieved with a restriction to purely motor position  (and velocity) based feedback controllers (without additional  non collocated  feedback) for the case of a  flexible joint robot. In some  works a controller structure based on a feedback of the joint torques as well as the link side positions was  considered and it  was  shown that this can lead to better results (see e.g. [IO]). This has  also  already been  verified experimentally with  the  DLR-light-weight-robots [2]
+%
+%
+%
+%A tank-based approach to impedance control with variable stiffness.
+%The impedance control provides a compliant behaviour during the interaction and regulates the dynamic response of the robot end-effector to interaction forces by establishing a suitable virtual mass-spring-damper system on the end-effector
+%Excessive contact force between the manipulator and the
+%environment should be prevented. Since humans control the force exerted on an object by adapting their arm stiffness, in a similar way the robot should be able to change the stiffness of its arm while performing an interaction task. The
+%/In order to imitate the surgeon’s behaviour, an impedance control with variable target stiffness is proposed in this paper
+%/The contribution of this paper is a modified impedance
+%control strategy that allows to reproduce a variable stiffness while preserving the passivity, and therefore a stable behaviour both in free motion and in interaction with partially known environments, of the robot.
+%//Analogously to the stiffness of a human arm that is adapted for different tasks; [] propose a control strategy that allows to reproduce a variable stiffness while preserving the passivity and therefore a stable behaviour of the robot, both in free motion and during physical interaction.
+%
+%
+%An  ISO10218-compliant  adaptive  damping  controller
+%for  safe  Physical  Human-Robot  Interaction:
+%the  International  Organization  for
+%Standardization  included  requirements  for  a  safe  industrial
+%robot.  This  standard  specifies  that  any  robot  must  respect
+%velocity,  power  and  contact  force  limits  at  the  tool  control
+%point (TCP) in the presence of a human
+%//An  alternative  comes  from  control,  typically  impedance
+%control [10], and its modified versions for force tracking [11],
+%force  limitation  [12],  adaptive  damping  [13]  or  exploiting
+%redundancy  [14].  However,  to  the  best  of  our  knowledge,
+%the only work that explicitly tackles the ISO1028-2011 from a control viewpoint is [15].
+%//In  this  paper,  we  propose  an  adaptive damping  controller  that  fulfills  the  ISO10218  requirements  by limiting  the  tool  velocity,  power  and  contact  force  online  (and only  when  needed
+%//
+%Adaptive Human–Robot Interaction Control for
+%Robots Driven by Series Elastic Actuators:
+%For the
+%robot driven by SEAs, which closely interacts with humans, the
+%interaction force between the human and the robot should be
+%considered as an important safety measure, and it is necessary
+%to control not only the position but also the interaction force. To
+%realize the interaction control task, hybrid position/force con-
+%trol [19] and impedance/admittance control [20]–[25] have been
+%proposed for different robots.\\
+For robots that physically interact with humans, the interaction force should imperatively be considered as an important safety measure \cite{ISO15066PDF}, it is then necessary to control not only the position but also the interaction force \cite{ikuta2001safety}. To realize the interaction control task, the idea of force control has been an active research topic with initial work in \cite{whitney1977force} and \cite{mason1981compliance}. It can be distinguished into two main approaches \cite{Villani2016force}: 
+\begin{itemize}
+\item Direct force control that uses an explicit closure of a force feedback loop. A widely adopted strategy from this category is hybrid force/position control that allows the user to simultaneously specify a desired motion along the unconstrained task directions and a desired contact force/moment along the constrained task directions \cite{raibert1981hybrid}, \cite{khatib1987unified}. A major concern with this approach is the need of an accurate model of both the interaction task and the environment of the robot.
+\item Indirect force control without explicit closure of a force feedback loop; Force control in this case is achieved via motion control. The most widely used scheme from this category is probably impedance control. The idea of extending human-like impedance control to robots aimed for physical interaction stared with the pioneering work of Hogan \cite{part1985impedance}. The basic objective of such controllers is the achievement of a desired dynamical relation between external forces applied to the robot and its resulting movement. In many robotic  applications this dynamical behaviour is specified in terms  of equivalent mass, stiffness and damping matrices with respect to some Cartesian coordinates \cite{ott2010unified}. Such control laws  provide accurate trajectory tracking in free motion while displaying passive properties (mass-spring-damper like system) in response to unexpected collisions. To overcome position tracking accuracy and stability problems when implementing impedance control for flexible joint robots; Adapted schemes that take into account the robot's joints elasticity have been proposed \cite{albu2007unified} \cite{zollo2005compliance}, \cite{ott2008passivity}, \cite{ott2008cartesian}.   
+\end{itemize}
+%Control algorithms designed for robots with non compliant actuators can
+%guarantee a stable behaviour even if a certain degree of elasticity is present in the actuation system or in the structure of the robot. The drawback, however, is a typical degradation of performances in terms positioning accuracy in tracking tasks for the robot's end-effector. It may also become a source of instability in case of interaction between the robot and the environment, as undesirable effects of chattering during contact can appear.
+Two interesting implementations are the schemes proposed by Schindlbeck et al. and Ficuciello et al. In \cite{schindlbeck2015unified}, a novel Cartesian passivity-based controller that combines both force tracking and impedance control is presented. To ensure the stability of the controller and its robustness with respect to contact loss, the concept of Task-energy tanks is used \cite{ferraguti2013tank}. In \cite{ficuciello2015variable}, a Cartesian impedance controller which parameters are modulated to enhance the comfort perceived by humans during physical interaction is presented. Better performances in terms of compromise between accuracy and execution time are obtained.  \\
+Apart from direct and indirect contact force control, various other control  approaches using internal and external force/torque sensors have been developed to handle safety during pre and post impact/contact phases \cite{ebert2002safe}, \cite{lumelsky1993real}, \cite{ikuta2003safety}. Haddadin in \cite{haddadin2008collision} and De Luca in \cite{de2006collision} present different strategies to reduce the effect of undesired impacts. A collision detection parameter based on the estimated external torque is introduced and used to scale down the link inertia obtaining a ``lighter" robot that ``flees" from the collision area. An other strategy is to use the disturbance input to slow the robot until zero velocity then pushing it back along its original path. Heizmann and Zelinsky in \cite{heinzmann2003quantitative} propose a safety criterion based on the \textit{potential impact force} to filter the control torque of the system. The introduced controller allows one to  consider two potential contact points at the same time for a real-time implementation.
+As the degree of potential injury is directly related to the mass and velocity of the colliding objects, the controller proposed in \cite{haddadin2012truly} takes into account the reflected robot inertia along a collision direction to decide about the maximum operational point velocity. The bounds on this velocity are based on experimental results relating mass, velocity, geometry and medically observable soft tissue injury by systematic drop-testing experiments with pig abdominal wall sample.
+By making use of the redundancy property of a KUKA/DLR lightweight arm, \cite{de2008exploiting} proposes a physical interaction strategy that is able to react safely to collisions while continuing to execute as much possible of the original task. 
+%
+%
+%%Variable Impedance Control of Redundant Manipulators for Intuitive Human–Robot Physical Interaction
+%The main idea of the paper is that of using in a synergic
+%way the robot’s redundancy and the modulation of the Carte- sian impedance parameters to enhance the performance during human–robot physical interaction.
+%/On the other hand, the variable impedance with a suitable modulation strategy for parameters’ tuning outperforms the constant impedance, in the sense that it enhances the comfort perceived by humans during manual guidance and allows reaching a favorable compromise between accuracy and execution time.
+%Index
+%
+%
+%
+%
+%
+%
+%In fact, elasticity of
+%mechanical transmissions induces position errors at the robot’s
+%end effector because of static deformation under gravity. In addi-
+%tion, it may generate lightly damped vibrational modes, which
+%reduce robot accuracy in tracking tasks
+%. Yet, it may become a source of instability in case of interaction between the robot and the environment, possibly leading to undesirable effects of
+%chattering during contact
+%
+%
+%
+%
+%%Unified Passivity-Based Cartesian Force/Impedance Control for Rigid and Flexible Joint Robots via Task-Energy Tanks
+%//In this paper, we strive for a robust passivity-based ap-
+%proach by combining force tracking with impedance con- trol based on the concept of energy tanks
+%//we present a solution that is able to get rid of the inherent drawback of force and set-point based indirect force control: the low robustness with respect to contact loss and the according possibility of unsafe abrupt robot motions.
+%//Contact-non-contact stabilization
+%//In this paper we proposed a novel Cartesian passivity-
+%based force/impedance controller. In order to be able to systematically fuse both concepts, we applied the concept of energy tanks such that the force tracking controller, impedance controller, energy tank, and motor dynamics together yield a passive system. Furthermore, our approach is able to cope with contact discontinuities such that no unwanted rapid motions due to contact loss may occur
+%
+%
+%%Springer robotics handbook
+
+%Active interaction control strategies can be grouped into
+%two categories: those performing indirect force control
+%and those performing direct force control. The main dif-
+%ference between the two categories is that the former
+%achieve force control via motion control, without ex-
+%plicit closure of a force feedback loop; the latter instead
+%offer the possibility of controlling the contact force and
+%moment to a desired value, thanks to the closure of
+%a force feedback loop.
+%To the first category belongs impedance control (or
+%admittance control) [9.7, 8], where the deviation of the
+%end-effector motion from the desired motion due to the
+%interaction with the environment is related to the con-
+%tact force through a mechanical impedance/admittance
+%with adjustable parameters. A robot manipulator under
+%impedance (or admittance) control is described by an
+%equivalent mass–spring–damper system with adjustable
+%parameters. This relationship is an impedance if the
+%robot control reacts to the motion deviation by gener-
+%ating forces, while it corresponds to an admittance if
+%the robot control reacts to interaction forces by impos-
+%ing a deviation from the desired motion. Special cases
+%of impedance and admittance control are stiffness con-
+%trol and compliance control [9.9], respectively, where
+%only the static relationship between the end-effector po-
+%sition and orientation deviation from the desired motion
+%and the contact force and moment is considered. Notice
+%that, in the robot control literature, the terms impedance
+%control and admittance control are often used to refer to
+%the same control scheme; the same happens for stiffness
+%and compliance control. Moreover, if only the relation-
+%ship between the contact force and moment and the end-
+%effector linear and angular velocity is of interest, the
+%corresponding control scheme is referred to as damping
+%control [9.10].
+%Indirect force control schemes do not require, in
+%principle, measurements of contact forces and mo-
+%ments; the resulting impedance or admittance is typi-
+%cally nonlinear and coupled. However, if a force/torque
+%sensor is available, then force measurements can be
+%used in the control scheme to achieve a linear and de-
+%coupled behavior.
+%
+%
+%Differently from indirect force control, direct force
+%control requires an explicit model of the interaction
+%task. In fact, the user has to specify the desired motion
+%and the desired contact force and moment in a con-
+%sistent way with respect to the constraints imposed
+%by the environment. A widely adopted strategy be-
+%longing to this category is hybrid force/motion control,
+%which aims at controlling the motion along the uncon-
+%strained task directions and force (and moment) along
+%the constrained task directions. The starting point is the
+%observation that, for many robotic tasks, it is possible to
+%introduce an orthogonal reference frame, known as the
+%compliance frame [9.11] (or task frame [9.12]) which
+%allows one to specify the task in terms of natural and
+%artificial constrains acting along and about the three
+%orthogonal axes of this frame. Based on this decompo-
+%sition, hybrid force/motion control allows simultaneous
+%control of both the contact force and the end-effector
+%motion in two mutually independent subspaces. Simple
+%selection matrices acting on both the desired and feed-
+%back quantities serve this purpose for planar contact
+%surfaces [9.13], whereas suitable projection matrices
+%must be used for general contact tasks, which can also
+%be derived from the explicit constraint equations [9.14–
+%16]. Several implementation of hybrid motion control
+%schemes are available, e.g., based on inverse dynam-
+%ics control in the operational space [9.17], passivity-
+%based control [9.18], or outer force control loops closed
+%around inner motion loops, typically available in indus-
+%trial robots [9.2].
+%
+%
+%
+%
+%
+%
+%
+%
+%%Compliance Control for an
+%%Anthropomorphic Robot with
+%%Elastic Joints: Theory and
+%%Experiments
+%Control algorithms conceived for completely rigid robots may
+%guarantee a stable behaviour even if a certain degree of elasticity in
+%the actuation system and motor transmission elements, or in the
+%link structure, is present. The price to pay, however, is a
+%typical degradation of robot performance. In fact, elasticity of
+%mechanical transmissions induces position errors at the robot’s
+%end effector because of static deformation under gravity. In addi-
+%tion, it may generate lightly damped vibrational modes, which
+%reduce robot accuracy in tracking tasks
+%. Yet, it may become a source of instability in case of interaction between the robot and the environment, possibly leading to undesirable effects of
+%chattering during contact
+%
+%Several solutions have been proposed in the literature to cope
+%with the control issue of robot manipulators with rigid joints in-
+%teracting with the working environment. They range from the con-
+%cept of active compliance to the concept of making the robot’s end
+%effector to behave as a mechanical impedance see, e.g., Ref.9for a survey , up to the hybrid position/force control approach 10
+%
+%This paper is aimed at presenting a complete theoretical formu-
+%lation of a compliance control in the Cartesian space plus gravity
+%compensation for robots with elastic joints. The controller consists
+%of a proportional-derivative action plus gravity compensation, as
+%for rigid robots, but a new position variable, named the gravity-
+%biased motor position, is introduced 18. This allows using only
+%the position and velocity information, available from the position
+%sensors on the rotors, to achieve an easy regulation of compliance
+%in the Cartesian space. Asymptotic stability is proven for two Formulations of the control law, namely, compliance control with constant gravity compensation as in 15, and compliance control with on-line gravity compensation.
+%  
+%  
+%  
+%% On the Passivity-Based Impedance Control of Flexible Joint Robots
+%In this paper, an impedance control law is proposed that is designed for flexible joint robots. The desired impedance is as- sumed to be a mass–spring–damper system. Furthermore, only the achievement of stiffness and damping is considered herein, while the inertial behaviour is left unchanged. In case of a robot with rigid joints, such a stiffness and damping behaviour could, in principle, be implemented quite easily with a PD-like con- troller (formulated in the relevant coordinates). In [10], it was proven that a motor-position-based PD-controller leads to a sta- ble closed-loop system also in case of a robot with flexible joints. Furthermore, in [11], a stability analysis of a hybrid position/force controller for a flexible joint robot without grav- itational effects was presented. However, it has been shown that, in practice, often only quite limited performance can be achieved with a restriction to purely motor position (and ve- locity) based feedback controllers (without additional noncol- located feedback) for the case of a flexible joint robot. In some works, a controller structure based on a feedback of the joint torques as well as the link side positions was considered, and it was shown that this leads to an increase of performance (see, e.g., [12]). This has also already been verified experimentally with the DLR lightweight robots [13]  
+
+
+
+
+\section{Quantifying human safety}
+
+
+  
+a systematic method for tuning the passive elasticity of the individual joints is still missing. This tuning is typically performed using experimental trial and error processes and very little information on the criteria and methodologies used is available. This work studies the effects of passive compliance on the key parameters of the robotic systems including natural frequency, damping ratio, Cartesian
+
+  
+  
+is 
+traditional to 
+make 
+the 
+interface 
+between 
+an 
+actuator 
+and its load 
+as 
+stiff 
+as possible. Despite this tradition, reducing 
+interface  stiffness  offers 
+a  number 
+of 
+advantages,  including 
+greater shock  tolerance,  lower  reflected 
+inertia, 
+more 
+accurate 
+and 
+stable 
+force control, less inadvertant damage to 
+the environ- 
+ment, and 
+the 
+capacity 
+for 
+energy 
+storage. 
+As 
+a trade-off, reduc- 
+ing 
+interface    stiffness   also    lowers    zero    motion 
+force 
+bandwidth
+
+
+
+%Why we use intrinsically flexible joints
+
+
+
+for an improved
+torque/mass ratio and energy efficiency with new con-
+trol methods to exploit the stiffness and damping prop-
+erties are required
+
+
+
+By considering the phys-
+ical contact of the human and the robot in the design
+phase, possible injuries due to unintentional contacts
+can be considerably mitigated
+
+%%%%%
+%%%%%
+%%%%%
+In order for humans and robots to interact in an effective and intuitive manner, robots must obtain information about the human affective state in response to the robot's actions. This secondary mode of interactive communication is hypothesized to permit a more natural collaboration, similar to the "body language" interaction between two cooperating humans. This paper describes the implementation and validation of a hidden Markov model (HMM) for estimating human affective state in real time, using robot motions as the stimulus. Inputs to the system are physiological signals such as heart rate, perspiration rate, and facial muscle contraction. Affective state was estimated using a two- dimensional valence-arousal representation. A robot manipulator was used to generate motions expected during human-robot interaction, and human subjects were asked to report their response to these motions. The human physiological response was also measured. Robot motions were generated using both a nominal potential field planner and a recently reported safe motion planner that minimizes the potential collision forces along the path. The robot motions were tested with 36 subjects. This data was used to train and validate the HMM model. The results of the HMM affective estimation are also compared to a previously implemented fuzzy inference engine.
+
+
+Providing a robot with the capability of predicting a person's behaviour by estimating his affective state can considerably improve the quality of the human-robot interaction. Input data like verbal or non verbal signals (e.g. facial expressions of the person) can be used as input data to adapt the behaviour of the robot Indeed, for a person, interaction with such a robot can be more effective and intuitive. 
+
+
+
+Such application cases and related technical issues raise crit-
+ical questions of physical safety, reliability, and, more general-
+ly, communication and operating robustness. All these aspects
+can be captured by the concept of dependability
+
+
+gestures, gait, facial expressions, dialogue, online learning
+
+The new KUKA LWR design can be considered as intrinsically safe and therefore suitable for human-robot-physical interaction
+
+It should be safeguarded as a “traditional”
+robot system (people are separated from it)
+\\
+\\
+\section{Safety standards for human-robot interaction}
+%% Safety standards for human-robot interaction
+The original safety standard for traditional industrial robots is the ISO 10218 initially edited in 1992. During its last revision, the decision was taken to separate it into two parts: ISO 10218-1 and ISO 10218-2 lately revised in 2011. The first part is dedicated particularly to manufacturers; It describes dangerous phenomena related to robots and gives recommendations and guidelines for protective measures and safe design indications in line with the machinery directive 2006/42/EC. 
+Technical specifications in this part concern, in a non-exhaustive way definitions and requirements related to: singularity, protection against hazards that can be caused by mechanical transmission, requisites in case of loss of power, performances of safety control circuits, conditions relative to control modes and limitations of power and strength plus the description of emergency stop functions.
+Furthermore, ISO 10218-2 is drafted to give more diverse safety requirements and guidance to integrators for the installation of industrial robots and industrial robot systems "robot+cell(s)". ISO 10218-2 describes how to properly conduct a task-based risk assessment to eliminate or reduce risks associated with hazards to personnel; Hazards engendered by the design, implementation and use of these systems. The newest and most exciting utility introduced in ISO 10218-1 and -2 is the direct interaction between robotic systems and human operators. Indeed, historically, for safety reasons, industrial robots are usually separated from humans by the mean of physical segregation, i.e. cages. ISO 10218-1 and -2 give general guidelines regarding safety requirements for human-robot interaction but do not provide the needed metrics for the design of collaborative robots, tasks and control strategies. In these standards, four collaborative techniques are considered:
+\begin{itemize}
+\item Safety-rated monitored stop: The system does a monitored stop so the human can enter its workspace to perform an assigned task. The robot system resumes its autonomous task once the operator is out.
+\item Hand-guiding: Based on a safety-rated monitored stop, a human operator can take control of the end-effector to move the robot. Once motion is complete, a monitored stop is issued again as the person exists the workspace.
+\item Speed separation monitoring: the robot arm and the human maintain a safe distance from each other. Depending on this distance, the speed of the robot is reduced.
+\item Power and force limiting: Power and force of the robot are limited by design or control during physical interaction.
+\end{itemize}
+The latest document from the International Standardization Organization (ISO) fully dedicated to human-robot collaboration is the ISO/TS 15066. Issued in 2016, this Technical Specification (TS) is a game changer for the robotics industry as it gives specific and detailed metric-based safety guidance needed to assess and control risks during human-robot interaction. Pressure, force and  even transferred energy limit values based on injury and pain sensitivity thresholds for various areas of the human body are provided. 
+
+
+
+%. in situation of physical interaction
+%Threshold limit values particularly on  Based on the "Change from pressure to pain" study conducted by the university of Mainz Institute for work in co
+%
+%
+%
+%On the other hand ISO/TS 15066 is a game changer for the industry. issued in 2016, it is fully dedicated to human-robot collaboration. This technical specification is the 
+%
+%lthough these standards give some initial guidelines for human-robot interaction, 
+%
+%ISO/TS 15066 is a game changer for the industry as it gives specific and detailed metric-based safety guidance needed to assess and control risks during human-robot interaction. Based on the "Change from pressure to pain" study conducted by the university of Mainz Institute for work in co
+%
+% ISO/TS 15066 provides guidelines for the design and implementation of a collaborative workspace that reduces risks to people. It specifies:
+%
+%    Definitions
+%    Important characteristics of safety control systems
+%    Factors to be considered in the design of collaborative robot systems
+%    Built-in safety-related systems and their effective use
+%    Guidance on implementing the following collaborative techniques: safety-rated monitored stop; hand guiding; speed and separation monitoring; power and force limiting.
+%
+%
+%
+%The technical specification includes data from a study on pain thresholds of different parts of the human body. This information can be used to develop and implement collaborative power- and force-limited robot applications.
+
+\\
+\\
+
+%ISO 10218-2:2011 describes the basic hazards and hazardous situations identified with these systems, and provides requirements to eliminate or adequately reduce the risks associated with these hazards. ISO 10218-2:2011 also specifies requirements for the industrial robot system as part of an integrated manufacturing system
+%
+%
+% the marking and the characteristics and principles of measure were updated for time(weather) and the distance of stop(ruling).
+%
+%
+%
+%La présente partie de l'ISO 10218 spécifie les exigences et les recommandations pour la prévention
+%intrinsèque, les mesures de protection et les informations pour l'utilisation des robots industriels. Elle décrit les
+%phénomènes dangereux de base associés aux robots et fournit des exigences pour éliminer ou réduire de
+%manière appropriée les risques associés à ces phénomènes dangereux.
+%
+%
+%Les exigences techniques révisées comportent, de façon non limitative, la définition et
+%les exigences relatives à la singularité, la protection contre les phénomènes dangereux engendrés par la
+%transmission, les exigences en cas de perte de puissance, les performances des circuits de commande de
+%sécurité, l'ajout d'une fonction d'arrêt de catégorie 2, les exigences relatives à la sélection du mode et à la
+%limitation de puissance et de force, le marquage et les caractéristiques et principes de mesure actualisés pour
+%le temps et la distance d'arrêt.
+%
+%
+%specifies requirements and guidelines for the inherent safe design, protective measures and information for use of industrial robots. It describes basic hazards associated with robots and provides requirements to eliminate, or adequately reduce, the risks associated with these hazards.
+%
+%
+%fournit des recommandations pour garantir la
+%sécurité lors de la conception et de la construction des robots. La sécurité dans les applications robotisées
+%étant influencée par la conception et l'application de l'intégration du système de robot considéré,
+%l'ISO 10218-2 donne des recommandations pour la protection du personnel pendant l'intégration, l'installation,
+%les essais de fonctionnement, la programmation, l'exploitation, la maintenance et la réparation des robots.
+%
+%
+%
+%Le présent document spécifie les prescriptions de conception, les mesures de
+% protection et les informations pour l’utilisation des robots afin de répondre aux
+%   exigences de sécurité de la Directive «Machines» 2006/42/CE
+
+
+
+
+
+
+
+
+
+

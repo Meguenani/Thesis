@@ -1,0 +1,4 @@
+pdflatex Main-Thesis.tex
+bibtex Main-Thesis.aux
+pdflatex Main-Thesis.tex
+pdflatex Main-Thesis.tex

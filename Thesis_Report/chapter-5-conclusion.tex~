@@ -1,0 +1,12 @@
+%%
+%% VERSION HISTORY
+%%    22 May 2006 - John Papandriopoulos - Original version
+%%    12 Jul 2007 - John Papandriopoulos - Converted into template
+%%
+
+\chapter{Conclusions and Perspectives}
+\label{chap:conclusion}
+Human-robot interaction is one of the most complex scenarios that a robotic system could face. Indeed, in a such constrained situation, several criteria must be satisfied with safety being the most important one. First the safety of the human operator which if compromised could lead to lethal injuries and second, the guaranty every time step of an optimal solution by the control algorithm. The reaction capabilities of the system must at the same time be taken into consideration.
+The work presented in this manuscript brings new insights in this direction. A generic approach to the different physical phenomena occurring during human-robot interaction is presented. Energy is used to modulate impact forces, the contact forces and to smooth the contact enabling/disabling phase. 
+
+Along the interaction process, the robotic system is subjected to both static and dynamic constraints. Generally the constraints are activated only one time step before hitting the limit. In most cases, with a control period of $1 ms$, no sufficient reaction capabilities are available to comply to the constraint. Therefore, we proposed a new formulation of static constraints that allows the activation at the right instant considering the available reaction capabilities. The approach has been validated in simulation with the articular velocity and position constraints of a KUKA LWR4 serial robot. The constraints are triggered several time steps ahead considering the torque and jerk capabilities. Experimental implementation and the reformulation of dynamic constraints (e.g. constraint on the kinetic energy of the robot in the direction of the human operator) are the subject of our present and future work.

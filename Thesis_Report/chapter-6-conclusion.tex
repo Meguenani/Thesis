@@ -1,0 +1,297 @@
+%%
+%% VERSION HISTORY
+%%    22 May 2006 - John Papandriopoulos - Original version
+%%    12 Jul 2007 - John Papandriopoulos - Converted into template
+%%
+
+\chapter{Conclusions and outlook}
+\label{chap:conclusion}
+\begin{synopsis}
+In this chapter, the thesis is concluded with a summary of the introduced contributions and an outlook on some lines of research identified as the consequent extension of the presented work.
+\end{synopsis}
+%Human-robot interaction is one of the most complex scenarios a robotic system could face. Indeed, in such dynamic and non-predictable environment, several criteria must be satisfied with safety being the most important one. In this work, the principle of safety is tackled at two different levels. First, when reactive control loops are used to handle the user specified objectives and/or constraints, the solvability of the control problem and the effect of the retained solution on the solvability of future control problems is rarely studied. Consequently, \textit{constraints incompatibilities} that render the control problem impossible to solve without inevitable constraints violations are frequent in robotics, thus compromising safety. For example, for a telemanipulated robot, to keep a safe distance from a static obstacle within its workspace, the system's deceleration and jerk capabilities must be taken into account in the formulation of constraints so their simultaneous satisfaction can be ensured. Therefore, using a control law able to solve a feasible problem and maintain its permanent feasibility is the main condition to ensure safety regarding constraints satisfaction and non-violation.
+\section{Contributions}
+Human-robot interaction is one of the most complex scenarios a robotic system could face. Indeed, in such dynamic and non-predictable environment, several criteria must be satisfied with safety being the most important one. In the work presented in this thesis, the concept of safety is tackled at two different levels. First, when reactive control loops are used to handle the user specified objectives and/or constraints, the \textit{solvability} of the control problem and the effect of the retained solution on the \textit{solvability} of future control problems is rarely studied. Consequently, \textit{constraints incompatibilities} that render the control problem impossible to solve without inevitable constraints violation are frequent in robotics, thus compromising safety. Therefore, using a control law able to solve a feasible problem and maintain its permanent feasibility is the main condition to ensure safety regarding constraints satisfaction. The second part of this work tackles the problem of safety for a human-operator entering the workspace of a robotic arm and physically interacting with it. In a generic way, the physical integrity of both the robot and its environment are considered for synthesizing a safe controller that makes the robot more suitable for human-robot interaction.  \\
+
+In the first chapter, the context of this thesis is presented from the industrial point of view of how to integrate robotic manipulators as collaborative tools which tasks are defined on the fly and constraints discovered in real-time. This objective exhibits general issues regarding: 1) how to properly guarantee safety for humans when interacting with robots and also: 2) in terms of constraint-based control design. For the first field of investigation, a short overview of the state-of-the-art techniques and standards employed to ensure safety during human-robot interaction are presented and used to position our contributions to open problems. These contributions go beyond what is usually proposed in the literature as a generic approach based on the modulation of the robot's energy at the control level is used to continuously guarantee safety for a human-operator during different interaction phases. For the second field of investigation, the issue of \textit{constraints incompatibility} that occurs when using reactive control loops is introduced. The various specifications that must be considered when dealing with such a problem are highlighted. Finally, our contributions to the resolution of the \textit{constraints incompatibility} problem are presented: not only the resolution of the control problem is tackled but its formulation is also addressed. The latter is very critical since it conditions the existence of a solution to this problem over an infinite horizon of time.
+
+In the second chapter, the problem of constraints incompatibility related to the physical limitations of a serial robot is studied. 
+The relation between the different parameters of the robot's extended state $S=\{\vect{q}, \vect{\dot{q}}, \vect{\ddot{q}}, \vect{\dddot{q}}\}$ along with all the combinations of the set \{joint position limits - joint velocity limits - joint acceleration limits - joint jerk limits\} is examined to reveal possible incompatibility cases. These incompatibilities are then resolved by reformulating the naive expressions of the joint physical bounds related constraints for a robot controlled at the dynamic-level. The constraint on joint velocity is modified to take into account the amount of jerk producible by the robot actuators and the constraint on articular position is reformulated to include both the robot's maximum articular deceleration and jerk capabilities. The final max/min bounds on the dynamic control input enable the system to successfully and simultaneously cope with all the constraints related to its articular physical limitations as an optimal solution for the control problem is guaranteed at every control time-step. 
+
+In the third chapter, a new control strategy that allows the modulation of both the kinetic energy of the robot and the amount of \textit{potential energy} held in its controller is introduced. This approach is successfully used to ensure safety for a human-operator during his interaction with a robotic arm. The impact force at the establishment of a physical contact is reduced by monitoring then constraining the kinetic energy of the robot under some \textit{safe} limit just before collision. The contact force on the other hand is diminished thanks to the constraint on the \textit{potential energy} that accumulates in the controller of the robot during physical-contact. Each constraint is composed of: 1) an introduced energy based safety indicator that reflects the degree of danger  the robotic manipulator represents towards the human and, 2) an energy based safety criterion that corresponds to the amount of energy considered to be safe for the robot to exhibit during the interaction. \\
+First used separately to express the energy based constraints, the relation between the robot's kinetic and potential energies is formulated and the robot along with its controller is represented as a system to which \textit{potential energy} is \textit{injected} and transformed into kinetic one. Based on this analysis, the concept of \textit{task energy profile} is introduced. A task energy profile is the instantaneous amount of \textit{potential energy} held in the controller of the robot and that transforms into kinetic one during its free movements. For tasks with repetitive motion cycles, this profile can be registered then used for the formulation of a constraint that saturates the instantaneous amount of \textit{potential energy} loaded in the controller of the robot. With such constraint, this amount, intended to increase in case of a deliberate or non-intentional physical contact with the environment, is saturated; which results into a compliant robot that does not generate harmful contact forces. Illustrated on a KUKA LWR4 robotic arm in simulation, the introduced safe control strategy allows the robot to safely physically interact with its environment.
+
+In the forth chapter, the controller along with the safety related constraints introduced in Chapter~\ref{chap:safety} are implemented on a real KUKA LWR4 as it physically interacts with a human-operator. A vision system is used to detect the approach of the human and computes his real-time distance to the robot. Depending on this distance, the robot's kinetic energy is modulated. A large amount is allowed when the person is distant and a safe value is imposed before collision. During physical contact, thanks to the constraint on the \textit{potential energy} that accumulates into the controller of the robot, the resulting contact force is saturated, the robot is compliant and can safely be moved or pushed by the human-operator. The introduced control scheme allows a person to safely enter the workspace of a robotic manipulator, physically interact with it and securely release contact and move away. The \textit{potential energy} held in the controller of the robot during physical contact is prevented from rapidly and dangerously transforming into kinetic one. The system progressively recovers its optimal dynamics.
+\section{Perspectives}
+The scope of the research topics tackled in this thesis leaves many unanswered questions and hence several directions for future research. They are hereby briefly discussed.
+\subsection{Extension of the work on the constraints incompatibility problem}
+Although the new formulations of the articular velocity and position constraints allow to \textit{properly}\footnote{Considering the amount of deceleration and jerk producible by the actuators of the robot.} cope with the articular velocity and position limits when applied to a simulated mechanism, the gap between simulation and real world affects however the quality of the introduced algorithms when used on a real world system. Indeed, unmodeled uncertainties such as sensor noises and delays can result in control strategies that are feasible for the ideal system but not for the real one. Accounting for the robot dynamics model uncertainties in the formulation of the control problem is therefore essential when implementing the introduced algorithms on real world robots. The methods developed in \cite{del2016robustness} to account for uncertainties in optimization problems seem to constitute a good approach with which this problem can be tackled. In their work, Del prete et al. model the uncertainties related to the dynamic control input of a humanoid robot using two different techniques: 1) as deterministic variables belonging to a known set, a solution that is feasible for any realization of the uncertainty in the given set is then computed and alternatively, 2) as random variables following known probability distributions so the solution that satisfies the constraints with a large-enough probability is retained.
+Besides the required work for the implementation of the introduced new constraints formulations on real robots, the proposed solutions for the problem of \textit{constraints incompatibility} resolved for constraints of type 1 (see table~\ref{my-label}}) need to be extended for constraints expressed in operational space, as for example, the constraint on energy introduced in Chapter~\ref{chap:safety}. Because related to human safety, the energy based constraints are of hight priority and therefore must imperatively always be satisfied. As explained in Chapter~\ref{chap:Constrcomp}, guaranteeing the \textit{viability} of the state of the robot when its controller includes such type of constraints is not straight forward. \textit{Prediction} is however the key word to successfully handle this type of constraints and for which MPC \textit{(Model Predictive Control)} seems to be the most appropriate approach as discussed in Section~\ref{subsec:crspnd_litt}.
+% Section VIII
+%summarizes the paper before discussing the future work.
+\subsection{Control of collaborative robots for safe human-robot interaction}
+%Energie de l'homme
+%Reformulation des energy basesd constraints to meet the 
+The energy-based control approach for safe human-robot interaction developed in Chapter~\ref{chap:safety} and Chapter~\ref{chap:safety2} constitutes a very interesting framework as it:
+\begin{itemize}
+\item defines a unified way to ensure safety for a human-operator during different interaction phases with a robotic manipulator;
+\item tends to break the classical barrier which consists in making a distinction between the robot motion in free-space and its behaviour in contact with the environment by considering mainly the system's energetic state. 
+\end{itemize}
+However, several aspects that have been neglected must be investigated in a required future work. The first one is actually of high importance: while monitoring the energy of the robot and constraining it under some safe limit is necessary, it is unlikely that safety can be guaranteed if this value does not account for the energy displayed by the human during physical interaction. Indeed, if not void, the very own kinetic energy of the human for example just before collision could compromise his safety even if the robot's kinetic energy is properly saturated. Its amount should then also be estimated and considered in the formulation of the energy based safety indicators. A way of effectively accounting for the effective mass of the collided human body region and its velocity is proposed in the recent ISO/TS 15066 standard \cite{ISO15066PDF}. \\A second limiting factor is related to the absence of a proper theoretical proof regarding the stability of the introduced energy-based safe controller. We tend to think that our control strategy leads to safe and stable behaviours of the robot during human-robot interaction but no theoretical approach to prove it has yet been proposed. Just like the stability analysis approach used in \cite{schindlbeck2015unified}, looking at this problem in terms of \textit{passivity} could be one way to tackle this question. 
+%Third, because related to human safety, the energy based constraints are of hight priority during human-robot interaction and therefore must obligatory always be satisfied. As seen from our work on the problem of \textit{constraints incompatibility}, guaranteeing the \textit{viability} of the state of the robot when its controller includes such type of constraints is not straight forward. \textit{Prediction} is however the key word to successfully handle this type of constraints for which MPC \textit{(Model Predictive Control)} seems to be the most appropriate approach.
+Finally, including safety as a constraint in the formulation of the control problem is the method for guaranteeing human safety proposed in this work. An additional approach for handling safety that can be used simultaneously, is to consider the amount of energy displayed by the robot directly at the level of trajectory generation (considering trajectory tracking tasks). Similarly to fixing the max/min velocity, acceleration and jerk at the generation of a desired trajectory, maximum deployed kinetic energy can also be included as a design parameter in a real-time algorithm of trajectory generation. 
+
+
+
+
+
+
+
+
+%It will enable the
+%further development of methodologies towards flexible multi-robot systems
+%that are capable of performing complex interaction scenarios with humans.
+%For this the unification of motion planning, interaction control, and collision
+%detection/reaction will be further pursued. This is expected to finally lead to the versatility and dynamic behavior of a robot that is so crucially needed in pHRI. In order to accomplish this goal a unified way of treating motion and
+%phyiscal interaction needs to be found.
+
+
+
+%A further important aspect to be investigated in the future is the extension of
+%the different methods for collision avoidance, detection, and reaction to the
+%hand-arm system and biped systems as the DLR Biped.
+
+
+
+%To sum up this thesis made significant contributions to a variety of nowa-
+%days open research problems in human interactive robotics and has indeed
+%opened up entirely new branches of robotics research. Developing the the-
+%oretical foundation and the experimental validation of various methods for
+
+
+
+%Starting from the perspective of safety in robotics, the work evolved over the
+%last years towards the much broader topic of pHRI. Recently, also novel as-
+%pects of cognitive Human-Robot Interaction, as e.g. the application of (in-
+%dustrial) design procedures for interaction processes in order to increase the
+%robot’s intuitiveness, usability, and feedback modalities, were investigated.
+%On the long term the ultimate goal is this holistic view on HRI, which will
+%potentially lead to a truly human-centered robot design from every perspec-
+%tive.
+
+
+
+
+
+
+
+%Apart from assessing possible injuries occurring during human-robot impacts,
+%it is equally important to evaluate and rate the quality of robot control coun-
+%termeasures for reducing or even preventing them. Primarily, a robot sharing
+%its workspace with humans should be able to detect collisions quickly and to
+%react safely in order to limit injuries due to physical contacts. In the absence of
+%external sensing, relative motion between robot and human is not predictable
+%and unexpected collisions may occur at any location along the robot arm. Ef-
+%ficient collision detection and reaction methods that use only proprioceptive
+%robot sensors and provide also directional information for safe robot reaction
+%after collisions were introduced and validated for this purpose. It was shown
+%that the proposed methods are sufficiently powerful such that even sharp con-
+%tact with a scalpel can be detected for a cutting motion and that the otherwise
+%resulting very severe injury is entirely prevented.
+
+
+
+
+%
+%%%%%
+%Finally, some lines of research shall be presented that are directly related to the
+%present thesis and were identified as the consequent extension of the presented
+%work.
+%%%%%%
+%The energy-based control approach for safe human-robot interaction developed in this thesis
+%provides a very interesting framework as it:
+%• shifts the notion of safety from a pure geometric problem to a physical one;
+%• tends to break the classical barrier which consists in making a distinction between robot motion in
+%free-space and robot motion in contact with the environment.
+%However, some aspects of the problem have been neglected. The first one is actually central: while monitoring
+%the robot energy and constraining it under some limit values is interesting, it is very unlikely that we can
+%guarantee any safety if this limit does not account for the energy introduced by the human operator in the
+%interaction. This energy should be considered and estimated in some way. Before contact, the corresponding
+%kinetic energy could be computed based on an estimation of the person mass as well as an estimation of
+%its velocity. When contact is established, the energy introduced by the operator can be accessed through
+%measurement of the interaction wrenches as well as of the tracking errors induced by these external wrenches.
+%The second limiting factor is related to the absence of a proper theoretical analysis of safety. We tend to
+%believe that our approach can lead to safe behaviours but we have not yet used any theoretical approach to
+%prove it. Looking at this problem in terms of passivity could be one way to go and constitutes a short term
+%perspective.
+%%%%%%
+%The rather large scope of the research topic tackled in this thesis leaves many unanswered
+%questions and hence several directions for future research. We briefly discuss these
+%directions here.
+%
+%
+%
+%
+%
+%Human-robot interaction is one of the most complex scenarios that a robotic system could
+%face. Indeed, in a such constrained situation, several criteria must be satisfied with safety
+%being the most important one. First the safety of the human operator which if com-
+%promised could lead to lethal injuries and second, the guaranty every time step of an
+%optimal solution by the control algorithm. The reaction capabilities of the system must at
+%the same time be taken into consideration. The work presented in this manuscript brings
+%new insights in this direction. A generic approach to the different physical phenomena
+%occurring during human-robot interaction is presented. Energy is used to modulate im-
+%pact forces, the contact forces and to smooth the contact enabling/disabling phase.
+%Along the interaction process, the robotic system is subjected to both static and dy-
+%namic constraints. Generally the constraints are activated only one time step before hit-
+%ting the limit. In most cases, with a control period of 1ms, no sufficient reaction capa-
+%bilities are available to comply to the constraint. Therefore, we proposed a new formu-
+%lation of static constraints that allows the activation at the right instant considering the
+%available reaction capabilities. The approach has been validated in simulation with the
+%articular velocity and position constraints of a KUKA LWR4 serial robot. The constraints
+%are triggered several time steps ahead considering the torque and jerk capabilities. Ex-
+%perimental implementation and the reformulation of dynamic constraints (e.g. constraint
+%on the kinetic energy of the robot in the direction of the human operator) are the subject
+%of our present and future work.
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+% First the safety of the human operator which if compromised could lead to lethal injuries and second, the guaranty every time step of an optimal solution by the control algorithm. The reaction capabilities of the system must at the same time be taken into consideration.
+%The work presented in this manuscript brings new insights in this direction. A generic approach to the different physical phenomena occurring during human-robot interaction is presented. Energy is used to modulate impact forces, the contact forces and to smooth the contact enabling/disabling phase. 
+%
+%Along the interaction process, the robotic system is subjected to both static and dynamic constraints. Generally the constraints are activated only one time step before hitting the limit. In most cases, with a control period of $1 ms$, no sufficient reaction capabilities are available to comply to the constraint. Therefore, we proposed a new formulation of static constraints that allows the activation at the right instant considering the available reaction capabilities. The approach has been validated in simulation with the articular velocity and position constraints of a KUKA LWR4 serial robot. The constraints are triggered several time steps ahead considering the torque and jerk capabilities. Experimental implementation and the reformulation of dynamic constraints (e.g. constraint on the kinetic energy of the robot in the direction of the human operator) are the subject of our present and future work.
+%
+%
+%we study the problem
+%of constraints incompatibility related to the articular physical limitations of a serial robot. Incompati-
+%bility cases between constraints are exposed and resolved by proposing new mathematical formulations
+%for the joint position and velocity constraints. These new formulations take into account the dynamic
+%capabilities of the robot’s actuators. The constraints are implemented into a QP (quadratic program-
+%ming) scheme to resolve the control problem of a redundant robot (KUKA LWR4) at the dynamic level
+%(torque control). The resulting new expressions allow an automatic activation of the constraints, at
+%the right time to comply with the position, velocity, torque/acceleration and jerk limits, all at the same
+%time. A solution for the optimization control problem is available every time-step, smoother control
+%torques are produced and the viability of the state of the robot is guaranteed
+%
+%
+%
+%
+%
+%In the second chapter, the formulation problem is introduced from a safety preser-
+%vation perspective. Indeed, ensuring the existence of a solution to the control problem
+%that complies with robotic constraints is a safety issue both for robots and their envi-
+%ronments. We show that to ensure safety either the constraints expressions have to be
+%permanently compatible, i.e. allow some space for control at any time, or alternative
+%safe behaviors (ASBs) must be designed in order to properly manage emergency cases
+%where the robot has to be stopped in a safe manner. As examples, the study of all the
+%combinations of the set {joint position limits - joint velocity limits - joint acceleration
+%limits - obstacles avoidance} is proposed. As a result, the intuitive expression of joint po-
+%sition limits is modified to remain compatible with joint accelerations limits, and ASBs
+%are proposed to ensure safety when dealing with obstacles avoidance, as compatibility
+%for these constraints is hard to prove, due to the dependence of operational deceleration
+%capabilities with respect to the robot configuration. A particular method is developed
+%to take full advantage of the usual avoidance techniques while maintaining safety.
+%
+%
+%
+%
+%In the first chapter, the context of this thesis is presented from the industrial point of
+%view of the Telemach project. This project dedicated to the automation of maintenance
+%tasks in the cutter-head of tunnel boring machines, exhibits general issues in terms
+%of constraint-based robot design and teleoperation. The link between these two fields
+%of investigation is drawn : they both rely on the safe and optimal reactive control of
+%robotic manipulators. A short overview of the literature in this domain is proposed
+%and our contribution to open problems is presented. This contribution goes beyond
+%what is usually proposed in the state-of-the-art : not only do we tackle the control
+%problem resolution but we also address its formulation. The latter is very critical since it
+%conditions the existence of a solution to the control problem but also has some interesting
+%implications in terms of its resolution.
+%
+%
+%
+%
+%In the first chapter, the context of this thesis is presented from the industrial point
+%of view of the TELEMACH project. This project dedicated to the automation of main-
+%tenance tasks in the cutter-head of tunnel boring machines, exhibits general issues in
+%terms of constraint-based robot design and teleoperation. The link between these two
+%fields of investigation is drawn: they both rely on the safe and optimal reactive control of
+%robotic manipulators. A short overview of the literature in this domain is proposed and
+%our contribution to open problems is presented. This contribution goes beyond what
+%is usually proposed in the state-of-the-art: not only do we tackle the control problem
+%resolution but we also address its formulation. The latter is very critical since it con-
+%ditions the existence of a solution to the control problem but also has some interesting
+%implications in terms of its resolution.
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%The link between these two
+%fields of investigation is drawn: they both rely on the safe and optimal reactive control of
+%robotic manipulators. A short overview of the literature in this domain is proposed and
+%our contribution to open problems is presented. This contribution goes beyond what
+%is usually proposed in the state-of-the-art: not only do we tackle the control problem
+%resolution but we also address its formulation. The latter is very critical since it con-
+%ditions the existence of a solution to the control problem but also has some interesting
+%implications in terms of its resolution.
+%
+%
+%
+%
+%
+%
+%is
+%only the second condition to ensure safety at the control level; the first one is that the
+%problem formulation maintains its permanent feasibility
+%
+% 
+%
+%The principle of safety we tackle in this work at the level of control-field  
+%
+%
+%
+% motion for which the desired joint input sent by the controller (motion
+%intended by the controller) is actually carried out by the physical system
+%
+%
+%
+%
+%
+%Reactive control loops are used in most robots control architectures; they are in
+%charge of converting operational inputs (user specified objectives and constraints) into
+%joint inputs at each time step. Algorithms are built to satisfy constraints and objec-
+%tives specified at various (potentially strict) priority levels, to handle specific cases, to
+%manage transitions, etc. However, all these achievements address only the resolution
+%of the control problem; the solvability of the problem and the impact of the retained
+%solution on the future control problems is rarely studied and constraints incompatibil-
+%ities recurrently occur in robotics, which inevitably implies constraints violations, thus
+%compromising safety.
+%
+%
+%
+%
+% First the safety of the human operator which if compromised could lead to lethal injuries and second, the guaranty every time step of an optimal solution by the control algorithm. The reaction capabilities of the system must at the same time be taken into consideration.
+%The work presented in this manuscript brings new insights in this direction. A generic approach to the different physical phenomena occurring during human-robot interaction is presented. Energy is used to modulate impact forces, the contact forces and to smooth the contact enabling/disabling phase. 
+%
+%Along the interaction process, the robotic system is subjected to both static and dynamic constraints. Generally the constraints are activated only one time step before hitting the limit. In most cases, with a control period of $1 ms$, no sufficient reaction capabilities are available to comply to the constraint. Therefore, we proposed a new formulation of static constraints that allows the activation at the right instant considering the available reaction capabilities. The approach has been validated in simulation with the articular velocity and position constraints of a KUKA LWR4 serial robot. The constraints are triggered several time steps ahead considering the torque and jerk capabilities. Experimental implementation and the reformulation of dynamic constraints (e.g. constraint on the kinetic energy of the robot in the direction of the human operator) are the subject of our present and future work.

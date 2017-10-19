@@ -1,0 +1,33 @@
+% Package pour ecrire des theses francaises 
+%
+\NeedsTeXFormat{LaTeX2e}[1995/12/01]
+\typeout{}
+\typeout{Style these.sty B. DAUNAY 2007}
+\typeout{}
+
+
+%-------------------------------------------------------
+%  Bibliographie
+%-------------------------------------------------------
+
+%\renewcommand{\bibname}{R�f�rences}
+\renewenvironment{thebibliography}[1]
+     {\chapter*{\bibname}%
+      \@mkboth{\bibname}{\bibname}%
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+         	  \setlength{\itemsep}{6pt}%
+ 						\leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}

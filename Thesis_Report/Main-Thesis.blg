@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: Main-Thesis.aux
+The style file: style/these.bst
+Database file #1: bib/thesis.bib
+Name 10 in "Vanderborght, B. and Albu-Sch{\"a}ffer, A. and Bicchi, A. and Burdet, E. and Caldwell, D. G. and Carloni, R. and Catalano, M. and Eiberger, O. and Friedl, W. and Ganesh, G, and Garabini, M. and Grebenstein, M. and Grioli, G. and Haddadin, S. and Hoppner, H. and Jafari, A. and Laffranchi, M. and Lefeber, D. and Petit, F. and Stramigioli, S. and Tsagarakis, N. and Van Damme, M. and Van Ham, R. and Visser, L.C. and Wolf, S." has a comma at the end for entry vanderborght2013variable
+while executing---line 1179 of file style/these.bst
+Warning--to sort, need author or key in VIACTORS-url
+Name 10 in "Vanderborght, B. and Albu-Sch{\"a}ffer, A. and Bicchi, A. and Burdet, E. and Caldwell, D. G. and Carloni, R. and Catalano, M. and Eiberger, O. and Friedl, W. and Ganesh, G, and Garabini, M. and Grebenstein, M. and Grioli, G. and Haddadin, S. and Hoppner, H. and Jafari, A. and Laffranchi, M. and Lefeber, D. and Petit, F. and Stramigioli, S. and Tsagarakis, N. and Van Damme, M. and Van Ham, R. and Visser, L.C. and Wolf, S." has a comma at the end for entry vanderborght2013variable
+while executing---line 1245 of file style/these.bst
+You've used 100 entries,
+            2415 wiz_defined-function locations,
+            1053 strings with 22351 characters,
+and the built_in function-call counts, 47712 in all, are:
+= -- 4991
+> -- 2014
+< -- 70
++ -- 724
+- -- 698
+* -- 3387
+:= -- 7169
+add.period$ -- 324
+call.type$ -- 100
+change.case$ -- 659
+chr.to.int$ -- 95
+cite$ -- 102
+duplicate$ -- 2086
+empty$ -- 3449
+format.name$ -- 797
+if$ -- 10342
+int.to.chr$ -- 6
+int.to.str$ -- 0
+missing$ -- 84
+newline$ -- 497
+num.names$ -- 198
+pop$ -- 817
+preamble$ -- 1
+purify$ -- 849
+quote$ -- 0
+skip$ -- 1872
+stack$ -- 0
+substring$ -- 2909
+swap$ -- 765
+text.length$ -- 70
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 776
+warning$ -- 1
+while$ -- 399
+width$ -- 106
+write$ -- 1355
+(There were 2 error messages)

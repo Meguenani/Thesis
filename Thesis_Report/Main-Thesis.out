@@ -1,0 +1,81 @@
+\BOOKMARK [0][-]{chapter.1}{Introduction, State-of-the-art and proposed contributions}{}
+\BOOKMARK [1][-]{section.1.1}{Motivation}{chapter.1}
+\BOOKMARK [1][-]{section.1.2}{Safe mechanical design}{chapter.1}
+\BOOKMARK [2][-]{subsection.1.2.1}{Flexible actuators}{section.1.2}
+\BOOKMARK [2][-]{subsection.1.2.2}{Lightweight Robotic Systems}{section.1.2}
+\BOOKMARK [1][-]{section.1.3}{Control}{chapter.1}
+\BOOKMARK [1][-]{section.1.4}{Safety standards}{chapter.1}
+\BOOKMARK [1][-]{section.1.5}{Discussion and proposed contributions}{chapter.1}
+\BOOKMARK [2][-]{subsection.1.5.1}{Considerations when dealing with safety during human-robot interaction}{section.1.5}
+\BOOKMARK [2][-]{subsection.1.5.2}{Considerations when dealing with constraints}{section.1.5}
+\BOOKMARK [1][-]{section.1.6}{Related Publications}{chapter.1}
+\BOOKMARK [0][-]{chapter.2}{Constraints incompatibility}{}
+\BOOKMARK [1][-]{section.2.1}{Introduction}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.1.1}{The general problem}{section.2.1}
+\BOOKMARK [2][-]{subsection.2.1.2}{Different types of constraints}{section.2.1}
+\BOOKMARK [2][-]{subsection.2.1.3}{Corresponding literature}{section.2.1}
+\BOOKMARK [2][-]{subsection.2.1.4}{Contributions}{section.2.1}
+\BOOKMARK [1][-]{section.2.2}{The QP form and the different constraints incompatibility cases}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.2.1}{Task formulation}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.2}{Controller formulation}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.3}{Articular constraints: naive formulations}{section.2.2}
+\BOOKMARK [1][-]{section.2.3}{Test case scenario for simulation}{chapter.2}
+\BOOKMARK [1][-]{section.2.4}{Articular constraints: new formulations}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.4.1}{Joint velocity constraint incompatibility with jerk limits}{section.2.4}
+\BOOKMARK [3][-]{subsubsection.2.4.1.1}{Illustration 1}{subsection.2.4.1}
+\BOOKMARK [2][-]{subsection.2.4.2}{Joint position constraint incompatibility with deceleration and/or jerk limits}{section.2.4}
+\BOOKMARK [3][-]{subsubsection.2.4.2.1}{Joint position constraint incompatibility with deceleration limits}{subsection.2.4.2}
+\BOOKMARK [4][-]{paragraph.2.4.2.1.1}{Illustration 2}{subsubsection.2.4.2.1}
+\BOOKMARK [3][-]{subsubsection.2.4.2.2}{Joint position constraint incompatibility with jerk limits 1}{subsection.2.4.2}
+\BOOKMARK [4][-]{paragraph.2.4.2.2.1}{Illustration 3}{subsubsection.2.4.2.2}
+\BOOKMARK [3][-]{subsubsection.2.4.2.3}{Joint position constraint incompatibility with jerk limits 2}{subsection.2.4.2}
+\BOOKMARK [4][-]{paragraph.2.4.2.3.1}{Illustration 4}{subsubsection.2.4.2.3}
+\BOOKMARK [3][-]{subsubsection.2.4.2.4}{Joint position constraint incompatibility with both deceleration and jerk limits 1}{subsection.2.4.2}
+\BOOKMARK [4][-]{paragraph.2.4.2.4.1}{Illustration 5}{subsubsection.2.4.2.4}
+\BOOKMARK [3][-]{subsubsection.2.4.2.5}{Joint position constraint incompatibility with both jerk and deceleration limits 2}{subsection.2.4.2}
+\BOOKMARK [4][-]{paragraph.2.4.2.5.1}{Illustration 6}{subsubsection.2.4.2.5}
+\BOOKMARK [1][-]{section.2.5}{Final bounds on the acceleration control variable}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.5.1}{Illustration 7}{section.2.5}
+\BOOKMARK [1][-]{section.2.6}{Conclusion}{chapter.2}
+\BOOKMARK [0][-]{chapter.3}{Energy based safe control}{}
+\BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}
+\BOOKMARK [1][-]{section.3.2}{Interaction forces and safety indicators}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.2.1}{Kinetic energy}{section.3.2}
+\BOOKMARK [2][-]{subsection.3.2.2}{Potential energy}{section.3.2}
+\BOOKMARK [2][-]{subsection.3.2.3}{Relation between kinetic and potential energies}{section.3.2}
+\BOOKMARK [1][-]{section.3.3}{Safety limit values}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.3.1}{Safety limit value for the pre-collision safety indicator}{section.3.3}
+\BOOKMARK [3][-]{subsubsection.3.3.1.1}{Pre-collision safety criterion extension}{subsection.3.3.1}
+\BOOKMARK [2][-]{subsection.3.3.2}{Safety limit value for the physical-contact safety indicator}{section.3.3}
+\BOOKMARK [1][-]{section.3.4}{Energy constraints implementation}{chapter.3}
+\BOOKMARK [1][-]{section.3.5}{Task energy profile}{chapter.3}
+\BOOKMARK [1][-]{section.3.6}{Safe dynamic controller}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.6.1}{Task formulation}{section.3.6}
+\BOOKMARK [2][-]{subsection.3.6.2}{Constraints formulation}{section.3.6}
+\BOOKMARK [3][-]{subsubsection.3.6.2.1}{Articular constraints}{subsection.3.6.2}
+\BOOKMARK [3][-]{subsubsection.3.6.2.2}{Energy related constraints}{subsection.3.6.2}
+\BOOKMARK [2][-]{subsection.3.6.3}{Controller formulation}{section.3.6}
+\BOOKMARK [1][-]{section.3.7}{Simulation}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.7.1}{Test case scenario}{section.3.7}
+\BOOKMARK [2][-]{subsection.3.7.2}{Scenario 1: obstacle intersecting with the trajectory of the robot and no constraints on its energy}{section.3.7}
+\BOOKMARK [2][-]{subsection.3.7.3}{Scenario 2: nearby obstacle not intersecting with the trajectory of the robot and constraint on its kinetic energy}{section.3.7}
+\BOOKMARK [2][-]{subsection.3.7.4}{Scenario 3: obstacle intersecting with the trajectory of the robot and constraint on its kinetic energy}{section.3.7}
+\BOOKMARK [2][-]{subsection.3.7.5}{Scenario 4: obstacle intersecting the trajectory of the robot and constraints on its kinetic and potential energies}{section.3.7}
+\BOOKMARK [2][-]{subsection.3.7.6}{Scenario 5: obstacle intersecting with the trajectory of the robot and constraint on its task energy profile}{section.3.7}
+\BOOKMARK [1][-]{section.3.8}{Conclusion}{chapter.3}
+\BOOKMARK [0][-]{chapter.4}{Safe human-robot interaction: experimental results}{}
+\BOOKMARK [1][-]{section.4.1}{Introduction}{chapter.4}
+\BOOKMARK [1][-]{section.4.2}{Experimental setup}{chapter.4}
+\BOOKMARK [1][-]{section.4.3}{Test case scenario}{chapter.4}
+\BOOKMARK [1][-]{section.4.4}{Human-robot interaction, scenario 1}{chapter.4}
+\BOOKMARK [1][-]{section.4.5}{Human-robot interaction, scenario 2}{chapter.4}
+\BOOKMARK [1][-]{section.4.6}{Human-robot interaction, scenario 3}{chapter.4}
+\BOOKMARK [1][-]{section.4.7}{Human-robot interaction, scenario 4}{chapter.4}
+\BOOKMARK [1][-]{section.4.8}{Conclusion}{chapter.4}
+\BOOKMARK [0][-]{chapter.5}{Conclusions and outlook}{}
+\BOOKMARK [1][-]{section.5.1}{Contributions}{chapter.5}
+\BOOKMARK [1][-]{section.5.2}{Perspectives}{chapter.5}
+\BOOKMARK [2][-]{subsection.5.2.1}{Extension of the work on the constraints incompatibility problem}{section.5.2}
+\BOOKMARK [2][-]{subsection.5.2.2}{Control of collaborative robots for safe human-robot interaction}{section.5.2}
+\BOOKMARK [0][-]{appendix.A}{Appendix}{}
+\BOOKMARK [0][-]{section*.83}{Bibliography}{}

@@ -1,0 +1,1369 @@
+% This file was created with JabRef 2.7b.
+% Encoding: UTF8
+
+@INPROCEEDINGS{abe2007,
+  author = {Abe, Yeuhi and da Silva, Marco and Popovi\'{c}, Jovan},
+  title = {Multiobjective control with frictional contacts},
+  booktitle = {Proceedings of the ACM SIGGRAPH/Eurographics symposium on Computer
+	animation},
+  year = {2007},
+  pages = {249--258},
+  isbn = {978-1-59593-624-0},
+  location = {San Diego, California}
+}
+
+@ARTICLE{aghili2005,
+  author = {Aghili, Farhad},
+  title = {A unified approach for inverse and direct dynamics of constrained
+	multibody systems based on linear projection operator: applications
+	to control and simulation},
+  journal = { IEEE Transactions on Robotics},
+  year = {2005},
+  volume = {21},
+  pages = {834--849},
+  number = {5},
+  publisher = {IEEE}
+}
+
+@INPROCEEDINGS{akella1994,
+  author = {Akella, Prasad and Parra-Vega, Vicente and Arimoto, Suguru and Tanie,
+	Kazuo},
+  title = {Discontinuous model-based adaptive control for robots executing free
+	and constrained tasks},
+  booktitle = {Proceedings of the International Conference on Robotics and Automation},
+  year = {1994},
+  pages = {3000--3007}
+}
+
+@BOOK{altmann2005,
+  title = {Rotations, quaternions, and double groups},
+  publisher = {Courier Corporation},
+  year = {2005},
+  author = {Altmann, Simon L}
+}
+
+@BOOK{an1988,
+  title = {Model-based control of a robot manipulator},
+  publisher = {MIT press Cambridge, MA},
+  year = {1988},
+  author = {An, Chae H and Atkeson, Christopher G and Hollerbach, John M},
+  volume = {214}
+}
+
+@INCOLLECTION{andersson2012,
+  author = {Andersson, Joel and {\AA}kesson, Johan and Diehl, Moritz},
+  title = {CasADi: a symbolic package for automatic differentiation and optimal
+	control},
+  booktitle = {Recent Advances in Algorithmic Differentiation},
+  publisher = {Springer},
+  year = {2012},
+  pages = {297--307}
+}
+
+@ARTICLE{andersson1989,
+  author = {Andersson, Russell L},
+  title = {Aggressive trajectory generator for a robot ping-pong player},
+  journal = {Control Systems Magazine},
+  year = {1989},
+  volume = {9},
+  pages = {15--21},
+  number = {2}
+}
+
+@ARTICLE{baerlocher2004,
+  author = {Baerlocher, Paolo and Boulic, Ronan},
+  title = {An inverse kinematics architecture enforcing an arbitrary number
+	of strict priority levels},
+  journal = {The visual computer},
+  year = {2004},
+  volume = {20},
+  pages = {402--417},
+  number = {6},
+  publisher = {Springer}
+}
+
+@INPROCEEDINGS{baerlocher1998,
+  author = {Baerlocher, P. and Boulic, R.},
+  title = {Task-priority formulations for the kinematic control of highly redundant
+	articulated structures},
+  booktitle = {Proceedings of the IEEE/RSJ International Conference on Intelligent
+	Robots and Systems},
+  year = {1998},
+  volume = {1},
+  pages = {323-329 vol.1},
+  doi = {10.1109/IROS.1998.724639}
+}
+
+@ARTICLE{balkan1998,
+  author = {Balkan, Tuna},
+  title = {A dynamic programming approach to optimal control of robotic manipulators},
+  journal = {Mechanics research communications},
+  year = {1998},
+  volume = {25},
+  pages = {225--230},
+  number = {2},
+  publisher = {Elsevier}
+}
+
+@INPROCEEDINGS{bellingham2003,
+  author = {Bellingham, John and Kuwata, Yoshiaki and How, Jonathan},
+  title = {Stable receding horizon trajectory control for complex environments},
+  booktitle = {Proceedings of the AIAA Guidance, Navigation, and Control Conference},
+  year = {2003}
+}
+
+@INCOLLECTION{bianco2001,
+  author = {Bianco, Corrado Guarino Lo and Piazzi, Aurelio},
+  title = {A Semi-Infinte Optimization Approach to Optimal Spline Trajectory
+	Planning of Mechanical Manipulators},
+  booktitle = {Semi-Infinite Programming},
+  publisher = {Springer},
+  year = {2001},
+  pages = {271--297}
+}
+
+@ARTICLE{bobrow1985,
+  author = {Bobrow, James E and Dubowsky, Steven and Gibson, JS},
+  title = {Time-optimal control of robotic manipulators along specified paths},
+  journal = {The international journal of robotics research},
+  year = {1985},
+  volume = {4},
+  pages = {3--17},
+  number = {3},
+  publisher = {Sage Publications}
+}
+
+@INPROCEEDINGS{bouyarmane2011,
+  author = {Bouyarmane, K. and Kheddar, A.},
+  title = {Using a multi-objective controller to synthesize simulated humanoid
+	robot motion with changing contact configurations},
+  booktitle = {IEEE/RSJ International Conference on Intelligent Robots and Systems
+	(IROS)},
+  year = {2011},
+  pages = {4414-4419},
+  doi = {10.1109/IROS.2011.6094483},
+  issn = {2153-0858}
+}
+
+@BOOK{boyd2004,
+  title = {Convex optimization},
+  publisher = {Cambridge university press},
+  year = {2004},
+  author = {Boyd, Stephen and Vandenberghe, Lieven},
+  pages = {128},
+  chapter = {4, Convex optimization problems}
+}
+
+@INPROCEEDINGS{brock2002,
+  author = {Brock, Oliver and Khatib, Oussama and Viji, Sriram},
+  title = {Task-consistent obstacle avoidance and motion behavior for mobile
+	manipulation},
+  booktitle = {Proceedings of the International Conference on Robotics and Automation},
+  year = {2002},
+  volume = {1},
+  pages = {388--393}
+}
+
+@INPROCEEDINGS{brufau2005,
+  author = {Brufau, Jordi and Puig-Vidal, Manel and Lopez-Sanchez, Jaime and
+	Samitier, Josep and Snis, N and Simu, U and Johansson, S and Driesen,
+	W and Breguet, J-M and Gao, J and others},
+  title = {MICRON: Small autonomous robot for cell manipulation applications},
+  booktitle = {Proceedings of the International Conference on Robotics and Automation},
+  year = {2005},
+  pages = {844--849}
+}
+
+@BOOK{camacho2013,
+  title = {Model predictive control},
+  publisher = {Springer Science \& Business Media},
+  year = {2013},
+  author = {Camacho, Eduardo F and Alba, Carlos Bordons}
+}
+
+@ARTICLE{chan1995,
+  author = {Chan, Tan Fung and Dubey, Rajiv V},
+  title = {A weighted least-norm solution based scheme for avoiding joint limits
+	for redundant joint manipulators},
+  journal = {IEEE transactions on Robotics and Automation},
+  year = {1995},
+  volume = {11},
+  pages = {286--292},
+  number = {2}
+}
+
+@INPROCEEDINGS{chang1999,
+  author = {Chang, Kyong-Sok and Khatib, Oussama},
+  title = {Efficient algorithm for extended operational space inertia matrix},
+  booktitle = {IEEE/RSJ International Conference on Intelligent Robots and Systems},
+  year = {1999},
+  volume = {1},
+  pages = {350-355}
+}
+
+@ARTICLE{chaumette2001,
+  author = {Chaumette, Fran{\c{c}}ois and Marchand, {\'E}ric},
+  title = {A redundancy-based iterative approach for avoiding joint limits:
+	Application to visual servoing},
+  journal = {IEEE Transactions on Robotics and Automation},
+  year = {2001},
+  volume = {17},
+  pages = {719--730},
+  number = {5}
+}
+
+@ARTICLE{cheney2009,
+  author = {Cheney, Ward and Kincaid, David},
+  title = {Linear algebra: Theory and applications},
+  journal = {The Australian Mathematical Society},
+  year = {2009},
+  pages = {544},
+  chapter = {7}
+}
+
+@ARTICLE{chiaverini1999,
+  author = {Chiaverini, Stefano and Siciliano, Bruno and Villani, Luigi},
+  title = {A survey of robot interaction control schemes with experimental comparison},
+  journal = {IEEE/ASME Transactions On Mechatronics},
+  year = {1999},
+  volume = {4},
+  pages = {273--285},
+  number = {3}
+}
+
+@INPROCEEDINGS{collette2007,
+  author = {Collette, C. and Micaelli, A. and Andriot, C. and Lemerle, P.},
+  title = {Dynamic balance control of humanoids for multiple grasps and non
+	coplanar frictional contacts},
+  booktitle = {Proceedings of the IEEE/RAS International Conference on Humanoid
+	Robots},
+  year = {2007},
+  pages = {81-88}
+}
+
+@ARTICLE{costantinescu2000,
+  author = {Costantinescu, D and Croft, EA},
+  title = {Smooth and time-optimal trajectory planning for industrial manipulators
+	along specified paths},
+  journal = {Journal of robotic systems},
+  year = {2000},
+  volume = {17},
+  pages = {233--249},
+  number = {5},
+  publisher = {New York, NY: Wiley, c1984-c2005.}
+}
+
+@INPROCEEDINGS{decre2009,
+  author = {Decr{\'e}, Wilm and Smits, Ruben and Bruyninckx, Herman and De Schutter,
+	Joris},
+  title = {Extending iTaSC to support inequality constraints and non-instantaneous
+	task specification},
+  booktitle = {Proceedings of the International Conference on Robotics and Automation},
+  year = {2009},
+  pages = {964--971}
+}
+
+@INPROCEEDINGS{dietrich2012,
+  author = {Dietrich, A. and Albu-Schaffer, A. and Hirzinger, G.},
+  title = {On continuous null space projections for torque-based, hierarchical,
+	multi-objective manipulation},
+  booktitle = {Proceedings of the International Conference on Robotics and Automation},
+  year = {2012},
+  pages = {2978-2985},
+  month = {May},
+  issn = {1050-4729}
+}
+
+@ARTICLE{dietrich2015,
+  author = {Dietrich, Alexander and Ott, Christian and Albu-Sch{\"a}ffer, Alin},
+  title = {An overview of null space projections for redundant, torque-controlled
+	robots},
+  journal = {The International Journal of Robotics Research},
+  year = {2015},
+  pages = {0278364914566516},
+  publisher = {SAGE Publications}
+}
+
+@ARTICLE{dietrich2012b,
+  author = {Dietrich, Alexander and Wimbock, Thomas and Albu-Schaffer, Alin and
+	Hirzinger, Gerd},
+  title = {Integration of reactive, torque-based self-collision avoidance into
+	a task hierarchy},
+  journal = {IEEE Transactions on Robotics},
+  year = {2012},
+  volume = {28},
+  pages = {1278--1293},
+  number = {6}
+}
+
+@ARTICLE{escande2014,
+  author = {Escande, Adrien and Mansard, Nicolas and Wieber, Pierre-Brice},
+  title = {Hierarchical quadratic programming: Fast online humanoid-robot motion
+	generation},
+  journal = {The International Journal of Robotics Research},
+  year = {2014},
+  pages = {0278364914521306},
+  publisher = {SAGE Publications}
+}
+
+@INPROCEEDINGS{faverjon1987,
+  author = {Faverjon, Bernard and Tournassoud, Pierre},
+  title = {A local based approach for path planning of manipulators with a high
+	number of degrees of freedom},
+  booktitle = {Proceedings of the International Conference on Robotics and Automation},
+  year = {1987},
+  volume = {4},
+  pages = {1152--1159}
+}
+
+@INPROCEEDINGS{flacco2014,
+  author = {Flacco, Fabrizio and De Luca, Alessandro},
+  title = {A reverse priority approach to multi-task control of redundant robots},
+  booktitle = {Proceedings of the IEEE/RSJ International Conference on Intelligent
+	Robots and Systems},
+  year = {2014},
+  pages = {2421--2427}
+}
+
+@ARTICLE{franklin1994,
+  author = {Franklin, Gene F and Powell, J David and Emami-Naeini, Abbas},
+  title = {Feedback control of dynamics systems},
+  journal = {Addison-Wesley, Reading, MA},
+  year = {1994}
+}
+
+@ARTICLE{gasparetto2012,
+  author = {Gasparetto, Alessandro and Boscariol, Paolo and Lanzutti, Albano
+	and Vidoni, Renato},
+  title = {Trajectory planning in robotics},
+  journal = {Mathematics in Computer Science},
+  year = {2012},
+  volume = {6},
+  pages = {269--279},
+  number = {3},
+  publisher = {Springer}
+}
+
+@INPROCEEDINGS{gerelli2008,
+  author = {Gerelli, Oscar and Bianco, Corrado Guarino Lo},
+  title = {Real-time path-tracking control of robotic manipulators with bounded
+	torques and torque-derivatives},
+  booktitle = {Intelligent Robots and Systems, 2008. IROS 2008. IEEE/RSJ International
+	Conference on},
+  year = {2008},
+  pages = {532--537}
+}
+
+@BOOK{golub2012,
+  title = {Matrix computations},
+  publisher = {JHU Press},
+  year = {2012},
+  author = {Golub, Gene H and Van Loan, Charles F},
+  volume = {3}
+}
+
+@ARTICLE{gonzalez2006,
+  author = {Gonz{\'a}lez-Banos, H{\'e}ctor H and Hsu, David and Latombe, Jean-Claude},
+  title = {Motion planning: Recent developments},
+  journal = {Autonomous Mobile Robots: Sensing, Control, Decision-Making and Applications},
+  year = {2006},
+  publisher = {Boca Raton, FL: CRC}
+}
+
+@ARTICLE{gouzenes1984,
+  author = {Gouzenes, Laurent},
+  title = {Strategies for solving collision-free trajectories problems for mobile
+	and manipulator robots},
+  journal = {The International Journal of Robotics Research},
+  year = {1984},
+  volume = {3},
+  pages = {51--65},
+  number = {4},
+  publisher = {Sage Publications}
+}
+
+@INPROCEEDINGS{han2012,
+  author = {Han, Hyejin and Lee, Jaemin and Park, Jaeheung},
+  title = {A continuous task transition algorithm for operational space control
+	framework},
+  booktitle = {Ubiquitous Robots and Ambient Intelligence (URAI), 2012 9th International
+	Conference on},
+  year = {2012},
+  pages = {148--152}
+}
+
+@INPROCEEDINGS{haschke2008,
+  author = {Haschke, Robert and Weitnauer, Erik and Ritter, Helge},
+  title = {On-line planning of time-optimal, jerk-limited trajectories},
+  booktitle = {Intelligent Robots and Systems, 2008. IROS 2008. IEEE/RSJ International
+	Conference on},
+  year = {2008},
+  pages = {3248--3253}
+}
+
+@INPROCEEDINGS{herdt2010,
+  author = {Herdt, Andrei and Perrin, Nicolas and Wieber, Pierre-Brice},
+  title = {Walking without thinking about it},
+  booktitle = {Intelligent Robots and Systems (IROS), 2010 IEEE/RSJ International
+	Conference on},
+  year = {2010},
+  pages = {190--195}
+}
+
+@INPROCEEDINGS{herrera2006,
+  author = {Herrera-Aguilar, Ignacio and Sidobre, Daniel},
+  title = {Soft motion trajectory planning and control for service manipulator
+	robot},
+  booktitle = {Proceedings of the IEEE/RSJ International Conference on Intelligent
+	Robots and Systems},
+  year = {2006}
+}
+
+@INPROCEEDINGS{herzog2014,
+  author = {Herzog, Alexander and Righetti, Ludovic and Grimminger, Felix and
+	Pastor, Peter and Schaal, Stefan},
+  title = {Balancing experiments on a torque-controlled humanoid with hierarchical
+	inverse dynamics},
+  booktitle = {Proceedings of the IEEE/RSJ International Conference on Intelligent
+	Robots and Systems},
+  year = {2014},
+  pages = {981--988}
+}
+
+@ARTICLE{hogan1985,
+  author = {Hogan, Neville},
+  title = {Impedance control: An approach to manipulation: Part I—Theory; Part
+	II—Implementation; Part III—Aplications},
+  journal = {Journal of dynamic systems, measurement, and control},
+  year = {1985},
+  volume = {107},
+  pages = {1-24},
+  number = {1},
+  publisher = {American Society of Mechanical Engineers}
+}
+
+@ARTICLE{hsu2002,
+  author = {Hsu, David and Kindel, Robert and Latombe, Jean-Claude and Rock,
+	Stephen},
+  title = {Randomized kinodynamic motion planning with moving obstacles},
+  journal = {The International Journal of Robotics Research},
+  year = {2002},
+  volume = {21},
+  pages = {233--255},
+  number = {3},
+  publisher = {SAGE Publications}
+}
+
+@INPROCEEDINGS{hyde1993,
+  author = {Hyde, James M and Cutkosky, Mark R},
+  title = {Contact transition control: An experimental study},
+  booktitle = {Robotics and Automation, 1993. Proceedings., 1993 IEEE International
+	Conference on},
+  year = {1993},
+  pages = {363--368}
+}
+
+@INPROCEEDINGS{ibanez2014,
+  author = {Ibanez, Aurelien and Bidaud, Philippe and Padois, Vincent},
+  title = {A distributed model predictive control approach for robust postural
+	stability of a humanoid robot},
+  booktitle = {Proceedings of the International Conference on Robotics and Automation},
+  year = {2014},
+  pages = {202--209}
+}
+
+@BOOK{isidori1995,
+  title = {Nonlinear control systems},
+  publisher = {Springer Science \& Business Media},
+  year = {1995},
+  author = {Isidori, Alberto}
+}
+
+@INPROCEEDINGS{jarquin2013,
+  author = {Jarquin, Gerardo and Escande, Adrien and Arechavaleta, Gustavo and
+	Moulard, Thomas and Yoshida, Eiichi and Parra-Vega, Vicente},
+  title = {Real-time smooth task transitions for hierarchical inverse kinematics},
+  booktitle = {Proceedings of the IEEE/RAS International Conference on Humanoid
+	Robots},
+  year = {2013},
+  pages = {528--533}
+}
+
+@INPROCEEDINGS{kajita2003,
+  author = {Kajita, Shuuji and Kanehiro, Fumio and Kaneko, Kenji and Fujiwara,
+	Kiyoshi and Harada, Kensuke and Yokoi, Kazuhito and Hirukawa, Hirohisa},
+  title = {Biped walking pattern generation by using preview control of zero-moment
+	point},
+  booktitle = {Proceedings of the International Conference on Robotics and Automation},
+  year = {2003},
+  volume = {2},
+  pages = {1620--1626}
+}
+
+@ARTICLE{kanehiro2008,
+  author = {Kanehiro, Fumio and Lamiraux, Florent and Kanoun, Oussama and Yoshida,
+	Eiichi and Laumond, Jean-Paul},
+  title = {A local collision avoidance method for non-strictly convex polyhedra},
+  journal = {Proceedings of robotics: science and systems IV},
+  year = {2008}
+}
+
+@ARTICLE{kanoun2011,
+  author = {Kanoun, Oussama and Lamiraux, Florent and Wieber, Pierre-Brice},
+  title = {Kinematic Control of Redundant Manipulators: Generalizing the Task-Priority
+	Framework to Inequality Task},
+  journal = {IEEE Transactions on Robotics},
+  year = {2011},
+  volume = {27},
+  pages = {785--792},
+  number = {4},
+  institution = {Nakamura Laboratory, Department of Mechano-Informatics, The University
+	of Tokyo, Bunkyo-Ku, Japan},
+  mendeley-tags = {TaskPriority}
+}
+
+@INPROCEEDINGS{kanoun2009,
+  author = {Kanoun, Oussama and Lamiraux, Florent and Wieber, Pierre-Brice and
+	Kanehiro, Fumio and Yoshida, Eiichi and Laumond, Jean-Paul},
+  title = {Prioritizing linear equality and inequality systems: application
+	to local motion planning for redundant robots},
+  booktitle = {Proceedings of the International Conference on Robotics and Automation},
+  year = {2009},
+  pages = {2939--2944}
+}
+
+@ARTICLE{kazerooni1990,
+  author = {Kazerooni, H and Waibel, BJ and Kim, S},
+  title = {On the stability of robot compliant motion control: Theory and experiments},
+  journal = {Journal of Dynamic Systems, Measurement, and Control},
+  year = {1990},
+  volume = {112},
+  pages = {417--426},
+  number = {3},
+  publisher = {American Society of Mechanical Engineers}
+}
+
+@INPROCEEDINGS{keith2011,
+  author = {Keith, F. and Wieber, P.-B.and Mansard, N. and Kheddar, A.},
+  title = {Analysis of the discontinuities in prioritized tasks-space control
+	under discreet task scheduling operations},
+  booktitle = {Proceedings of the IEEE/RSJ International Conference on Intelligent
+	Robots and Systems},
+  year = {2011},
+  pages = {3887-3892},
+  issn = {2153-0858}
+}
+
+@ARTICLE{khatib1995,
+  author = {Khatib, Oussama},
+  title = {Inertial properties in robotic manipulation: An object-level framework},
+  journal = {The International Journal of Robotics Research},
+  year = {1995},
+  volume = {14},
+  pages = {19-36},
+  number = {1},
+  publisher = {Sage Publications}
+}
+
+@ARTICLE{khatib1987,
+  author = {Khatib, Oussama},
+  title = {A unified approach for motion and force control of robot manipulators:
+	The operational space formulation},
+  journal = {IEEE Journal of Robotics and Automation},
+  year = {1987},
+  volume = {3},
+  pages = {43--53},
+  number = {1},
+  publisher = {IEEE}
+}
+
+@ARTICLE{khatib1986,
+  author = {Khatib, Oussama},
+  title = {Real-time obstacle avoidance for manipulators and mobile robots},
+  journal = {The international journal of robotics research},
+  year = {1986},
+  volume = {5},
+  pages = {90--98},
+  number = {1},
+  publisher = {Sage Publications}
+}
+
+@ARTICLE{khatib2004,
+  author = {Khatib, Oussama and Sentis, Luis and Park, Jaeheung and Warren, James},
+  title = {Whole-body dynamic behavior and control of human-like robots},
+  journal = {International Journal of Humanoid Robotics},
+  year = {2004},
+  volume = {1},
+  pages = {29--43},
+  number = {01},
+  publisher = {World Scientific}
+}
+
+@INPROCEEDINGS{khatib2008,
+  author = {Khatib, Oussama and Sentis, Luis and Park, Jae-Heung},
+  title = {A unified framework for whole-body humanoid robot control with multiple
+	constraints and contacts},
+  booktitle = {European Robotics Symposium 2008},
+  year = {2008},
+  pages = {303--312},
+  organization = {Springer}
+}
+
+@ARTICLE{klein1990,
+  author = {Klein, Charles and Kittivatcharapong, Sankon},
+  title = {Optimal force distribution for the legs of a walking machine with
+	friction cone constraints},
+  journal = {IEEE Transactions on Robotics and Automation},
+  year = {1990},
+  volume = {6},
+  pages = {73--85},
+  number = {1}
+}
+
+@INPROCEEDINGS{kyriakopoulos1988,
+  author = {Kyriakopoulos, Konstantinos J and Saridis, George N},
+  title = {Minimum jerk path generation},
+  booktitle = {Proceedings of the International Conference on Robotics and Automation},
+  year = {1988},
+  pages = {364--369},
+  organization = {IEEE}
+}
+
+@INPROCEEDINGS{kunhe2005,
+  author = {K{\"u}nhe, F and Gomes, J and Fetter, W},
+  title = {Mobile robot trajectory tracking using model predictive control},
+  booktitle = {II IEEE latin-american robotics symposium},
+  year = {2005}
+}
+
+@ARTICLE{lambrechts2004,
+  author = {Lambrechts, Paul and Boerlage, Matthijs and Steinbuch, Maarten},
+  title = {Trajectory planning and feedforward design for high performance motion
+	systems},
+  journal = {Feedback},
+  year = {2004},
+  volume = {14},
+  pages = {15}
+}
+
+@ARTICLE{lee2012,
+  author = {Jaemin Lee and Mansard, N. and Jaeheung Park},
+  title = {Intermediate Desired Value Approach for Task Transition of Robots
+	in Kinematic Control},
+  journal = {IEEE Transactions on Robotics},
+  year = {2012},
+  volume = {28},
+  pages = {1260-1277},
+  number = {6},
+  issn = {1552-3098}
+}
+
+@ARTICLE{liegeois1977,
+  author = {A. Li\'{e}geois},
+  title = {Automatic Supervisory Control of the Configuration and Behavior of
+	Multibody Mechanisms},
+  journal = {IEEE Transactions on Systems, Man and Cybernetics},
+  year = {1977},
+  volume = {7},
+  pages = {868-871},
+  number = {12},
+  issn = {0018-9472}
+}
+
+@ARTICLE{lin1983,
+  author = {Lin, Chun-Shin and Chang, Po-Rong and Luh, Js Ye So},
+  title = {Formulation and optimization of cubic polynomial joint trajectories
+	for industrial robots},
+  journal = {IEEE Transactions on Automatic Control},
+  year = {1983},
+  volume = {28},
+  pages = {1066--1074},
+  number = {12},
+  publisher = {IEEE}
+}
+
+@ARTICLE{liu2012,
+  author = {Liu, Mingxing and Micaelli, A. and Evrard, P. and Escande, A. and
+	Andriot, C.},
+  title = {Interactive Virtual Humans: A Two-Level Prioritized Control Framework
+	With Wrench Bounds},
+  journal = {IEEE Transactions on Robotics},
+  year = {2012},
+  volume = {28},
+  pages = {1309-1322},
+  number = {6},
+  issn = {1552-3098}
+}
+
+@ARTICLE{liu2016,
+  author = {Liu, Mingxing and Tan, Yang and Padois, Vincent},
+  title = {Generalized hierarchical control},
+  journal = {Autonomous Robots},
+  year = {2016},
+  volume = {40},
+  pages = {17--31},
+  number = {1},
+  publisher = {Springer}
+}
+
+@INPROCEEDINGS{lober2015,
+  author = {Lober, R and Padois, V and Sigaud, O},
+  title = {Variance Modulated Task Prioritization in Whole-Body Control},
+  booktitle = {Proceedings of the IEEE/RSJ International Conference on Intelligent
+	Robots and Systems},
+  year = {2015},
+  pages = {1--6}
+}
+
+@ARTICLE{lumelsky1987,
+  author = {Lumelsky, Vladimir J and Stepanov, Alexander A},
+  title = {Path-planning strategies for a point mobile automaton moving amidst
+	unknown obstacles of arbitrary shape},
+  journal = {Algorithmica},
+  year = {1987},
+  volume = {2},
+  pages = {403--430},
+  number = {1-4},
+  publisher = {Springer}
+}
+
+@ARTICLE{macfarlane2003,
+  author = {Macfarlane, Sonja and Croft, Elizabeth and others},
+  title = {Jerk-bounded manipulator trajectory planning: design for real-time
+	applications},
+  journal = { IEEE Transactions on Robotics and Automation},
+  year = {2003},
+  volume = {19},
+  pages = {42--52},
+  number = {1},
+  publisher = {IEEE}
+}
+
+@ARTICLE{maciejewski1985,
+  author = {Maciejewski, Anthony A and Klein, Charles A},
+  title = {Obstacle avoidance for kinematically redundant manipulators in dynamically
+	varying environments},
+  journal = {The international journal of robotics research},
+  year = {1985},
+  volume = {4},
+  pages = {109--117},
+  number = {3},
+  publisher = {Sage Publications}
+}
+
+@INPROCEEDINGS{makarov2011,
+  author = {Makarov, Maria and Grossard, Mathieu and Rodriguez-Ayerbe, Pedro
+	and Dumur, Didier},
+  title = {Generalized predictive control of an anthropomorphic robot arm for
+	trajectory tracking},
+  booktitle = {Proceedings of the IEEE/ASME International Conference on Advanced
+	Intelligent Mechatronics},
+  year = {2011}
+}
+
+@ARTICLE{mansard2009,
+  author = {Mansard, Nicolas and Khatib, Oussama and Kheddar, Abderrahmane},
+  title = {A unified approach to integrate unilateral constraints in the stack
+	of tasks},
+  journal = {IEEE Transactions on Robotics},
+  year = {2009},
+  volume = {25},
+  pages = {670--685},
+  number = {3},
+  publisher = {IEEE}
+}
+
+@INPROCEEDINGS{mansard2006,
+  author = {Mansard, Nicolas and Lopes, Manuel and Santos-Victor, Jos{\'e} and
+	Chaumette, Fran{\c{c}}ois},
+  title = {Jacobian learning methods for tasks sequencing in visual servoing},
+  booktitle = {Intelligent Robots and Systems, 2006 IEEE/RSJ International Conference
+	on},
+  year = {2006},
+  pages = {4284--4290},
+  organization = {IEEE}
+}
+
+@ARTICLE{mansard2009c,
+  author = {Mansard, N. and Remazeilles, A. and Chaumette, F.},
+  title = {Continuity of Varying-Feature-Set Control Laws},
+  journal = {Automatic Control, IEEE Transactions on},
+  year = {2009},
+  volume = {54},
+  pages = {2493-2505},
+  number = {11},
+  issn = {0018-9286}
+}
+
+@ARTICLE{mills1993,
+  author = {Mills, James K and Lokhorst, David M},
+  title = {Control of robotic manipulators during general task execution: a
+	discontinuous control approach},
+  journal = {The International Journal of Robotics Research},
+  year = {1993},
+  volume = {12},
+  pages = {146--163},
+  number = {2},
+  publisher = {Sage Publications}
+}
+
+@INPROCEEDINGS{mistry2008,
+  author = {Mistry, Michael and Nakanishi, Jun and Cheng, Gordon and Schaal,
+	Stefan},
+  title = {Inverse kinematics with floating base and constraints for full body
+	humanoid robot control},
+  booktitle = {Proceedings of the IEEE/RAS International Conference on Humanoid
+	Robots},
+  year = {2008},
+  pages = {22--27}
+}
+
+@ARTICLE{mordatch2012,
+  author = {Mordatch, Igor and Todorov, Emanuel and Popovi{\'c}, Zoran},
+  title = {Discovery of complex behaviors through contact-invariant optimization},
+  journal = {ACM Transactions on Graphics},
+  year = {2012},
+  volume = {31},
+  pages = {43},
+  number = {4},
+  publisher = {ACM}
+}
+
+@ARTICLE{muico2009,
+  author = {Muico, Uldarico and Lee, Yongjoon and Popovi{\'c}, Jovan and Popovi{\'c},
+	Zoran},
+  title = {Contact-aware nonlinear control of dynamic characters},
+  journal = {ACM Transactions on Graphics},
+  year = {2009},
+  volume = {28},
+  pages = {81},
+  number = {3}
+}
+
+@BOOK{murray1994,
+  title = {A mathematical introduction to robotic manipulation},
+  publisher = {CRC press},
+  year = {1994},
+  author = {Murray, Richard M and Li, Zexiang and Sastry, S Shankar and Sastry,
+	S Shankara}
+}
+
+@BOOK{nakamura1990,
+  title = {Advanced robotics: redundancy and optimization},
+  publisher = {Addison-Wesley Longman Publishing Co., Inc.},
+  year = {1990},
+  author = {Nakamura, Y.},
+  owner = {yang},
+  timestamp = {2014.08.20}
+}
+
+@ARTICLE{nakamura1987,
+  author = {Nakamura, Yoshihiko and Hanafusa, Hideo and Yoshikawa, Tsuneo},
+  title = {Task-priority based redundancy control of robot manipulators},
+  journal = {The International Journal of Robotics Research},
+  year = {1987},
+  volume = {6},
+  pages = {3--15},
+  number = {2},
+  publisher = {Sage Publications}
+}
+
+@BOOK{nise2007,
+  title = {CONTROL SYSTEMS ENGINEERING},
+  publisher = {John Wiley \& Sons},
+  year = {2007},
+  author = {Nise, Norman S}
+}
+
+@BOOK{nocedal2006,
+  title = {Numerical Optimization, Second Edition},
+  publisher = {Springer New York},
+  year = {2006},
+  author = {Nocedal, Jorge and Wright, Stephen J}
+}
+
+@ARTICLE{padois2007,
+  author = {Padois, Vincent and Fourquet, Jean-Yves and Chiron, Pascale and others},
+  title = {Kinematic and dynamic model-based control of wheeled mobile manipulators:
+	A unified framework for reactive approaches},
+  journal = {Robotica},
+  year = {2007},
+  volume = {25},
+  pages = {157},
+  number = {2},
+  publisher = {Cambridge Univ Press}
+}
+
+@ARTICLE{pagilla2001,
+  author = {Pagilla, P.R. and Yu, Biao Yu Biao},
+  title = {A stable transition controller for constrained robots},
+  journal = {IEEE/ASME Transactions on Mechatronics},
+  year = {2001},
+  volume = {6},
+  pages = {65--74},
+  number = {1},
+  annote = {Contract with constraints: normal velocity should be zero.}
+}
+
+@ARTICLE{pang1996,
+  author = {Pang, Jong-Shi and Trinkle, Jeffrey C},
+  title = {Complementarity formulations and existence of solutions of dynamic
+	multi-rigid-body contact problems with Coulomb friction},
+  journal = {Mathematical programming},
+  year = {1996},
+  volume = {73},
+  pages = {199--226},
+  number = {2},
+  publisher = {Springer}
+}
+
+@INPROCEEDINGS{park1998,
+  author = {Park, Ki Cheol and Chang, Pyung Hun and Kim, Seung Ho},
+  title = {The enhanced compact QP method for redundant manipulators using practical
+	inequality constraints},
+  booktitle = {Proceedings of the International Conference on Robotics and Automation},
+  year = {1998},
+  volume = {1},
+  pages = {107--114}
+}
+
+@ARTICLE{petric2013,
+  author = {Tadej Petri\v{c} and Leon \v{Z}lajpah},
+  title = {Smooth continuous transition between tasks on a kinematic control
+	level: Obstacle avoidance as a control problem },
+  journal = {Robotics and Autonomous Systems },
+  year = {2013},
+  volume = {61},
+  pages = {948-959},
+  number = {9},
+  issn = {0921-8890}
+}
+
+@ARTICLE{piazzi2000,
+  author = {Piazzi, Aurelio and Visioli, Antonio},
+  title = {Global minimum-jerk trajectory planning of robot manipulators},
+  journal = { IEEE Transactions on Industrial Electronics},
+  year = {2000},
+  volume = {47},
+  pages = {140--149},
+  number = {1}
+}
+
+@ARTICLE{raibert1981,
+  author = {Raibert, Marc H and Craig, John J},
+  title = {Hybrid position/force control of manipulators},
+  journal = {Journal of Dynamic Systems, Measurement, and Control},
+  year = {1981},
+  volume = {103},
+  pages = {126--133},
+  number = {2},
+  publisher = {American Society of Mechanical Engineers}
+}
+
+@INPROCEEDINGS{raunhardt2007,
+  author = {Raunhardt, Daniel and Boulic, Ronan},
+  title = {Progressive clamping},
+  booktitle = {Proceedings of the International Conference on Robotics and Automation},
+  year = {2007},
+  pages = {4414--4419}
+}
+
+@INPROCEEDINGS{rubrecht2010,
+  author = {Rubrecht, S{\'e}bastien and Padois, Vincent and Bidaud, Philippe
+	and De Broissia, Michel},
+  title = {Constraints Compliant Control: constraints compatibility and the
+	displaced configuration approach},
+  booktitle = {Proceedings of the IEEE/RSJ International Conference on Intelligent
+	Robots and Systems},
+  year = {2010},
+  pages = {677--684}
+}
+
+@ARTICLE{saab2013,
+  author = {Saab, Layale and Ramos, Oscar E. and Keith, Francois and Mansard,
+	Nicolas and Soueres, Philippe and Fourquet, Jean-Yves},
+  title = {Dynamic Whole-Body Motion Generation Under Rigid Contacts and Other
+	Unilateral Constraints},
+  journal = { IEEE Transactions on Robotics},
+  year = {2013},
+  volume = {29},
+  pages = {346--362},
+  number = {2},
+  mendeley-tags = {TaskPriority},
+  shorttitle = {Robotics, IEEE Transactions on}
+}
+
+@ARTICLE{sadeghian2013,
+  author = {Sadeghian, Hamid and Villani, Luigi and Keshmiri, Mehdi and Siciliano,
+	Bruno},
+  title = {Dynamic multi-priority control in redundant robotic systems},
+  journal = {Robotica},
+  year = {2013},
+  volume = {31},
+  pages = {1155--1167},
+  number = {07},
+  publisher = {Cambridge Univ Press}
+}
+
+@PHDTHESIS{salini2012,
+  author = {Salini, J.},
+  title = {Dynamic control for the task/posture coordination of humanoids: toward
+	synthesis of complex activities},
+  school = {Universit\'{e} Pierre et Marie Curie},
+  year = {2012},
+  type = {Ph.D. thesis},
+  address = {Paris, France},
+  month = {June},
+  category = {THDR}
+}
+
+@MISC{arboris2012,
+  author = {Salini, J. and Barth\'elemy, S. and Micaelli, A.},
+  title = {Arboris-Python},
+  year = {2012},
+  url = {http://www.isir.upmc.fr/?op=view_profil&lang=fr&id=121&pageid=766}
+}
+
+@INPROCEEDINGS{salini2011,
+  author = {Salini, J. and Padois, V. and Bidaud, P.},
+  title = {Synthesis of complex humanoid whole-body behavior: A focus on sequencing
+	and tasks transitions},
+  booktitle = {Proceedings of the International Conference on Robotics and Automation},
+  year = {2011},
+  pages = {1283 -1290},
+  issn = {1050-4729}
+}
+
+@BOOK{samson1991,
+  title = {Robot control: the task function approach},
+  publisher = {Oxford University Press},
+  year = {1991},
+  author = {Samson, Claude and Espiau, Bernard and Borgne, Michel Le}
+}
+
+@BOOK{schatzman2002,
+  title = {Numerical analysis: a mathematical introduction},
+  publisher = {Oxford University Press},
+  year = {2002},
+  author = {Schatzman, Michelle and Schatzman, Michelle}
+}
+
+@INPROCEEDINGS{sentis2004,
+  author = {L. Sentis and O. Khatib},
+  title = {Task-Oriented Control of Humanoid Robots Through Prioritization},
+  booktitle = {Proceedings of the IEEE/RAS International Conference on Humanoid
+	Robots},
+  year = {2004}
+}
+
+@ARTICLE{sentis2010,
+  author = {Sentis, L. and Jaeheung Park and Khatib, O.},
+  title = {Compliant Control of Multi-Contact and Center of Mass Behaviors in
+	Humanoid Robots},
+  journal = {IEEE Transactions on Robotics},
+  year = {2010},
+  volume = {26},
+  pages = {483-501},
+  number = {3},
+  issn = {1552-3098}
+}
+
+@ARTICLE{shiller1996,
+  author = {Shiller, Zvi},
+  title = {Time-energy optimal control of articulated systems with geometric
+	path constraints},
+  journal = {Journal of dynamic systems, measurement, and control},
+  year = {1996},
+  volume = {118},
+  pages = {139--143},
+  number = {1},
+  publisher = {American Society of Mechanical Engineers}
+}
+
+@ARTICLE{shiller1992,
+  author = {Shiller, Zvi and Lu, Hsueh-Hen},
+  title = {Computation of path constrained time optimal motions with dynamic
+	singularities},
+  journal = {Journal of dynamic systems, measurement, and control},
+  year = {1992},
+  volume = {114},
+  pages = {34--40},
+  number = {1},
+  publisher = {American Society of Mechanical Engineers}
+}
+
+@ARTICLE{siciliano1990,
+  author = {Siciliano, Bruno},
+  title = {Kinematic control of redundant robot manipulators: A tutorial},
+  journal = {Journal of Intelligent and Robotic Systems},
+  year = {1990},
+  volume = {3},
+  pages = {201--212},
+  number = {3},
+  publisher = {Springer}
+}
+
+@INBOOK{siciliano2008,
+  chapter = {27. Contact Modeling and Manipulation},
+  title = {Springer handbook of robotics},
+  publisher = {Springer Science \& Business Media},
+  year = {2008},
+  author = {Siciliano, Bruno and Khatib, Oussama}
+}
+
+@BOOK{siciliano2009,
+  title = {Robotics: modelling, planning and control},
+  publisher = {Springer Science \& Business Media},
+  year = {2009},
+  author = {Siciliano, Bruno and Sciavicco, Lorenzo and Villani, Luigi and Oriolo,
+	Giuseppe}
+}
+
+@INPROCEEDINGS{siciliano1991,
+  author = {Siciliano, Bruno and Slotine, Jean-Jacques E},
+  title = {A general framework for managing multiple tasks in highly redundant
+	robotic systems},
+  booktitle = {Proceedings of the International Conference on Advanced Robotics},
+  year = {1991},
+  pages = {1211--1216}
+}
+
+@BOOK{siciliano2012,
+  title = {Robot force control},
+  publisher = {Springer Science \& Business Media},
+  year = {2012},
+  author = {Siciliano, Bruno and Villani, Luigi},
+  volume = {540}
+}
+
+@ARTICLE{simon1993,
+  author = {Simon, Dan},
+  title = {The application of neural networks to optimal robot trajectory planning},
+  journal = {Robotics and Autonomous Systems},
+  year = {1993},
+  volume = {11},
+  pages = {23--34},
+  number = {1},
+  publisher = {Elsevier}
+}
+
+@BOOK{slotine1991,
+  title = {Applied nonlinear control},
+  publisher = {Prentice-hall Englewood Cliffs, NJ},
+  year = {1991},
+  author = {Slotine, Jean-Jacques E and Li, Weiping and others},
+  volume = {199},
+  number = {1}
+}
+
+@INPROCEEDINGS{stasse2008,
+  author = {Stasse, Olivier and Escande, Adrien and Mansard, Nicolas and Miossec,
+	Sylvain and Evrard, Paul and Kheddar, Abderrahmane},
+  title = {Real-time (self)-collision avoidance task on a hrp-2 humanoid robot},
+  booktitle = {Proceedings of the International Conference on Robotics and Automation},
+  year = {2008},
+  pages = {3200--3205}
+}
+
+@ARTICLE{sugiura2010,
+  author = {Sugiura, Hisashi and Gienger, Michael and JAN{\ss}EN, HERBERT and
+	Goerick, Christian},
+  title = {Reactive self collision avoidance with dynamic task prioritization
+	for humanoid robots},
+  journal = {International Journal of Humanoid Robotics},
+  year = {2010},
+  volume = {7},
+  pages = {31--54},
+  number = {01},
+  publisher = {World Scientific}
+}
+
+@ARTICLE{tarn1996,
+  author = {Tarn, Tzyh-jong and Wu, Yunying and Xi, Ning and Isidori, Alberto},
+  title = {Force regulation and contact transition control},
+  journal = {Control System, IEEE},
+  year = {1996},
+  volume = {16},
+  pages = {32--40},
+  number = {1},
+  keywords = {ForceControl},
+  mendeley-tags = {ForceControl}
+}
+
+@ARTICLE{uno1989,
+  author = {Uno, Yoji and Kawato, Mitsuo and Suzuki, Rika},
+  title = {Formation and control of optimal trajectory in human multijoint arm
+	movement},
+  journal = {Biological cybernetics},
+  year = {1989},
+  volume = {61},
+  pages = {89--101},
+  number = {2},
+  publisher = {Springer}
+}
+
+@INPROCEEDINGS{verscheure2008,
+  author = {Verscheure, Diederik and Demeulenaere, Bram and Swevers, Jan and
+	Schutter, Joris De and Diehl, Moritz},
+  title = {Time-energy optimal path tracking for robots: a numerically efficient
+	optimization approach},
+  booktitle = {Advanced Motion Control, 2008. AMC'08. 10th IEEE International Workshop
+	on},
+  year = {2008},
+  pages = {727--732},
+  organization = {IEEE}
+}
+
+@ARTICLE{volpe1993,
+  author = {Volpe, Richard and Khosla, Pradeep},
+  title = {A theoretical and experimental investigation of impact control for
+	manipulators},
+  journal = {The International Journal of Robotics Research},
+  year = {1993},
+  volume = {12},
+  pages = {351--365},
+  number = {4},
+  publisher = {Sage Publications}
+}
+
+@ARTICLE{vukobratovic2004,
+  author = {Vukobratovi{\'c}, Miomir and Borovac, Branislav},
+  title = {Zero-moment point—thirty five years of its life},
+  journal = {International Journal of Humanoid Robotics},
+  year = {2004},
+  volume = {1},
+  pages = {157--173},
+  number = {01},
+  publisher = {World Scientific}
+}
+
+@INPROCEEDINGS{walker1990,
+  author = {Walker, Ian D},
+  title = {The use of kinematic redundancy in reducing impact and contact effects
+	in manipulation},
+  booktitle = {Proceedings of the International Conference on Robotics and Automation},
+  year = {1990},
+  pages = {434--439}
+}
+
+@INPROCEEDINGS{wensing2013,
+  author = {Wensing, Patrick M and Orin, David},
+  title = {Generation of dynamic humanoid behaviors through task-space control
+	with conic optimization},
+  booktitle = {Proceedings of the IEEE International Conference on Robotics and
+	Automation},
+  year = {2013},
+  pages = {3103--3109}
+}
+
+@ARTICLE{whitney1987,
+  author = {Whitney, Daniel E},
+  title = {Historical perspective and state of the art in robot force control},
+  journal = {The International Journal of Robotics Research},
+  year = {1987},
+  volume = {6},
+  pages = {3--14},
+  number = {1},
+  publisher = {Sage Publications}
+}
+
+@ARTICLE{whitney1977,
+  author = {Whitney, Daniel E},
+  title = {Force feedback control of manipulator fine motions},
+  journal = {Journal of Dynamic Systems, Measurement, and Control},
+  year = {1977},
+  volume = {99},
+  pages = {91--97},
+  number = {2},
+  publisher = {American Society of Mechanical Engineers}
+}
+
+@INPROCEEDINGS{wieber2006,
+  author = {Wieber, Pierre-Brice},
+  title = {Trajectory free linear model predictive control for stable walking
+	in the presence of strong perturbations},
+  booktitle = {Proceedings of the IEEE/RAS International Conference on Humanoid
+	Robots},
+  year = {2006},
+  pages = {137--142},
+  organization = {IEEE}
+}
+
+@MISC{continuity,
+  author = {Wikipedia},
+  title = {Continuous function},
+  url = {https://en.wikipedia.org/wiki/Continuous_function}
+}
+
+@BOOK{de2012,
+  title = {Theory of robot control},
+  publisher = {Springer Science \& Business Media},
+  year = {2012},
+  author = {de Wit, Carlos Canudas and Siciliano, Bruno and Bastin, Georges}
+}
+
+@INPROCEEDINGS{wu1996,
+  author = {Wu, Yunying and Tarn, Tzyh-Jong and Xi, Ning and Isidori, Alberto},
+  title = {On robust impact control via positive acceleration feedback for robot
+	manipulators},
+  booktitle = {Proceedings of the International Conference on Robotics and Automation},
+  year = {1996},
+  volume = {2},
+  pages = {1891--1896},
+  organization = {IEEE}
+}
+
+@INPROCEEDINGS{xu2009,
+  author = {Xu, Haili and Zhuang, Jian and Wang, Sun'an and Zhu, Zhisong},
+  title = {Global time-energy optimal planning of robot trajectories},
+  booktitle = {Mechatronics and Automation, 2009. ICMA 2009. International Conference
+	on},
+  year = {2009},
+  pages = {4034--4039},
+  organization = {IEEE}
+}
+
+@ARTICLE{yoshikawa1988,
+  author = {Yoshikawa, Tsuneo and Sugie, Toshiharu and Tanaka, Masaki},
+  title = {Dynamic hybrid position/force control of robot manipulators-controller
+	design and experiment},
+  journal = {Robotics and Automation, IEEE Journal of},
+  year = {1988},
+  volume = {4},
+  pages = {699--705},
+  number = {6},
+  publisher = {IEEE}
+}
+
+@INPROCEEDINGS{youcef1989,
+  author = {Youcef-Toumi, K and Gutz, DA},
+  title = {Impact and force control},
+  booktitle = {Proceedings of the International Conference on Robotics and Automation},
+  year = {1989},
+  pages = {410--416},
+  organization = {IEEE}
+}
+
+@ARTICLE{zhang2004,
+  author = {Zhang, Yunong and Ge, Shuzhi Sam and Lee, Tong Heng},
+  title = {A unified quadratic-programming-based dynamical system approach to
+	joint torque optimization of physically constrained redundant manipulators},
+  journal = {IEEE Transactions on Systems, Man, and Cybernetics, Part B: Cybernetics},
+  year = {2004},
+  volume = {34},
+  pages = {2126--2132},
+  number = {5}
+}
+
+@ARTICLE{zhang2004obstacle,
+  author = {Zhang, Yunong and Wang, Jun},
+  title = {Obstacle avoidance for kinematically redundant manipulators using
+	a dual neural network},
+  journal = {IEEE Transactions on Systems, Man, and Cybernetics, Part B: Cybernetics
+	},
+  year = {2004},
+  volume = {34},
+  pages = {752--759},
+  number = {1}
+}
+

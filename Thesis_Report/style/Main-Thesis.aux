@@ -1,0 +1,339 @@
+\relax 
+\ifx\hyper@anchor\@undefined
+\global \let \oldcontentsline\contentsline
+\gdef \contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global \let \oldnewlabel\newlabel
+\gdef \newlabel#1#2{\newlabelxx{#1}#2}
+\gdef \newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\let \contentsline\oldcontentsline
+\let \newlabel\oldnewlabel}
+\else
+\global \let \hyper@last\relax 
+\fi
+
+\bibstyle{IEEEtran}
+\bibstyle{style/these}
+\@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction, State-of-the-art and proposed contributions}{1}{chapter.1}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chap:Litreview}{{1}{1}{Introduction, State-of-the-art and proposed contributions\relax }{chapter.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}Safety standards}{2}{section.1.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.1}Considerations when dealing with constraints}{2}{subsection.1.2.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces A telemanipulated robotic arm coping with a \textit  {safety distance} constraint between its end-effector and an obstacle $O$ entering its workspace.\relax }}{3}{figure.caption.2}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:dampdzdl}{{1.1}{3}{A telemanipulated robotic arm coping with a \textit {safety distance} constraint between its end-effector and an obstacle $O$ entering its workspace.\relax \relax }{figure.caption.2}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Constraints incompatibility}{5}{chapter.2}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chap:Constrcomp}{{2}{5}{Constraints incompatibility\relax }{chapter.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Introduction}{5}{section.2.1}}
+\newlabel{sec:intro constrcomp}{{2.1}{5}{Introduction\relax }{section.2.1}{}}
+\newlabel{label:solution}{{1}{6}{{{\color {red}\underline {solution}}}}{mylabelcounter.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.1}The general problem}{6}{subsection.2.1.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Braking phase for the car in scenario 1 as it stops before hitting the wall.\relax }}{7}{figure.caption.3}}
+\newlabel{fig:car_example_2}{{2.1}{7}{Braking phase for the car in scenario 1 as it stops before hitting the wall.\relax \relax }{figure.caption.3}{}}
+\newlabel{eq:discretized_dynamics_vel}{{2.1}{7}{The general problem\relax }{equation.2.1.1}{}}
+\newlabel{eq:q_dot_evolution_with_const_qdddot_m}{{2.2}{7}{Motivation\relax }{equation.2.1.2}{}}
+\newlabel{eq:q_ddot_vel_jerk_comp_aa_n1}{{2.3}{7}{Motivation\relax }{equation.2.1.3}{}}
+\newlabel{label:complete}{{1}{8}{{{\color {red}\underline {complete}}}}{mylabelcounter.2}{}}
+\newlabel{eq:n_1_eq_aa}{{2.4}{8}{Motivation\relax }{equation.2.1.4}{}}
+\newlabel{eq:q_ddot_vel_jerk_comp_aa_n2}{{2.5}{8}{Motivation\relax }{equation.2.1.5}{}}
+\newlabel{eq:n_2_eq_aa}{{2.6}{8}{Motivation\relax }{equation.2.1.6}{}}
+\newlabel{eq:qddot_cond_to_satisfy_Jerk_Vel_compatibility_profile}{{2.7}{8}{Motivation\relax }{equation.2.1.7}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1.1}Illustration 1}{8}{subsubsection.2.1.1.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Extended state $S$ of joint $0$ during the braking phase implicitly induced to cope with the maximum velocity limit $\mathaccentV {dot}05F{q}_{M_{0}}$. The naive formulation of the articular velocity constraint (\ref  {eq:cnt_lit_tme_step_2}) is used. Top to bottom: velocity, acceleration and jerk.\relax }}{9}{figure.caption.4}}
+\newlabel{fig:0_Vel_constr_classic}{{2.2}{9}{Extended state $S$ of joint $0$ during the braking phase implicitly induced to cope with the maximum velocity limit $\dot {q}_{M_{0}}$. The naive formulation of the articular velocity constraint (\ref {eq:cnt_lit_tme_step_2}) is used. Top to bottom: velocity, acceleration and jerk.\relax \relax }{figure.caption.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.2}Joint position constraint incompatibility with deceleration and/or jerk limits}{9}{subsection.2.1.2}}
+\newlabel{subsec:complete_b_ph}{{2.1.2}{9}{Joint position constraint incompatibility with deceleration and/or jerk limits\relax }{subsection.2.1.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Extended state $S$ of joint $0$ during the braking phase implicitly induced to cope with a maximum velocity limit $\mathaccentV {dot}05F{q}_{M_{0}}$. In this case, the new formulation of the joint rate constraint (\ref  {eq:q_ddot_vel_jerk_comp_aa_n1}) that takes into account the actuator's maximum producible jerk $({\mathop {q}\limits ^{\vbox to-1.4\ex@ {\kern -\tw@ \ex@ \hbox {\normalfont  ...}\vss }}}_{m_{0}} = 25\nobreakspace  {}rad.s^{-3})$ is used. Note that $n_1$, is physically meaningful only during the span of the implicitly induced braking phase. Top to bottom: velocity, acceleration, jerk and $n_1$. $z_1$ and $z_2$ are in Fig.\nobreakspace  {}\ref  {fig:1_Vel_constr_jerk_comp_zoom}\relax }}{10}{figure.caption.5}}
+\newlabel{fig:1_Vel_constr_jerk_comp}{{2.3}{10}{Extended state $S$ of joint $0$ during the braking phase implicitly induced to cope with a maximum velocity limit $\dot {q}_{M_{0}}$. In this case, the new formulation of the joint rate constraint (\ref {eq:q_ddot_vel_jerk_comp_aa_n1}) that takes into account the actuator's maximum producible jerk $(\dddot {q}_{m_{0}} = 25~rad.s^{-3})$ is used. Note that $n_1$, is physically meaningful only during the span of the implicitly induced braking phase. Top to bottom: velocity, acceleration, jerk and $n_1$. $z_1$ and $z_2$ are in Fig.~\ref {fig:1_Vel_constr_jerk_comp_zoom}\relax \relax }{figure.caption.5}{}}
+\newlabel{eq:qddot_cond_to_satisfy_Acc_posi_compatibility}{{2.8}{10}{Joint position constraint incompatibility with deceleration and/or jerk limits\relax }{equation.2.1.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Zooms corresponding to Fig.\nobreakspace  {}\ref  {fig:1_Vel_constr_jerk_comp}.\relax }}{11}{figure.caption.6}}
+\newlabel{fig:1_Vel_constr_jerk_comp_zoom}{{2.4}{11}{Zooms corresponding to Fig.~\ref {fig:1_Vel_constr_jerk_comp}.\relax \relax }{figure.caption.6}{}}
+\newlabel{eq:qddot_cond_to_satisfy_Jerk_posi_compatibility}{{2.9}{11}{Joint position constraint incompatibility with deceleration and/or jerk limits\relax }{equation.2.1.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Extended state $S$ of a joint during the induced \textit  {complete} braking phase needed to \textit  {\textbf  {properly}} cope with an upper position limit $q_{M}$. The braking phase is composed of three sub-phases that each lasts for a number of time-steps: sub-phase\nobreakspace  {}1 lasts $n_{15}$ control time-steps; sub-phase\nobreakspace  {}2 lasts $n_{17}$ control time-steps and sub-phase\nobreakspace  {}3 lasts $n_{19}$ control time-steps. Note that this illustration is not the result of a simulation. It represents the state of an actuator in case the \textit  {complete} braking phase is used to cope with its upper position limit. Top to bottom: position, velocity, acceleration and jerk.\relax }}{12}{figure.caption.7}}
+\newlabel{fig:per_Pr_jerk_ala_3}{{2.5}{12}{Extended state $S$ of a joint during the induced \textit {complete} braking phase needed to \textit {\textbf {properly}} cope with an upper position limit $q_{M}$. The braking phase is composed of three sub-phases that each lasts for a number of time-steps: sub-phase~1 lasts $n_{15}$ control time-steps; sub-phase~2 lasts $n_{17}$ control time-steps and sub-phase~3 lasts $n_{19}$ control time-steps. Note that this illustration is not the result of a simulation. It represents the state of an actuator in case the \textit {complete} braking phase is used to cope with its upper position limit. Top to bottom: position, velocity, acceleration and jerk.\relax \relax }{figure.caption.7}{}}
+\newlabel{eq:qddot_cond_to_satisfy_Jerk_posi_compatibility_complete}{{2.10}{12}{Joint position constraint incompatibility with deceleration and/or jerk limits\relax }{equation.2.1.10}{}}
+\newlabel{eq:qddot_cond_to_satisfy_Acc_Jerk_posi_compatibility}{{2.11}{12}{Joint position constraint incompatibility with deceleration and/or jerk limits\relax }{equation.2.1.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces Extended state $S$ of a joint during the induced braking phase needed to cope with an upper position limit $q_{M}$. Lasting $n_3$ control time-steps, the braking phase in this case takes into account only the articular deceleration capability $\mathaccentV {ddot}07F{q}_m$. Jerk limits are not considered. Top to bottom: position, velocity, acceleration and jerk.\relax }}{13}{figure.caption.8}}
+\newlabel{fig:5_Posi_constr_acc_comp_312}{{2.6}{13}{Extended state $S$ of a joint during the induced braking phase needed to cope with an upper position limit $q_{M}$. Lasting $n_3$ control time-steps, the braking phase in this case takes into account only the articular deceleration capability $\ddot {q}_m$. Jerk limits are not considered. Top to bottom: position, velocity, acceleration and jerk.\relax \relax }{figure.caption.8}{}}
+\newlabel{eq:qddot_cond_to_satisfy_Acc_Jerk_posi_compatibility}{{2.12}{13}{Joint position constraint incompatibility with deceleration and/or jerk limits\relax }{equation.2.1.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces Extended state $S$ of a joint during the induced braking phase needed to cope with an upper position limit $q_{M}$. The braking phase in this case is composed of two sub-phases: sub-phase\nobreakspace  {}1 that lasts $n_{7}$ control time-steps and sub-phase\nobreakspace  {}2 that lasts $n_{9}$ iterations. Note that, this illustration of the state of the joint is not the result of a simulation. It is a representation of how should be a braking phase induced using (\ref  {eq:qddot_cond_to_satisfy_Jerk_posi_compatibility_complete}) when coping with an upper position limit. Top to bottom: position, velocity, acceleration and jerk.\relax }}{14}{figure.caption.9}}
+\newlabel{fig:8_Podfgf12}{{2.7}{14}{Extended state $S$ of a joint during the induced braking phase needed to cope with an upper position limit $q_{M}$. The braking phase in this case is composed of two sub-phases: sub-phase~1 that lasts $n_{7}$ control time-steps and sub-phase~2 that lasts $n_{9}$ iterations. Note that, this illustration of the state of the joint is not the result of a simulation. It is a representation of how should be a braking phase induced using (\ref {eq:qddot_cond_to_satisfy_Jerk_posi_compatibility_complete}) when coping with an upper position limit. Top to bottom: position, velocity, acceleration and jerk.\relax \relax }{figure.caption.9}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2.1}Joint position constraint incompatibility with deceleration limits}{14}{subsubsection.2.1.2.1}}
+\newlabel{eq:discretized_dynamics_posi_decel}{{2.13}{15}{Joint position constraint incompatibility with deceleration limits\relax }{equation.2.1.13}{}}
+\newlabel{eq:q_evolution_with_const_qddot_m}{{2.14}{15}{Joint position constraint incompatibility with deceleration limits\relax }{equation.2.1.14}{}}
+\newlabel{eq:q_dot_posi_acc_comp}{{2.15}{15}{Joint position constraint incompatibility with deceleration limits\relax }{equation.2.1.15}{}}
+\newlabel{eq:q_ddot_posi_acc_comp_upp}{{2.16}{15}{Joint position constraint incompatibility with deceleration limits\relax }{equation.2.1.16}{}}
+\newlabel{eq:n_3_Acc_posi_comp}{{2.17}{15}{Joint position constraint incompatibility with deceleration limits\relax }{equation.2.1.17}{}}
+\newlabel{eq:q_ddot_posi_acc_comp_low}{{2.18}{16}{Joint position constraint incompatibility with deceleration limits\relax }{equation.2.1.18}{}}
+\newlabel{eq:n_4_Acc_posi_comp}{{2.19}{16}{Joint position constraint incompatibility with deceleration limits\relax }{equation.2.1.19}{}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.1.2.1.1}Illustration 2}{16}{paragraph.2.1.2.1.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces Extended state $S$ of joint $0$ during the braking phase implicitly induced by the joint's actuator to cope with the upper position limit $q_{M_{0}}$. The new formulation of the constraint on articular position (\ref  {eq:q_ddot_posi_acc_comp_upp}) that takes into account the deceleration capability $\mathaccentV {ddot}07F{q}_{m_{0}} = -100\nobreakspace  {}rad.s^{-2}$ is used. Top to bottom: position, velocity, acceleration, jerk and $n_3$. See $z_3$ and $z_4$ in Fig.\nobreakspace  {}\ref  {fig:4_Posi_constr_acc_comp_100_zoom}\relax }}{17}{figure.caption.10}}
+\newlabel{fig:4_Posi_constr_acc_comp_100}{{2.8}{17}{Extended state $S$ of joint $0$ during the braking phase implicitly induced by the joint's actuator to cope with the upper position limit $q_{M_{0}}$. The new formulation of the constraint on articular position (\ref {eq:q_ddot_posi_acc_comp_upp}) that takes into account the deceleration capability $\ddot {q}_{m_{0}} = -100~rad.s^{-2}$ is used. Top to bottom: position, velocity, acceleration, jerk and $n_3$. See $z_3$ and $z_4$ in Fig.~\ref {fig:4_Posi_constr_acc_comp_100_zoom}\relax \relax }{figure.caption.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces Zooms corresponding to Fig.\nobreakspace  {}\ref  {fig:4_Posi_constr_acc_comp_100}.\relax }}{17}{figure.caption.10}}
+\newlabel{fig:4_Posi_constr_acc_comp_100_zoom}{{2.9}{17}{Zooms corresponding to Fig.~\ref {fig:4_Posi_constr_acc_comp_100}.\relax \relax }{figure.caption.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces Extended state $S$ of joint $0$ during the braking phase implicitly induced by the joint's actuator to cope with the upper position limit $q_{M_{0}}$. The new formulation of the constraint on articular position (\ref  {eq:q_ddot_posi_acc_comp_upp}) that takes into account the deceleration capability $\mathaccentV {ddot}07F{q}_{m_{0}} = -3\nobreakspace  {}rad.s^{-2}$ is used. Top to bottom: position, velocity, acceleration, jerk and $n_3$. See $z_5$ and $z_6$ in Fig.\nobreakspace  {}\ref  {fig:5_Posi_constr_acc_comp_3_zoom}\relax }}{18}{figure.caption.11}}
+\newlabel{fig:5_Posi_constr_acc_comp_3}{{2.10}{18}{Extended state $S$ of joint $0$ during the braking phase implicitly induced by the joint's actuator to cope with the upper position limit $q_{M_{0}}$. The new formulation of the constraint on articular position (\ref {eq:q_ddot_posi_acc_comp_upp}) that takes into account the deceleration capability $\ddot {q}_{m_{0}} = -3~rad.s^{-2}$ is used. Top to bottom: position, velocity, acceleration, jerk and $n_3$. See $z_5$ and $z_6$ in Fig.~\ref {fig:5_Posi_constr_acc_comp_3_zoom}\relax \relax }{figure.caption.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.11}{\ignorespaces Zooms corresponding to Fig.\nobreakspace  {}\ref  {fig:5_Posi_constr_acc_comp_3}.\relax }}{18}{figure.caption.11}}
+\newlabel{fig:5_Posi_constr_acc_comp_3_zoom}{{2.11}{18}{Zooms corresponding to Fig.~\ref {fig:5_Posi_constr_acc_comp_3}.\relax \relax }{figure.caption.11}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2.2}Joint position constraint incompatibility with jerk limits 1}{19}{subsubsection.2.1.2.2}}
+\newlabel{sec:secref2}{{2.1.2.2}{19}{Joint position constraint incompatibility with jerk limits 1\relax }{subsubsection.2.1.2.2}{}}
+\newlabel{eq:discretized_dynamics_posi_jerk_braking}{{2.20}{19}{Joint position constraint incompatibility with jerk limits 1\relax }{equation.2.1.20}{}}
+\newlabel{eq:q_evolution_with_const_qdddot_m}{{2.21}{19}{Joint position constraint incompatibility with jerk limits 1\relax }{equation.2.1.21}{}}
+\newlabel{eq:q_ddot_posi_jerk_comp_upp}{{2.22}{19}{Joint position constraint incompatibility with jerk limits 1\relax }{equation.2.1.22}{}}
+\newlabel{eq:n_5_eq_new}{{2.23}{19}{Joint position constraint incompatibility with jerk limits 1\relax }{equation.2.1.23}{}}
+\newlabel{eq:q_ddot_posi_jerk_comp_low}{{2.24}{20}{Joint position constraint incompatibility with jerk limits 1\relax }{equation.2.1.24}{}}
+\newlabel{eq:n_6_eq_new}{{2.25}{20}{Joint position constraint incompatibility with jerk limits 1\relax }{equation.2.1.25}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Compute $n_{5}, n_{6}, f_{\theta }$ and $f_{\eta }$\relax }}{20}{algorithm.1}}
+\newlabel{alg:compute_f_theta_f_eta_n_5_n_6}{{1}{20}{Compute $n_{5}, n_{6}, f_{\theta }$ and $f_{\eta }$\relax \relax }{algorithm.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.1.2.2.1}Illustration 3}{21}{paragraph.2.1.2.2.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.12}{\ignorespaces Extended state $S$ of joint $0$ during the braking phase implicitly induced to cope with an upper position limit $q_{M_{0}}$. The new version of the formulation of the constraint on articular position (\ref  {eq:q_ddot_posi_jerk_comp_upp}) that takes into account the jerk capability $({\mathop {q}\limits ^{\vbox to-1.4\ex@ {\kern -\tw@ \ex@ \hbox {\normalfont  ...}\vss }}}_{m_{0}} = -25\nobreakspace  {}rad.s^{-3})$ is used. Top to bottom: position, velocity, acceleration, jerk and $n_5$. See $z_7$ and $z_8$ in Fig.\nobreakspace  {}\ref  {fig:4_Posi_constr_acc_comp_100_zoom}.\relax }}{22}{figure.caption.12}}
+\newlabel{fig:6_Posi_constr_jerk_comp_25_non_complete_formula_backklash_zoom}{{2.12}{22}{Extended state $S$ of joint $0$ during the braking phase implicitly induced to cope with an upper position limit $q_{M_{0}}$. The new version of the formulation of the constraint on articular position (\ref {eq:q_ddot_posi_jerk_comp_upp}) that takes into account the jerk capability $(\dddot {q}_{m_{0}} = -25~rad.s^{-3})$ is used. Top to bottom: position, velocity, acceleration, jerk and $n_5$. See $z_7$ and $z_8$ in Fig.~\ref {fig:4_Posi_constr_acc_comp_100_zoom}.\relax \relax }{figure.caption.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.13}{\ignorespaces Zooms corresponding to Fig.\nobreakspace  {}\ref  {fig:6_Posi_constr_jerk_comp_25_non_complete_formula_backklash}.\relax }}{22}{figure.caption.12}}
+\newlabel{fig:6_Posi_constr_jerk_comp_25_non_complete_formula_backklash_zoom}{{2.13}{22}{Zooms corresponding to Fig.~\ref {fig:6_Posi_constr_jerk_comp_25_non_complete_formula_backklash}.\relax \relax }{figure.caption.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.14}{\ignorespaces Extended state $S$ of joint $0$ during the braking phase implicitly induced to cope with an upper position limit $q_{M_{0}}$. The new version of the formulation of the constraint on articular position (\ref  {eq:q_ddot_posi_jerk_comp_upp}) that takes into account the jerk capability $({\mathop {q}\limits ^{\vbox to-1.4\ex@ {\kern -\tw@ \ex@ \hbox {\normalfont  ...}\vss }}}_{m_{0}} = -2500\nobreakspace  {}rad.s^{-3})$ is used. Top to bottom: position, velocity, acceleration, jerk and $n_5$. See $z_9$ and $z_{10}$ in Fig.\nobreakspace  {}\ref  {fig:7_Posi_constr_jerk_comp_2500_non_complete_formula_backklash_zoom}.\relax }}{23}{figure.caption.13}}
+\newlabel{fig:7_Posi_constr_jerk_comp_2500_non_complete_formula_backklash}{{2.14}{23}{Extended state $S$ of joint $0$ during the braking phase implicitly induced to cope with an upper position limit $q_{M_{0}}$. The new version of the formulation of the constraint on articular position (\ref {eq:q_ddot_posi_jerk_comp_upp}) that takes into account the jerk capability $(\dddot {q}_{m_{0}} = -2500~rad.s^{-3})$ is used. Top to bottom: position, velocity, acceleration, jerk and $n_5$. See $z_9$ and $z_{10}$ in Fig.~\ref {fig:7_Posi_constr_jerk_comp_2500_non_complete_formula_backklash_zoom}.\relax \relax }{figure.caption.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.15}{\ignorespaces Zooms corresponding to Fig.\nobreakspace  {}\ref  {fig:7_Posi_constr_jerk_comp_2500_non_complete_formula_backklash}.\relax }}{23}{figure.caption.13}}
+\newlabel{fig:7_Posi_constr_jerk_comp_2500_non_complete_formula_backklash_zoom}{{2.15}{23}{Zooms corresponding to Fig.~\ref {fig:7_Posi_constr_jerk_comp_2500_non_complete_formula_backklash}.\relax \relax }{figure.caption.13}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2.3}Joint position constraint incompatibility with jerk limits 2}{24}{subsubsection.2.1.2.3}}
+\newlabel{eq:discretized_dynamics_posi_jerk_braking_complete_formula}{{2.26}{24}{Joint position constraint incompatibility with jerk limits 2\relax }{equation.2.1.26}{}}
+\newlabel{eq:q_evolution_with_const_qdddot_m_const_qdddot_M}{{2.27}{24}{Joint position constraint incompatibility with jerk limits 2\relax }{equation.2.1.27}{}}
+\newlabel{eq:q_ddot_evo_in_n_7_iteration_q_dddot_m}{{2.28}{24}{Joint position constraint incompatibility with jerk limits 2\relax }{equation.2.1.28}{}}
+\newlabel{eq:q_evolution_with_const_qdddot_m_const_qdddot_M_dev}{{2.29}{25}{Joint position constraint incompatibility with jerk limits 2\relax }{equation.2.1.29}{}}
+\newlabel{eq:q_constr_on_q_ddot_with_const_qdddot_m_const_qdddot_M_1}{{2.30}{25}{Joint position constraint incompatibility with jerk limits 2\relax }{equation.2.1.30}{}}
+\newlabel{eq:q_constr_on_q_ddot_with_const_qdddot_M_const_qdddot_m_2}{{2.31}{25}{Joint position constraint incompatibility with jerk limits 2\relax }{equation.2.1.31}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces Compute $n_{7}, n_{8}, n_{9}, n_{10}, f_{\mu }$ and $f_{\lambda }$\relax }}{26}{algorithm.2}}
+\newlabel{alg:compute_f_mu_f_lambda_n_7_n_8_n_9_n_10}{{2}{26}{Compute $n_{7}, n_{8}, n_{9}, n_{10}, f_{\mu }$ and $f_{\lambda }$\relax \relax }{algorithm.2}{}}
+\newlabel{note1}{{{\itshape  a}}{26}{Compute $n_{7}, n_{8}, n_{9}, n_{10}, f_{\mu }$ and $f_{\lambda }$\relax \relax }{algorithm.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.1.2.3.1}Illustration 4}{26}{paragraph.2.1.2.3.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2.4}Joint position constraint incompatibility with both deceleration and jerk limits 1}{27}{subsubsection.2.1.2.4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.16}{\ignorespaces Extended state $S$ of joint $0$ during the braking phase implicitly induced to cope with an upper position limit $q_{M_{0}}$. The new formulation of the constraint on articular position (\ref  {eq:q_constr_on_q_ddot_with_const_qdddot_m_const_qdddot_M_1}) that takes into account both the positive and negative jerk capabilities $[{\mathop {q}\limits ^{\vbox to-1.4\ex@ {\kern -\tw@ \ex@ \hbox {\normalfont  ...}\vss }}}_{m_{0}}, {\mathop {q}\limits ^{\vbox to-1.4\ex@ {\kern -\tw@ \ex@ \hbox {\normalfont  ...}\vss }}}_{M_{0}}] = [-25, 25]\nobreakspace  {}rad.s^{-3}$ is used. Top to bottom: position, velocity, acceleration, jerk and ($n_7$, $n_9$). See $z_{10}$ and $z_{11}$ in Fig.\nobreakspace  {}\ref  {fig:8_Posi_constr_jerk_comp_25_complete_formula_no_backklash_zoom}.\relax }}{28}{figure.caption.14}}
+\newlabel{fig:8_Posi_constr_jerk_comp_25_complete_formula_no_backklash}{{2.16}{28}{Extended state $S$ of joint $0$ during the braking phase implicitly induced to cope with an upper position limit $q_{M_{0}}$. The new formulation of the constraint on articular position (\ref {eq:q_constr_on_q_ddot_with_const_qdddot_m_const_qdddot_M_1}) that takes into account both the positive and negative jerk capabilities $[\dddot {q}_{m_{0}}, \dddot {q}_{M_{0}}] = [-25, 25]~rad.s^{-3}$ is used. Top to bottom: position, velocity, acceleration, jerk and ($n_7$, $n_9$). See $z_{10}$ and $z_{11}$ in Fig.~\ref {fig:8_Posi_constr_jerk_comp_25_complete_formula_no_backklash_zoom}.\relax \relax }{figure.caption.14}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.17}{\ignorespaces Zooms corresponding to Fig.\nobreakspace  {}\ref  {fig:8_Posi_constr_jerk_comp_25_complete_formula_no_backklash}.\relax }}{29}{figure.caption.15}}
+\newlabel{fig:8_Posi_constr_jerk_comp_25_complete_formula_no_backklash_zoom}{{2.17}{29}{Zooms corresponding to Fig.~\ref {fig:8_Posi_constr_jerk_comp_25_complete_formula_no_backklash}.\relax \relax }{figure.caption.15}{}}
+\newlabel{eq:q_evolution_with_const_qdddot_m_const_const_qdddot_M}{{2.32}{30}{Joint position constraint incompatibility with both deceleration and jerk limits 1\relax }{equation.2.1.32}{}}
+\newlabel{eq:q_evolution_with_const_qddot_m_and_qdddot_m_final}{{2.33}{30}{Joint position constraint incompatibility with both deceleration and jerk limits 1\relax }{equation.2.1.33}{}}
+\newlabel{eq:q_evolution_with_const_qddot_m_and_qdddot_m_2_final}{{2.34}{30}{Joint position constraint incompatibility with both deceleration and jerk limits 1\relax }{equation.2.1.34}{}}
+\newlabel{eq:Constr_comp_posi_acc_jerk_1_final}{{2.35}{31}{Joint position constraint incompatibility with both deceleration and jerk limits 1\relax }{equation.2.1.35}{}}
+\newlabel{eq:Constr_comp_posi_acc_jerk_1_kinema_final}{{2.36}{31}{Joint position constraint incompatibility with both deceleration and jerk limits 1\relax }{equation.2.1.36}{}}
+\newlabel{eq:Constr_comp_posi_acc_jerk_2_final}{{2.37}{31}{Joint position constraint incompatibility with both deceleration and jerk limits 1\relax }{equation.2.1.37}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {3}{\ignorespaces Compute $n_{11}, n_{12}, n_{13}, n_{14}, f_{\rho }$ and $f_{\pi }$\relax }}{32}{algorithm.3}}
+\newlabel{alg:compute_n_11_n_12_n_13_n_14_f_rho_f_pi}{{3}{32}{Compute $n_{11}, n_{12}, n_{13}, n_{14}, f_{\rho }$ and $f_{\pi }$\relax \relax }{algorithm.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.1.2.4.1}Illustration 5}{32}{paragraph.2.1.2.4.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.18}{\ignorespaces Extended state $S$ of joint $0$ during a \textit  {non-complete} braking phase implicitly induced to cope with an upper position limit $q_{M_{0}}$. The new formulation of the constraint on articular position (\ref  {eq:Constr_comp_posi_acc_jerk_1_final}), that takes into account both the articular jerk and deceleration capabilities $({\mathop {q}\limits ^{\vbox to-1.4\ex@ {\kern -\tw@ \ex@ \hbox {\normalfont  ...}\vss }}}_{m_{0}} = -25\nobreakspace  {}rad.s^{-3})$, $(\mathaccentV {ddot}07F{q}_{m_{0}}= -3\nobreakspace  {}rad.s^{-2})$ is used. Top to bottom: position, velocity, acceleration, jerk and $(n_{11}, n_{13})$. See $z_{13}$ and $z_{14}$ in Fig.\nobreakspace  {}\ref  {fig:9_Posi_constr_jerk_acc_comp_non_complete_formula_3_zoom}.\relax }}{33}{figure.caption.16}}
+\newlabel{fig:9_Posi_constr_jerk_acc_comp_non_complete_formula_3}{{2.18}{33}{Extended state $S$ of joint $0$ during a \textit {non-complete} braking phase implicitly induced to cope with an upper position limit $q_{M_{0}}$. The new formulation of the constraint on articular position (\ref {eq:Constr_comp_posi_acc_jerk_1_final}), that takes into account both the articular jerk and deceleration capabilities $(\dddot {q}_{m_{0}} = -25~rad.s^{-3})$, $(\ddot {q}_{m_{0}}= -3~rad.s^{-2})$ is used. Top to bottom: position, velocity, acceleration, jerk and $(n_{11}, n_{13})$. See $z_{13}$ and $z_{14}$ in Fig.~\ref {fig:9_Posi_constr_jerk_acc_comp_non_complete_formula_3_zoom}.\relax \relax }{figure.caption.16}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.19}{\ignorespaces Zooms corresponding to Fig.\nobreakspace  {}\ref  {fig:9_Posi_constr_jerk_acc_comp_non_complete_formula_3}.\relax }}{34}{figure.caption.17}}
+\newlabel{fig:9_Posi_constr_jerk_acc_comp_non_complete_formula_3_zoom}{{2.19}{34}{Zooms corresponding to Fig.~\ref {fig:9_Posi_constr_jerk_acc_comp_non_complete_formula_3}.\relax \relax }{figure.caption.17}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2.5}Joint position constraint incompatibility with both jerk and deceleration limits 2}{34}{subsubsection.2.1.2.5}}
+\newlabel{eq:S_with_const_qdddot_m_const_qddot_m_const_qdddot_M}{{2.38}{35}{Joint position constraint incompatibility with both jerk and deceleration limits 2\relax }{equation.2.1.38}{}}
+\newlabel{eq:q_evolution_with_const_qdddot_m_const_qddot_m_const_qdddot_M}{{2.39}{35}{Joint position constraint incompatibility with both jerk and deceleration limits 2\relax }{equation.2.1.39}{}}
+\newlabel{eq:q_evolution_with_const_qdddot_m_const_qddot_m_const_qdddot_M_dev}{{2.41}{36}{Joint position constraint incompatibility with both jerk and deceleration limits 2\relax }{equation.2.1.41}{}}
+\newlabel{eq:q_ddot_posi_acc_jerk_comp_complete_1}{{2.42}{37}{Joint position constraint incompatibility with both jerk and deceleration limits 2\relax }{equation.2.1.42}{}}
+\newlabel{eq:q_ddot_posi_acc_jerk_comp_complete_2}{{2.43}{37}{Joint position constraint incompatibility with both jerk and deceleration limits 2\relax }{equation.2.1.43}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {4}{\ignorespaces Compute $n_{15}, n_{16}, n_{17}, n_{18}, n_{19}, n_{20}, f_{\chi }$ and $f_{\phi }$\relax }}{38}{algorithm.4}}
+\newlabel{alg:compute_n_15_n_16_n_17_n_18_n_19_n_20_f_chi_f_phi}{{4}{38}{Compute $n_{15}, n_{16}, n_{17}, n_{18}, n_{19}, n_{20}, f_{\chi }$ and $f_{\phi }$\relax \relax }{algorithm.4}{}}
+\newlabel{note2}{{{\itshape  a}}{38}{Compute $n_{15}, n_{16}, n_{17}, n_{18}, n_{19}, n_{20}, f_{\chi }$ and $f_{\phi }$\relax \relax }{algorithm.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.1.2.5.1}Illustration 6}{39}{paragraph.2.1.2.5.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Final bounds on the acceleration control variable}{39}{section.2.2}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {5}{\ignorespaces Compute $f_{\psi }$ and $f_{\omega }$\relax }}{39}{algorithm.5}}
+\newlabel{alg:compute_f_psi_f_omega}{{5}{39}{Compute $f_{\psi }$ and $f_{\omega }$\relax \relax }{algorithm.5}{}}
+\newlabel{note1}{{{\itshape  a}}{39}{Compute $f_{\psi }$ and $f_{\omega }$\relax \relax }{algorithm.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.20}{\ignorespaces Extended state $S$ of joint $0$ during the \textit  {complete} braking phase to cope with an upper position limit $q_{M_{0}}$. The new formulation of the constraint on articular position (\ref  {eq:q_ddot_posi_acc_jerk_comp_complete_1}), that takes into account the deceleration capability $\mathaccentV {ddot}07F{q}_{m_{0}}=-3\nobreakspace  {}rad.s^{-2}$ in addition to the positive and negative jerk limits $[{\mathop {q}\limits ^{\vbox to-1.4\ex@ {\kern -\tw@ \ex@ \hbox {\normalfont  ...}\vss }}}_{m_{0}}, {\mathop {q}\limits ^{\vbox to-1.4\ex@ {\kern -\tw@ \ex@ \hbox {\normalfont  ...}\vss }}}_{M_{0}}] = [-25, 25]\nobreakspace  {}rad.s^{-3}$ is used. Top to bottom: position, velocity, acceleration, jerk and $(n_{15}, n_{17}, n_{19})$. See $z_{16}$, $z_{17}$ and $z_{18}$ in Fig.\nobreakspace  {}\ref  {fig:11_Posi_constr_jerk_acc_comp_complete_formula_3_zoom}\relax }}{40}{figure.caption.18}}
+\newlabel{fig:11_Posi_constr_jerk_acc_comp_complete_formula_3}{{2.20}{40}{Extended state $S$ of joint $0$ during the \textit {complete} braking phase to cope with an upper position limit $q_{M_{0}}$. The new formulation of the constraint on articular position (\ref {eq:q_ddot_posi_acc_jerk_comp_complete_1}), that takes into account the deceleration capability $\ddot {q}_{m_{0}}=-3~rad.s^{-2}$ in addition to the positive and negative jerk limits $[\dddot {q}_{m_{0}}, \dddot {q}_{M_{0}}] = [-25, 25]~rad.s^{-3}$ is used. Top to bottom: position, velocity, acceleration, jerk and $(n_{15}, n_{17}, n_{19})$. See $z_{16}$, $z_{17}$ and $z_{18}$ in Fig.~\ref {fig:11_Posi_constr_jerk_acc_comp_complete_formula_3_zoom}\relax \relax }{figure.caption.18}{}}
+\newlabel{eq:qddot_FINAL_CONSTR_1_final}{{2.44}{40}{Final bounds on the acceleration control variable\relax }{equation.2.2.44}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Illustration 7}{40}{subsection.2.2.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.21}{\ignorespaces Zooms corresponding to Fig.\nobreakspace  {}\ref  {fig:11_Posi_constr_jerk_acc_comp_complete_formula_3}.\relax }}{41}{figure.caption.19}}
+\newlabel{fig:11_Posi_constr_jerk_acc_comp_complete_formula_3_zoom}{{2.21}{41}{Zooms corresponding to Fig.~\ref {fig:11_Posi_constr_jerk_acc_comp_complete_formula_3}.\relax \relax }{figure.caption.19}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.22}{\ignorespaces State $S$ of joint $0$ during the braking phase to cope with an upper position limit $q_{M_{0}}$; The new constraint formulation (\ref  {eq:q_ddot_posi_acc_jerk_comp_complete_1}) that takes into account the deceleration capability $\mathaccentV {ddot}07F{q}_{m_{0}}=-100\nobreakspace  {}rad.s^{-2}$ in addition to the positive and negative jerk limits $[{\mathop {q}\limits ^{\vbox to-1.4\ex@ {\kern -\tw@ \ex@ \hbox {\normalfont  ...}\vss }}}_{m_{0}}, {\mathop {q}\limits ^{\vbox to-1.4\ex@ {\kern -\tw@ \ex@ \hbox {\normalfont  ...}\vss }}}_{M_{0}}] = [-25, 25]\nobreakspace  {}rad.s^{-3}$ is used. Top to bottom: position, velocity, acceleration, jerk and $(n_{15}, n_{17}, n_{19})$.\relax }}{42}{figure.caption.20}}
+\newlabel{fig:10_Posi_constr_jerk_acc_comp_complete_formula_100}{{2.22}{42}{State $S$ of joint $0$ during the braking phase to cope with an upper position limit $q_{M_{0}}$; The new constraint formulation (\ref {eq:q_ddot_posi_acc_jerk_comp_complete_1}) that takes into account the deceleration capability $\ddot {q}_{m_{0}}=-100~rad.s^{-2}$ in addition to the positive and negative jerk limits $[\dddot {q}_{m_{0}}, \dddot {q}_{M_{0}}] = [-25, 25]~rad.s^{-3}$ is used. Top to bottom: position, velocity, acceleration, jerk and $(n_{15}, n_{17}, n_{19})$.\relax \relax }{figure.caption.20}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.23}{\ignorespaces Extended state $S$ of joint $0$ during the braking phases implicitly induced to simultaneously cope with its position, velocity, acceleration and jerk limitations. The final constraint on the acceleration control variable (\ref  {eq:qddot_FINAL_CONSTR_1_final}), that takes into account all these limitations is used. Top to bottom: position, velocity, acceleration, jerk and $(n_{1}, n_{15}, n_{17}, n_{19})$. See $z_{19}$, $z_{20}$, $z_{21}$, $z_{22}$ and $z_{23}$ in Fig.\nobreakspace  {}\ref  {fig:12_all_constr_zoom}.\relax }}{43}{figure.caption.21}}
+\newlabel{fig:12_all_constr}{{2.23}{43}{Extended state $S$ of joint $0$ during the braking phases implicitly induced to simultaneously cope with its position, velocity, acceleration and jerk limitations. The final constraint on the acceleration control variable (\ref {eq:qddot_FINAL_CONSTR_1_final}), that takes into account all these limitations is used. Top to bottom: position, velocity, acceleration, jerk and $(n_{1}, n_{15}, n_{17}, n_{19})$. See $z_{19}$, $z_{20}$, $z_{21}$, $z_{22}$ and $z_{23}$ in Fig.~\ref {fig:12_all_constr_zoom}.\relax \relax }{figure.caption.21}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.24}{\ignorespaces Zooms corresponding to Fig.\nobreakspace  {}\ref  {fig:12_all_constr}.\relax }}{43}{figure.caption.21}}
+\newlabel{fig:12_all_constr_zoom}{{2.24}{43}{Zooms corresponding to Fig.~\ref {fig:12_all_constr}.\relax \relax }{figure.caption.21}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Conclusion}{44}{section.2.3}}
+\newlabel{sec:concl_comp_cnstr}{{2.3}{44}{Conclusion\relax }{section.2.3}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Energy based safe control}{45}{chapter.3}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chap:safety}{{3}{45}{Energy based safe control\relax }{chapter.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Introduction}{45}{section.3.1}}
+\newlabel{sec:Problem statement}{{3.1}{45}{Introduction\relax }{section.3.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces View of a user sharing the same workspace with a KUKA LWR4 robotic manipulator. The kinetic energy of the robot is modulated as function of the real-time distance between the human and the robot in order to best perform the task of the robot while ensuring safety.\relax }}{46}{figure.caption.22}}
+\newlabel{fig:experiment}{{3.1}{46}{View of a user sharing the same workspace with a KUKA LWR4 robotic manipulator. The kinetic energy of the robot is modulated as function of the real-time distance between the human and the robot in order to best perform the task of the robot while ensuring safety.\relax \relax }{figure.caption.22}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Interaction forces and safety indicators}{47}{section.3.2}}
+\newlabel{sec:inter1}{{3.2}{47}{Interaction forces and safety indicators\relax }{section.3.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Kinetic energy}{47}{subsection.3.2.1}}
+\newlabel{eq:Energydissipationmodel1}{{3.1}{47}{Kinetic energy\relax }{equation.3.2.1}{}}
+\newlabel{eq:Ep_constr_221}{{3.4}{48}{Kinetic energy\relax }{equation.3.2.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Instantaneous force $\unhbox \voidb@x \hbox {\relax \mathversion  {bold}${F}$}_{EE_{|k}}$ applied by a robotic manipulator to an obstacle in its environment. The contact point $C$ in this case is the robot's end-effector point $(EE)$.\relax }}{49}{figure.caption.23}}
+\newlabel{fig:small_dist_rob_obst2}{{3.2}{49}{Instantaneous force $\vect {F}_{EE_{|k}}$ applied by a robotic manipulator to an obstacle in its environment. The contact point $C$ in this case is the robot's end-effector point $(EE)$.\relax \relax }{figure.caption.23}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Relation between kinetic and potential energies}{49}{subsection.3.2.2}}
+\newlabel{subsec:relEcEp}{{3.2.2}{49}{Relation between kinetic and potential energies\relax }{subsection.3.2.2}{}}
+\newlabel{eq:pulling_force}{{3.5}{49}{Relation between kinetic and potential energies\relax }{equation.3.2.5}{}}
+\newlabel{eq:2pts_mvt_dyn21}{{3.6}{49}{Relation between kinetic and potential energies\relax }{equation.3.2.6}{}}
+\newlabel{eq:Ec_var_eq_Ep}{{3.7}{49}{Relation between kinetic and potential energies\relax }{equation.3.2.7}{}}
+\newlabel{eq:Ec_var_eq_Ep2}{{3.8}{50}{Relation between kinetic and potential energies\relax }{equation.3.2.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Equivalent force $\unhbox \voidb@x \hbox {\relax \mathversion  {bold}${F}$}_{C_{|k}}$ expressed at the potential collision point $C$ pulling a robotic arm towards its desired trajectory from its current position $\unhbox \voidb@x \hbox {\relax \mathversion  {bold}${X}$}_{|k}$ to its future position $\unhbox \voidb@x \hbox {\relax \mathversion  {bold}${X}$}_{|k+1}$. The potential collision point $C$ in this case is the end-effector point $EE$.\relax }}{50}{figure.caption.24}}
+\newlabel{fig:small_dist_rob_obst33}{{3.3}{50}{Equivalent force $\vect {F}_{C_{|k}}$ expressed at the potential collision point $C$ pulling a robotic arm towards its desired trajectory from its current position $\vect {X}_{|k}$ to its future position $\vect {X}_{|k+1}$. The potential collision point $C$ in this case is the end-effector point $EE$.\relax \relax }{figure.caption.24}{}}
+\newlabel{eq:Ec_eq_sum_Ep_a}{{3.9}{50}{Relation between kinetic and potential energies\relax }{equation.3.2.9}{}}
+\newlabel{eq:Sp_free_mvts}{{3.10}{51}{Relation between kinetic and potential energies\relax }{equation.3.2.10}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Safety limit values}{51}{section.3.3}}
+\newlabel{sec:salimval1}{{3.3}{51}{Safety limit values\relax }{section.3.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Safety limit value for the pre-collision safety indicator}{51}{subsection.3.3.1}}
+\newlabel{eq:Ec_constr_a}{{3.11}{52}{Safety limit value for the pre-collision safety indicator\relax }{equation.3.3.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Task formulation}{52}{subsection.3.3.2}}
+\newlabel{Xddot}{{3.12}{52}{Task formulation\relax }{equation.3.3.12}{}}
+\newlabel{accelerationError}{{3.13}{52}{Task formulation\relax }{equation.3.3.13}{}}
+\newlabel{accelerationError}{{3.14}{52}{Task formulation\relax }{equation.3.3.14}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}Constraints formulation}{52}{subsection.3.3.3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.3.1}Articular constraints}{52}{subsubsection.3.3.3.1}}
+\newlabel{eq:const_1_literature23}{{3.15}{53}{Articular constraints\relax }{equation.3.3.15}{}}
+\newlabel{eq:cnt_lit_11}{{3.15a}{53}{Articular constraints\relax }{equation.3.3.15a}{}}
+\newlabel{eq:cnt_lit_11_bis}{{3.15b}{53}{Articular constraints\relax }{equation.3.3.15b}{}}
+\newlabel{eq:cnt_lit_22}{{3.15c}{53}{Articular constraints\relax }{equation.3.3.15c}{}}
+\newlabel{eq:cnt_lit_22_bis}{{3.15d}{53}{Articular constraints\relax }{equation.3.3.15d}{}}
+\newlabel{eq:cnt_lit_44}{{3.15e}{53}{Articular constraints\relax }{equation.3.3.15e}{}}
+\newlabel{eq:cnt_lit_55}{{3.15f}{53}{Articular constraints\relax }{equation.3.3.15f}{}}
+\newlabel{eq:cnt_lit_111}{{3.16a}{53}{Articular constraints\relax }{equation.3.3.16a}{}}
+\newlabel{eq:cnt_lit_222}{{3.16b}{53}{Articular constraints\relax }{equation.3.3.16b}{}}
+\newlabel{eq:cnt_lit_333}{{3.16c}{53}{Articular constraints\relax }{equation.3.3.16c}{}}
+\newlabel{eq:cnt_lit_444}{{3.16d}{53}{Articular constraints\relax }{equation.3.3.16d}{}}
+\newlabel{eq:const_1_literature1}{{3.16}{53}{Articular constraints\relax }{AMS.26}{}}
+\newlabel{eq:dyn_eq_aab}{{3.17}{53}{Articular constraints\relax }{equation.3.3.17}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.3.2}Energy related constraints}{53}{subsubsection.3.3.3.2}}
+\newlabel{eq:eq1}{{3.18}{53}{Energy related constraints\relax }{equation.3.3.18}{}}
+\newlabel{eq:const_eqs}{{3.19}{53}{Energy related constraints\relax }{equation.3.3.19}{}}
+\newlabel{eq:eq3}{{3.19a}{53}{Energy related constraints\relax }{equation.3.3.19a}{}}
+\newlabel{eq:eq4}{{3.19b}{53}{Energy related constraints\relax }{equation.3.3.19b}{}}
+\newlabel{eq:eq2}{{3.20}{54}{Energy related constraints\relax }{equation.3.3.20}{}}
+\newlabel{eq:v_futur}{{3.21}{54}{Energy related constraints\relax }{equation.3.3.21}{}}
+\newlabel{eq:X_k1_estimated}{{3.22}{54}{Energy related constraints\relax }{equation.3.3.22}{}}
+\newlabel{eq:Sp_phy_cont_expre}{{3.23}{54}{Energy related constraints\relax }{equation.3.3.23}{}}
+\newlabel{eq:Sp_phy_cont_expre_with}{{3.24}{54}{Energy related constraints\relax }{equation.3.3.24}{}}
+\newlabel{eq:Ep_constr_2_3_axis}{{3.25}{54}{Energy related constraints\relax }{equation.3.3.25}{}}
+\newlabel{eq:eqer}{{3.25a}{54}{Energy related constraints\relax }{equation.3.3.25a}{}}
+\newlabel{eq:eqet}{{3.25b}{54}{Energy related constraints\relax }{equation.3.3.25b}{}}
+\newlabel{eq:eqey}{{3.25c}{54}{Energy related constraints\relax }{equation.3.3.25c}{}}
+\newlabel{eq:Safe_constr_1}{{3.26}{54}{Energy related constraints\relax }{equation.3.3.26}{}}
+\newlabel{eq:sign_estimation}{{3.27}{54}{Energy related constraints\relax }{equation.3.3.27}{}}
+\newlabel{eq:Safe_constr_2}{{3.28}{55}{Energy related constraints\relax }{equation.3.3.28}{}}
+\newlabel{eq:Safe_constr_2_bis}{{3.29}{55}{Energy related constraints\relax }{equation.3.3.29}{}}
+\newlabel{eq:Safe_constr_4}{{3.30}{55}{Energy related constraints\relax }{equation.3.3.30}{}}
+\newlabel{eq:Safe_constr_4_3_axisaaa}{{3.31}{55}{Energy related constraints\relax }{equation.3.3.31}{}}
+\newlabel{eq:Safe_constr_4_x_axis}{{3.31a}{55}{Energy related constraints\relax }{equation.3.3.31a}{}}
+\newlabel{eq:Safe_constr_4_y_axis}{{3.31b}{55}{Energy related constraints\relax }{equation.3.3.31b}{}}
+\newlabel{eq:Safe_constr_4_z_axis}{{3.31c}{55}{Energy related constraints\relax }{equation.3.3.31c}{}}
+\newlabel{eq:Safe_constr_4_3_axis12}{{3.32}{55}{Energy related constraints\relax }{equation.3.3.32}{}}
+\newlabel{eq:Safe_constr_4_x_axis_pos12}{{3.32a}{55}{Energy related constraints\relax }{equation.3.3.32a}{}}
+\newlabel{eq:Safe_constr_4_x_axis_neg12}{{3.32b}{55}{Energy related constraints\relax }{equation.3.3.32b}{}}
+\newlabel{eq:Safe_constr_4_3_axis54}{{3.33}{55}{Energy related constraints\relax }{equation.3.3.33}{}}
+\newlabel{eq:Safe_constr_4_x_axis_pos54}{{3.33a}{55}{Energy related constraints\relax }{equation.3.3.33a}{}}
+\newlabel{eq:Safe_constr_4_x_axis_neg54}{{3.33b}{55}{Energy related constraints\relax }{equation.3.3.33b}{}}
+\newlabel{eq:Safe_constr_4_y_axis_pos54}{{3.33c}{55}{Energy related constraints\relax }{equation.3.3.33c}{}}
+\newlabel{eq:Safe_constr_4_y_axis_neg54}{{3.33d}{55}{Energy related constraints\relax }{equation.3.3.33d}{}}
+\newlabel{eq:Safe_constr_4_z_axis_pos54}{{3.33e}{55}{Energy related constraints\relax }{equation.3.3.33e}{}}
+\newlabel{eq:Safe_constr_4_z_axis_neg54}{{3.33f}{55}{Energy related constraints\relax }{equation.3.3.33f}{}}
+\newlabel{eq:Safe_constr_3}{{3.34}{56}{Energy related constraints\relax }{equation.3.3.34}{}}
+\newlabel{eq:Safe_constr_3_axis}{{3.35}{56}{Energy related constraints\relax }{equation.3.3.35}{}}
+\newlabel{eq:eqAA}{{3.35a}{56}{Energy related constraints\relax }{equation.3.3.35a}{}}
+\newlabel{eq:eqBB}{{3.35b}{56}{Energy related constraints\relax }{equation.3.3.35b}{}}
+\newlabel{eq:eqCC}{{3.35c}{56}{Energy related constraints\relax }{equation.3.3.35c}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.4}Controller formulation}{56}{subsection.3.3.4}}
+\newlabel{subsec:cntrl_frmulation}{{3.3.4}{56}{Controller formulation\relax }{subsection.3.3.4}{}}
+\newlabel{eq:ctrl_pbb}{{3.36}{56}{Controller formulation\relax }{equation.3.3.36}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Simulation}{57}{section.3.4}}
+\newlabel{sec:contrl12}{{3.4}{57}{Simulation\relax }{section.3.4}{}}
+\newlabel{eq:plotted_Sc}{{3.37}{57}{Simulation\relax }{equation.3.4.37}{}}
+\newlabel{eq:plotted_Sc2}{{3.38}{57}{Simulation\relax }{equation.3.4.38}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Scenario 1: obstacle intersecting with the robot's trajectory and no constraints on energy}{57}{subsection.3.4.1}}
+\newlabel{subsec_no_constr_energy}{{3.4.1}{57}{Scenario 1: obstacle intersecting with the robot's trajectory and no constraints on energy\relax }{subsection.3.4.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Articular position, velocity and acceleration corresponding to the pick and place movement as the energy of the robot is not constrained.\relax }}{58}{figure.caption.33}}
+\newlabel{fig:q_qdot}{{3.4}{58}{Articular position, velocity and acceleration corresponding to the pick and place movement as the energy of the robot is not constrained.\relax \relax }{figure.caption.33}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Articular torque and jerk corresponding to the pick and place movement as the energy of the robot is not constrained.\relax }}{59}{figure.caption.34}}
+\newlabel{fig:tau_qdddot}{{3.5}{59}{Articular torque and jerk corresponding to the pick and place movement as the energy of the robot is not constrained.\relax \relax }{figure.caption.34}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces (a) Kinetic energy of the robot in the direction of the considered obstacle (case $O_2$ in Fig.\nobreakspace  {}\ref  {fig:kuka_in_xde862301_a}), computed using (\ref  {eq:plotted_Sc}) and (\ref  {eq:plotted_Sc2}) during the pick and place movement. (b), (c) and (d) are the energy profiles corresponding to the pick and place task along the $\unhbox \voidb@x \hbox {\relax \mathversion  {bold}${x}$}$, $\unhbox \voidb@x \hbox {\relax \mathversion  {bold}${y}$}$ and $\unhbox \voidb@x \hbox {\relax \mathversion  {bold}${z}$}$ axis in Cartesian space.\relax }}{60}{figure.caption.35}}
+\newlabel{fig:energy_profile}{{3.6}{60}{(a) Kinetic energy of the robot in the direction of the considered obstacle (case $O_2$ in Fig.~\ref {fig:kuka_in_xde862301_a}), computed using (\ref {eq:plotted_Sc}) and (\ref {eq:plotted_Sc2}) during the pick and place movement. (b), (c) and (d) are the energy profiles corresponding to the pick and place task along the $\vect {x}$, $\vect {y}$ and $\vect {z}$ axis in Cartesian space.\relax \relax }{figure.caption.35}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Scenario 2: nearby obstacle, not intersecting with the robot's trajectory and constraint on kinetic energy}{60}{subsection.3.4.2}}
+\newlabel{subsec:no_inter_constr_Ec}{{3.4.2}{60}{Scenario 2: nearby obstacle, not intersecting with the robot's trajectory and constraint on kinetic energy\relax }{subsection.3.4.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces Kinetic energy of the KUKA LWR4 expressed at the level of its end-effector in the direction of the considered obstacle during a collision phase.\relax }}{61}{figure.caption.36}}
+\newlabel{fig:ec_obst3!!!!}{{3.7}{61}{Kinetic energy of the KUKA LWR4 expressed at the level of its end-effector in the direction of the considered obstacle during a collision phase.\relax \relax }{figure.caption.36}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces (a) \textit  {Potential energy} accumulated in the controller of the robot during physical contact along the $\unhbox \voidb@x \hbox {\relax \mathversion  {bold}${x}$}$ axis in Cartesian space. (b) Contact forces between the robot and the wall after the establishment of physical contact along the $\unhbox \voidb@x \hbox {\relax \mathversion  {bold}${x}$}$, $\unhbox \voidb@x \hbox {\relax \mathversion  {bold}${y}$}$ and $\unhbox \voidb@x \hbox {\relax \mathversion  {bold}${z}$}$ axis in Cartesian space. (c) Actuation torques during physical contact with the considered obstacle.\relax }}{62}{figure.caption.37}}
+\newlabel{fig:ep__f_tau_!!!!}{{3.8}{62}{(a) \textit {Potential energy} accumulated in the controller of the robot during physical contact along the $\vect {x}$ axis in Cartesian space. (b) Contact forces between the robot and the wall after the establishment of physical contact along the $\vect {x}$, $\vect {y}$ and $\vect {z}$ axis in Cartesian space. (c) Actuation torques during physical contact with the considered obstacle.\relax \relax }{figure.caption.37}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces Screen-shot of the KUKA LWR4 robot within the XDE simulator with the nearby wall not intersecting its trajectory.\relax }}{63}{figure.caption.38}}
+\newlabel{fig:kuka_xde_nearby_obst}{{3.9}{63}{Screen-shot of the KUKA LWR4 robot within the XDE simulator with the nearby wall not intersecting its trajectory.\relax \relax }{figure.caption.38}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.10}{\ignorespaces Screen-shot of the KUKA LWR4 robot within the XDE simulator during a collision with the wall intersecting its trajectory.\relax }}{63}{figure.caption.38}}
+\newlabel{fig:kuka_xde_obst_coll}{{3.10}{63}{Screen-shot of the KUKA LWR4 robot within the XDE simulator during a collision with the wall intersecting its trajectory.\relax \relax }{figure.caption.38}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.11}{\ignorespaces Constrained kinetic energy of the robot expressed at the end-effector in the direction of a nearby considered obstacle (case $O_2$ in Fig.\nobreakspace  {}\ref  {fig:kuka_in_xde862301_a}).\relax }}{63}{figure.caption.39}}
+\newlabel{fig:dist_ec_ecmax_plot1_2}{{3.11}{63}{Constrained kinetic energy of the robot expressed at the end-effector in the direction of a nearby considered obstacle (case $O_2$ in Fig.~\ref {fig:kuka_in_xde862301_a}).\relax \relax }{figure.caption.39}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}Scenario 3: obstacle intersecting with the robot's trajectory and constraint on its kinetic energy}{63}{subsection.3.4.3}}
+\newlabel{subsec_inter_constr_Ec_classic}{{3.4.3}{63}{Scenario 3: obstacle intersecting with the robot's trajectory and constraint on its kinetic energy\relax }{subsection.3.4.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.12}{\ignorespaces (a), (b) and (c) depict the real and desired position for the robot's end-effector in Cartesian space as the kinetic energy of the robot is constrained. (d), (e) and (f) are the real and desired velocity for the end-effector as the system is submitted to the same constraint (case $O_2$ in Fig.\nobreakspace  {}\ref  {fig:kuka_in_xde862301_a}).\relax }}{64}{figure.caption.40}}
+\newlabel{fig:x_x_dot1_2}{{3.12}{64}{(a), (b) and (c) depict the real and desired position for the robot's end-effector in Cartesian space as the kinetic energy of the robot is constrained. (d), (e) and (f) are the real and desired velocity for the end-effector as the system is submitted to the same constraint (case $O_2$ in Fig.~\ref {fig:kuka_in_xde862301_a}).\relax \relax }{figure.caption.40}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.13}{\ignorespaces Generated articular torque and jerk as the constraint on the kinetic energy of the robot is activated (case $O_2$ in Fig.\nobreakspace  {}\ref  {fig:kuka_in_xde862301_a}).\relax }}{65}{figure.caption.41}}
+\newlabel{fig:tau3_qddot!!!!}{{3.13}{65}{Generated articular torque and jerk as the constraint on the kinetic energy of the robot is activated (case $O_2$ in Fig.~\ref {fig:kuka_in_xde862301_a}).\relax \relax }{figure.caption.41}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.14}{\ignorespaces Constrained kinetic energy of the robot expressed at the end-effector in the direction of the collided obstacle (case $O_1$ in Fig.\nobreakspace  {}\ref  {fig:kuka_in_xde862301_a}).\relax }}{66}{figure.caption.42}}
+\newlabel{fig:dist_ec_ecmax_plot}{{3.14}{66}{Constrained kinetic energy of the robot expressed at the end-effector in the direction of the collided obstacle (case $O_1$ in Fig.~\ref {fig:kuka_in_xde862301_a}).\relax \relax }{figure.caption.42}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.4}Scenario 4: obstacle intersecting the robot's trajectory and constraints on its kinetic and potential energies}{66}{subsection.3.4.4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.15}{\ignorespaces (a) \textit  {Potential energy} generated within the robot-obstacle system during physical contact along the $\unhbox \voidb@x \hbox {\relax \mathversion  {bold}${x}$}$ axis in Cartesian space. (b) Corresponding contact forces along the $\unhbox \voidb@x \hbox {\relax \mathversion  {bold}${x}$}$, $\unhbox \voidb@x \hbox {\relax \mathversion  {bold}${y}$}$ and $\unhbox \voidb@x \hbox {\relax \mathversion  {bold}${z}$}$ axis in Cartesian space. (c) Actuation torques during physical contact with the considered obstacle (case $O_1$ in Fig.\nobreakspace  {}\ref  {fig:kuka_in_xde862301_a}).\relax }}{67}{figure.caption.43}}
+\newlabel{fig:ep__f_tau75_!!!!}{{3.15}{67}{(a) \textit {Potential energy} generated within the robot-obstacle system during physical contact along the $\vect {x}$ axis in Cartesian space. (b) Corresponding contact forces along the $\vect {x}$, $\vect {y}$ and $\vect {z}$ axis in Cartesian space. (c) Actuation torques during physical contact with the considered obstacle (case $O_1$ in Fig.~\ref {fig:kuka_in_xde862301_a}).\relax \relax }{figure.caption.43}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.16}{\ignorespaces (a), (b) and (c) depict the real and desired position for the end-effector in Cartesian space as the kinetic energy of the robot is constrained. (d), (e) and (f) are the real and desired velocity for the end-effector as the robot is submitted to the same constraint (case $O_1$ in Fig.\nobreakspace  {}\ref  {fig:kuka_in_xde862301_a}).\relax }}{68}{figure.caption.44}}
+\newlabel{fig:x_x_dot4_com}{{3.16}{68}{(a), (b) and (c) depict the real and desired position for the end-effector in Cartesian space as the kinetic energy of the robot is constrained. (d), (e) and (f) are the real and desired velocity for the end-effector as the robot is submitted to the same constraint (case $O_1$ in Fig.~\ref {fig:kuka_in_xde862301_a}).\relax \relax }{figure.caption.44}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.17}{\ignorespaces Constrained kinetic energy of the robot expressed at the end-effector in the direction of the collided obstacle (case $O_1$ in Fig.\nobreakspace  {}\ref  {fig:kuka_in_xde862301_a}).\relax }}{68}{figure.caption.45}}
+\newlabel{fig:dist_ec_ecmax_plot55}{{3.17}{68}{Constrained kinetic energy of the robot expressed at the end-effector in the direction of the collided obstacle (case $O_1$ in Fig.~\ref {fig:kuka_in_xde862301_a}).\relax \relax }{figure.caption.45}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.18}{\ignorespaces (a) Constrained \textit  {potential energy} stored in the controller of the robot during physical contact along the $\unhbox \voidb@x \hbox {\relax \mathversion  {bold}${x}$}$ axis in Cartesian space. (b) Corresponding contact forces along the $\unhbox \voidb@x \hbox {\relax \mathversion  {bold}${x}$}$, $\unhbox \voidb@x \hbox {\relax \mathversion  {bold}${y}$}$ and $\unhbox \voidb@x \hbox {\relax \mathversion  {bold}${z}$}$ axis in Cartesian space. (c) Actuation torques during the physical contact with the considered obstacle (case $O_1$ in Fig.\nobreakspace  {}\ref  {fig:kuka_in_xde862301_a}).\relax }}{69}{figure.caption.46}}
+\newlabel{fig:ep__f_tau65_!!!!}{{3.18}{69}{(a) Constrained \textit {potential energy} stored in the controller of the robot during physical contact along the $\vect {x}$ axis in Cartesian space. (b) Corresponding contact forces along the $\vect {x}$, $\vect {y}$ and $\vect {z}$ axis in Cartesian space. (c) Actuation torques during the physical contact with the considered obstacle (case $O_1$ in Fig.~\ref {fig:kuka_in_xde862301_a}).\relax \relax }{figure.caption.46}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.5}Scenario 5: obstacle intersecting with the robot's trajectory and constraint on its task energy profile}{69}{subsection.3.4.5}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Conclusion}{70}{section.3.5}}
+\newlabel{sec:safety1conclusion}{{3.5}{70}{Conclusion\relax }{section.3.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.19}{\ignorespaces (a), (b) and (c) depict the real and desired position for the end-effector in Cartesian space as the task energy profile of the robot is constrained. (d), (e) and (f) are the real and desired velocity for the end-effector as the robot is submitted to the same constraint (case $O_1$ in Fig.\nobreakspace  {}\ref  {fig:kuka_in_xde862301_a}).\relax }}{71}{figure.caption.47}}
+\newlabel{fig:x_x_dot454}{{3.19}{71}{(a), (b) and (c) depict the real and desired position for the end-effector in Cartesian space as the task energy profile of the robot is constrained. (d), (e) and (f) are the real and desired velocity for the end-effector as the robot is submitted to the same constraint (case $O_1$ in Fig.~\ref {fig:kuka_in_xde862301_a}).\relax \relax }{figure.caption.47}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.20}{\ignorespaces Constrained energy profile for the pick and place task along the $\unhbox \voidb@x \hbox {\relax \mathversion  {bold}${x}$}$, $\unhbox \voidb@x \hbox {\relax \mathversion  {bold}${y}$}$ and $\unhbox \voidb@x \hbox {\relax \mathversion  {bold}${z}$}$ axis in Cartesian space.\relax }}{72}{figure.caption.48}}
+\newlabel{fig:ep_profil_xyz_futur_with_recnstruted6}{{3.20}{72}{Constrained energy profile for the pick and place task along the $\vect {x}$, $\vect {y}$ and $\vect {z}$ axis in Cartesian space.\relax \relax }{figure.caption.48}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.21}{\ignorespaces (a) The kinetic energy of the robot expressed at the end-effector as it physically interacts with the nearby obstacle (case $O_1$ in Fig.\nobreakspace  {}\ref  {fig:kuka_in_xde862301_a}). (b) Corresponding contact forces along the $\unhbox \voidb@x \hbox {\relax \mathversion  {bold}${x}$}$, $\unhbox \voidb@x \hbox {\relax \mathversion  {bold}${y}$}$ and $\unhbox \voidb@x \hbox {\relax \mathversion  {bold}${z}$}$ axis in Cartesian space. (c) Actuation torques during the physical contact.\relax }}{73}{figure.caption.49}}
+\newlabel{fig:ec__f_tau65_grand_!!!!}{{3.21}{73}{(a) The kinetic energy of the robot expressed at the end-effector as it physically interacts with the nearby obstacle (case $O_1$ in Fig.~\ref {fig:kuka_in_xde862301_a}). (b) Corresponding contact forces along the $\vect {x}$, $\vect {y}$ and $\vect {z}$ axis in Cartesian space. (c) Actuation torques during the physical contact.\relax \relax }{figure.caption.49}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Safe human-robot interaction: experimental results}{75}{chapter.4}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chap:safety2}{{4}{75}{Safe human-robot interaction: experimental results\relax }{chapter.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Introduction}{75}{section.4.1}}
+\newlabel{sec:experiment_on_kuka}{{4.1}{75}{Introduction\relax }{section.4.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Experimental setup}{75}{section.4.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Human-robot interaction, scenario 1}{76}{section.4.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Kinetic energy deployed by the robot expressed at the level of its end-effector in the direction of the human-operator entering its workspace and physically intersecting its movement.\relax }}{77}{figure.caption.50}}
+\newlabel{fig:sc65}{{4.1}{77}{Kinetic energy deployed by the robot expressed at the level of its end-effector in the direction of the human-operator entering its workspace and physically intersecting its movement.\relax \relax }{figure.caption.50}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Human-robot interaction, scenario 4}{77}{section.4.4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces (a) \textit  {Potential energy} stored in the controller of the robot during physical contact along the $\unhbox \voidb@x \hbox {\relax \mathversion  {bold}${x}$}$, $\unhbox \voidb@x \hbox {\relax \mathversion  {bold}${y}$}$ and $\unhbox \voidb@x \hbox {\relax \mathversion  {bold}${z}$}$ axis in Cartesian space. (b) Articular torques.\relax }}{78}{figure.caption.51}}
+\newlabel{fig:e_p_xerr_sc_tau657}{{4.2}{78}{(a) \textit {Potential energy} stored in the controller of the robot during physical contact along the $\vect {x}$, $\vect {y}$ and $\vect {z}$ axis in Cartesian space. (b) Articular torques.\relax \relax }{figure.caption.51}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Constrained kinetic energy of the robot expressed at its end-effector in the direction of the approaching operator.\relax }}{79}{figure.caption.52}}
+\newlabel{fig:sc6785}{{4.3}{79}{Constrained kinetic energy of the robot expressed at its end-effector in the direction of the approaching operator.\relax \relax }{figure.caption.52}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Conclusion}{79}{section.4.5}}
+\newlabel{sec:safety2conclusion}{{4.5}{79}{Conclusion\relax }{section.4.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces (a) \textit  {Potential energy} stored in the controller of the robot during physical contact along the $\unhbox \voidb@x \hbox {\relax \mathversion  {bold}${x}$}$, $\unhbox \voidb@x \hbox {\relax \mathversion  {bold}${y}$}$ and $\unhbox \voidb@x \hbox {\relax \mathversion  {bold}${z}$}$ axis in Cartesian space. (b) Articular torques.\relax }}{80}{figure.caption.53}}
+\newlabel{fig:e_p_xerr_sc_tau785}{{4.4}{80}{(a) \textit {Potential energy} stored in the controller of the robot during physical contact along the $\vect {x}$, $\vect {y}$ and $\vect {z}$ axis in Cartesian space. (b) Articular torques.\relax \relax }{figure.caption.53}{}}
+\newlabel{eq:dyn_Ec_cnstr}{{4.1}{81}{Conclusion\relax }{equation.4.5.1}{}}
+\newlabel{eq:dyn_Ec_cnstr2}{{4.2}{81}{Conclusion\relax }{equation.4.5.2}{}}
+\newlabel{eq:dyn_Ec_cnstr222}{{4.3}{81}{Conclusion\relax }{equation.4.5.3}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Conclusions and outlook}{83}{chapter.5}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chap:conclusion}{{5}{83}{Conclusions and outlook\relax }{chapter.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Contributions}{83}{section.5.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Perspectives}{85}{section.5.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Extension of the work on the constraints incompatibility problem}{85}{subsection.5.2.1}}
+\bibdata{bib/thesis}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Appendix}{87}{appendix.A}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{app:constrcomp}{{A}{87}{Appendix\relax }{appendix.A}{}}
+\newlabel{eq:dyn_eq_bis}{{A.1}{87}{Appendix\relax }{equation.A.0.1}{}}
+\newlabel{eq:qddot_minimizing_opt_1}{{A.2}{87}{Appendix\relax }{equation.A.0.2}{}}
+\newlabel{eq:qddot_maximizing_opt_2}{{A.3}{87}{Appendix\relax }{equation.A.0.3}{}}
+\newlabel{eq:qddot_maximizing}{{A.4}{87}{Appendix\relax }{equation.A.0.4}{}}
+\newlabel{eq:qddot_minimizing}{{A.5}{87}{Appendix\relax }{equation.A.0.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.1}{\ignorespaces Instantaneous producible maximum and minimum articular accelerations for joint $0$ during the movement of the KUKA LWR4 as shown in Fig.\nobreakspace  {}\ref  {fig:kuka_screen}.\relax }}{88}{figure.caption.54}}
+\newlabel{fig:instant_articular_acceleration_capability}{{A.1}{88}{Instantaneous producible maximum and minimum articular accelerations for joint $0$ during the movement of the KUKA LWR4 as shown in Fig.~\ref {fig:kuka_screen}.\relax \relax }{figure.caption.54}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {6}{\ignorespaces Compute $\boldsymbol  {\mathaccentV {ddot}07F{q}}_M$ and $\boldsymbol  {\mathaccentV {ddot}07F{q}}_m$\relax }}{88}{algorithm.6}}
+\newlabel{alg:compute_q_ddot_m_q_ddot_M}{{6}{88}{Compute $\boldsymbol {\ddot {q}}_M$ and $\boldsymbol {\ddot {q}}_m$\relax \relax }{algorithm.6}{}}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{89}{section*.56}}
