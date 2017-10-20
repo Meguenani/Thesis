@@ -1,0 +1,98 @@
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{color}
+\usepackage{graphicx} % for pdf, bitmapped graphics files
+\usepackage{epsfig} % for postscript graphics files
+\usepackage[tight,footnotesize]{subfigure}
+\graphicspath{{../figures/}}
+
+\usepackage{mathptmx} % assumes new font selection scheme installed
+\usepackage{amsmath} % assumes amsmath package installed
+\usepackage{amssymb}  % assumes amsmath package installed
+\usepackage{IEEEtrantools}
+
+\usepackage{url}
+% \usepackage[noadjust]{cite}
+\usepackage{cancel}
+% \usepackage{enumerate}
+% \usepackage{enumitem}
+
+\newcommand{\mathpo}{\mathbf}
+\newenvironment{system}[1][rCL]
+{\left\lbrace\begin{IEEEeqnarraybox}[][c]{#1}}
+{\end{IEEEeqnarraybox}\right.}
+
+\newcommand{\figref}[1]{Fig.~\ref{#1}}
+\renewcommand{\matrix}[1]{\begin{bmatrix}{#1}\end{bmatrix}}
+\newenvironment{tmatrix}{\left[\begin{smallmatrix}}{\end{smallmatrix}\right]}
+
+\usepackage{geometry}
+
+\useoutertheme{default}
+\useinnertheme{circles}
+
+\setbeamertemplate{blocks}[rounded][shadow=true]
+% \setbeamertemplate{frametitle}[default][rounded=false,shadow=true]
+
+\usepackage{lmodern}
+\usepackage{concmath}
+
+\definecolor{codyco_color}{RGB}{51,102,0} %Green
+\definecolor{codyco_color}{RGB}{0,100,150} % Blue
+\definecolor{codyco_color}{RGB}{200,50,50} % Red
+% \definecolor{inria_blue}{RGB}{215,27,43}
+% \definecolor{inria_dim}{RGB}{161,184,203}
+% \definecolor{inria_nav}{RGB}{55,110,155}
+
+% \setbeamercolor{title}{use={structure,title text},bg=inria_blue,fg=white}
+% \setbeamercolor{section in toc}{fg=inria_blue}
+% \setbeamercolor{item}{fg=inria_blue}
+\setbeamercolor{block title}{use={title text},bg=codyco_color,fg=white}
+% \setbeamercolor{alerted text}{fg=inria_blue}
+% \setbeamertemplate{navigation symbols}{}
+% \setbeamercolor{frametitle}{use={title text},bg=white,fg=inria_blue}
+% \setbeamercolor{framesubtitle}{use={title text},bg=white,fg=inria_blue}
+
+\makeatletter
+%\long\def\beamer@@frametitle[#1]#2{%
+%  \beamer@ifempty{#2}{}{%
+%    \gdef\insertframetitle{{#2\ifnum\beamer@autobreakcount>0\relax{}\space\usebeamertemplate*{frametitle continuation}\fi}\vspace{-\bigskipamount}\newline\rule{.95\paperwidth}{.75pt}}%
+%  \gdef\beamer@frametitle{#2}%
+%  \gdef\beamer@shortframetitle{#1}%
+%}%
+%}
+\makeatother
+
+% \setlength{\leftmargini}{0em}
+% \setlength{\leftmarginii}{1em}
+% \setlength{\leftmarginiii}{2em}
+
+\newenvironment{itemblock}%
+{%
+\begin{itemize}%
+\setlength{\itemindent}{1em}%
+\setlength{\parindent}{1em}%
+}%
+{\end{itemize}}
+
+\theoremstyle{definition}
+\newtheorem{proposition}{Proposition}
+
+\newenvironment{enums}{
+\begin{enumerate}[label=(\roman{*}), ref=(\roman{*})]
+%   \setlength{\itemsep}{3pt}
+%   \setlength{\parskip}{0pt}
+%   \setlength{\parsep}{0pt}
+%   \addtolength{\itemindent}{\baselineskip}
+}{\end{enumerate}}
+
+
+% \setbeamercolor{footline}{fg=white,bg=inria_blue}
+% \setbeamertemplate{footline}{\begin{beamercolorbox}[shadow=true, ht=5.6pt]{footline}%
+% \insertshortauthor\hfill\eventname%
+% \hfill\insertframenumber/\inserttotalframenumber~\end{beamercolorbox}}
+
+\setbeamertemplate{bibliography item}[text]
+\usepackage{harvard}

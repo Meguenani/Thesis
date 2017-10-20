@@ -1,0 +1,17 @@
+\beamer@endinputifotherversion {3.10pt}
+\select@language {english}
+\beamer@sectionintoc {1}{Part I: Reactive control and constraints incompatibility}{13}{0}{1}
+\beamer@subsectionintoc {1}{1}{Reactive control -- the problem}{14}{0}{1}
+\beamer@subsectionintoc {1}{2}{Constraints incompatibility, problem illustration (car example)}{23}{0}{1}
+\beamer@subsectionintoc {1}{3}{Articular constraints and the incompatibility problem}{27}{0}{1}
+\beamer@subsectionintoc {1}{4}{Literature}{31}{0}{1}
+\beamer@subsectionintoc {1}{5}{Constraints on articular position/velocity, naive VS new formulations}{37}{0}{1}
+\beamer@subsectionintoc {1}{6}{Conclusion I}{47}{0}{1}
+\beamer@sectionintoc {2}{Part II: Safe Human-Robot Interaction}{52}{0}{2}
+\beamer@subsectionintoc {2}{1}{Safety as a constraint on energy}{68}{0}{2}
+\beamer@subsectionintoc {2}{2}{Safety indicator/limit during the pre-collision phase}{70}{0}{2}
+\beamer@subsectionintoc {2}{3}{Safety indicator/limit during the physical-contact phase}{77}{0}{2}
+\beamer@subsectionintoc {2}{4}{The controller}{83}{0}{2}
+\beamer@subsectionintoc {2}{5}{Simulation and experimental results}{87}{0}{2}
+\beamer@subsectionintoc {2}{6}{Conclusion II.}{96}{0}{2}
+\beamer@sectionintoc {3}{Conclusion}{99}{0}{3}

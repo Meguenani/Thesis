@@ -1,0 +1,154 @@
+\documentclass[pdftex,9pt, xcolor=table]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{tcolorbox}
+\usepackage{pgfpages}
+\usepackage{pgf}
+\usepackage{enumerate}
+\usepackage{soul}
+\usepackage{tikz}
+\usepackage{cancel}
+
+\DeclareMathOperator*{\argmin}{arg~~min}
+
+\usepackage{transparent}
+%\usepackage[colorlinks]{hyperref}
+%\setbeameroption{show notes}
+%\setbeameroption{show notes on second screen=right}
+\usepackage{color}
+\usepackage{empheq}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{graphicx}
+\usepackage[table,xcdraw]{xcolor}
+\input{header}
+%\usepackage{media9}
+\setbeamercovered{transparent}
+\usepackage{amsmath} % assumes amsmath package installed
+\usepackage{amssymb}  % assumes amsmath package installed
+\usepackage{mathtools}
+\usepackage{multimedia}  
+\usepackage{ marvosym }
+\setbeamercolor{title}{fg=black}
+\definecolor{myc}{rgb}{0.953125,0.421875,0.421875}
+\newcommand{\vect}[1]{\mbox{\boldmath${#1}$}}%$
+
+\newcommand\mytag{\hspace*{1em}\refstepcounter{equation}(\theequation)}
+
+\newcommand<>{\overlay}[1]{\uncover#2{%
+  \begin{tikzpicture}[remember picture,overlay]%
+  \draw[fill=black,opacity=0.70] 
+  (current page.north east) rectangle (current page.south west);
+  \node at (current page.center) {#1};
+  \end{tikzpicture}}
+}
+
+
+
+\newcommand*\oldmacro{}%
+\let\oldmacro\insertshorttitle%
+\renewcommand*\insertshorttitle{%
+  \oldmacro\hfill%
+  \insertframenumber\,/\,41}
+
+
+%
+%\addtobeamertemplate{navigation symbols}{}{%
+%    \usebeamerfont{footline}%
+%    \usebeamercolor[fg]{footline}%
+%    \hspace{1em}%
+%    \insertframenumber/\inserttotalframenumber
+%}
+
+
+
+% \usepackage[makeroom]{cancel}
+%\input{symbols}
+
+\definecolor{ao(english)}{rgb}{0.0, 0.5, 0.0}
+\definecolor{armygreen}{rgb}{0.29, 0.33, 0.13}
+\definecolor{blue-violet}{rgb}{0.54, 0.17, 0.89}
+\definecolor{applegreen}{rgb}{0.55, 0.71, 0.0}
+\definecolor{carmine}{rgb}{0.59, 0.0, 0.09}
+\definecolor{caribbeangreen}{rgb}{0.0, 0.8, 0.6}
+\definecolor{cadmiumorange}{rgb}{0.93, 0.53, 0.18}
+\definecolor{deepsaffron}{rgb}{1.0, 0.6, 0.2}
+\definecolor{internationalorange}{rgb}{1.0, 0.31, 0.0}
+\definecolor{lime(web)(x11green)}{rgb}{0.0, 1.0, 0.0}
+\definecolor{limegreen}{rgb}{0.2, 0.8, 0.2}
+\definecolor{napiergreen}{rgb}{0.16, 0.5, 0.0}
+
+
+\usetheme{Warsaw}
+
+%\setbeamertemplate{frametitle continuation}[from second]
+\setbeamertemplate{headline}{}
+
+%Global Background must be put in preamble
+%\usebackgroundtemplate
+%{%
+%    \includegraphics[width=\paperwidth,height=\paperheight]{figures//backgroundShort.pdf}%
+%}
+\vspace{10mm}
+\title[Safe Control of Robotic manipulators in Dynamic Contexts]{{\color{white} \textbf{Safe Control of Robotic manipulators in Dynamic Contexts}}}
+\vspace{10mm}
+\author[{Anis MEGUENANI \hspace{2mm} PhD -- 13/10/2017}]{\Large{\textbf{Anis MEGUENANI}} \\
+\vspace{3mm}
+\small{Supervisors: Philippe Bidaud \& Vincent Padois}}
+\vspace{10mm}
+\institute{ 
+meguenani@isir.upmc.fr \\ 
+\small{Institut des Systèmes Intelligents et de Robotique\\ Université Pierre et Marie Curie \& CNRS UMR 7222}} 
+
+\date{
+\small{\textbf{PhD defence}}\\
+\vspace{2mm}
+\small{October. 13th, 2017}\\
+\small{Paris, France}
+}
+
+\setbeamercolor{block body}{fg=black,bg=red!3}
+
+\newenvironment{notitleblock}[1]{%
+  \setbeamercolor{block body}{fg=black,bg=red!30}
+  \setbeamercolor{block title}{fg=black,bg=red}
+  \begin{block}{}{#1}}{\end{block}}
+
+
+
+\AtBeginSubsection[]
+{
+  \begin{frame}[noframenumbering]
+    %\frametitle{Outline}
+    \tableofcontents[currentsubsection]
+  \end{frame}
+}
+
+
+
+\AtBeginSection[]
+{
+  \begin{frame}[noframenumbering]
+    %\frametitle{Outline}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\begin{document}
+
+% Local background must be enclosed by curly braces for grouping.
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{figures/backgroundFirstPageRed.png}}%
+
+
+\begin{frame}[plain]
+  \vspace{1cm}
+  \titlepage
+  \flushbottom
+\end{frame}
+}
+
+\input{texfiles/slides}
+
+% \input{texfiles/torque_control}
+
+\end{document}

@@ -1,0 +1,4 @@
+AVANT DE COMPILER AVEC LATEX : 
+
+pdflatex --shell-escape presentation.tex 
+

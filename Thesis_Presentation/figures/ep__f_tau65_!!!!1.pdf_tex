@@ -1,0 +1,61 @@
+%% Creator: Inkscape inkscape 0.92.2, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'ep__f_tau65_!!!!1.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{857.68427955bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.51895871)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{ep__f_tau65_!!!!1.pdf}}%
+    \put(0.70078719,0.2432308){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{(a)\\  }}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{ep__f_tau65_!!!!1.pdf}}%
+    \put(0.69308208,0.10116081){\color[rgb]{1,0,0}\makebox(0,0)[lb]{\smash{\textit{contact}}}}%
+    \put(0.6187946,0.12938836){\color[rgb]{1,0,0}\makebox(0,0)[lb]{\smash{\textit{   Collision+activation of }\textit{\\ }\textit{the constraint on S}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{ep__f_tau65_!!!!1.pdf}}%
+    \put(0.54894196,0.17683451){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{\textit{Impact force 85 N }}}}}%
+    \put(0.00000048,0.55196901){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{1.07638513\unitlength}\raggedright  \end{minipage}}}%
+  \end{picture}%
+\endgroup%
