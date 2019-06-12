@@ -1,4 +1,4 @@
-These files are for preparing a doctoral thesis at the University of Melbourne.
+These files are for preparing a doctoral thesis at the University of Pierre et Marie Curie (Paris 6).
 
 The file thesis-master.tex assembles the complete dissertation; this is the file
 you should compile.
